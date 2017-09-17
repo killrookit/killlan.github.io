@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="渗透教程,nmap中文教程,端口扫描,漏洞扫描,内网渗透,漏洞利用,防火墙,powershell端口扫描,bat端口扫描,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：  列举网络主机清单 管理服务升级调度 监控主机 服务运行状况  Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全">
+<meta name="keywords" content="渗透教程,nmap中文教程,端口扫描,漏洞扫描,内网渗透,漏洞利用,防火墙,powershell端口扫描,bat端口扫描">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Nmap 中文教程">
+<meta property="og:url" content="http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/index.html">
+<meta property="og:site_name" content="KillLan&#39;sBlog">
+<meta property="og:description" content="0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：  列举网络主机清单 管理服务升级调度 监控主机 服务运行状况  Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-16T15:43:54.158Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Nmap 中文教程">
+<meta name="twitter:description" content="0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：  列举网络主机清单 管理服务升级调度 监控主机 服务运行状况  Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'S8F1O4WUNA',
+      apiKey: '0a36672a03d577251de0cd5b5f644c9d',
+      indexName: 'indexName',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/">
+
+
+
+
+
+  <title>Nmap 中文教程 | KillLan'sBlog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?13f430ddbef1b04a8dd2ef35f888085a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">KillLan'sBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">关注内网渗透与防御</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            标签
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wooyundrops">
+          <a href="/WooyunDrops" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            WooyunDrops
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KillRootKit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KillLan'sBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">Nmap 中文教程</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-16T02:39:20+08:00">
+                2017-09-16
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/渗透教程/" itemprop="url" rel="index">
+                    <span itemprop="name">渗透教程</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/16/Nmap-Chinese-Course/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/16/Nmap-Chinese-Course/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/16/Nmap-Chinese-Course/" class="leancloud_visitors" data-flag-title="Nmap 中文教程">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="0x00-简述"><a href="#0x00-简述" class="headerlink" title="0x00 简述"></a>0x00 简述</h1><p>Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：</p>
+<ul>
+<li>列举网络主机清单</li>
+<li>管理服务升级调度</li>
+<li>监控主机</li>
+<li>服务运行状况</li>
+</ul>
+<p>Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。<br>Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。<br>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。<br>Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。</p>
+<h1 id="0x01-命令及参数介绍"><a href="#0x01-命令及参数介绍" class="headerlink" title="0x01 命令及参数介绍"></a>0x01 命令及参数介绍</h1><h2 id="常见端口扫描"><a href="#常见端口扫描" class="headerlink" title="常见端口扫描"></a>常见端口扫描</h2><blockquote>
+<p>map [Scan Type(s)] [Options] {target specification}<br>scan type(s) 用于指定扫描类型<br>options 用于指定选项<br>target specification 用于指定扫描目标</p>
+<p>-s 指定扫描类型<br>如下：<br>-sP (ping扫描) <em>存活主机探测<br>-sS (TCP SYN扫描 隐身扫描)  </em>默认扫描方式<br>-sT (tcp 扫描) <em> syn 不能用时就tcp扫描<br>-sU （UDP 扫描）<br>-sA  （ACK扫描） </em>三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用<br>-sV   （版本探测）<br>-A    操作系统探测<br>-O （启用操作系统检测）<br>-v    详细<br>选项说明：<br>-P0  [指定端口] (无ping扫描)<br>-PU  [指定端口] (udp ping扫描)<br>-PS [指定端口] (TCP SYN ping 扫描)<br>-PA  [指定端口] (tcp ack ping扫描)<br>-PI   使用真正的pingICMP echo请求来扫描目标主机是否正在运行<br>-iL 指定扫描主机列表<br>-iR 随机选择目标<br>–exclude 排除扫描目标<br>–excludefile 排除文件中目标列表<br>-n (不用域名解析)<br>-R (为所有目标解析域名)<br>-T  时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢<br>-F  快速扫描<br>-e  指定网络接口<br>-M 设置tcp扫描线程</p>
+</blockquote>
+<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><blockquote>
+<p>-oS   “1337格式” 保存扫描结果输出<br>-oN  把扫描结果重定向到一个可读的文件logfilename中<br>-oM  每个结果一行输出<br>-oA 同上<br>–append-output 附在原来的结果前面</p>
+</blockquote>
+<h2 id="Nmap端口6个状态"><a href="#Nmap端口6个状态" class="headerlink" title="Nmap端口6个状态"></a>Nmap端口6个状态</h2><blockquote>
+<p>open（开放的）<br>closed（关闭的）<br>filtered（被过滤的）不确定开放还是关闭<br>unfiltered （未被过滤的）<br>openfiltered （开放或者被过滤的）<br>closedfiltered （关闭或者未被过滤的）</p>
+</blockquote>
+<h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><h3 id="获取远程主机的系统类型及开放端口"><a href="#获取远程主机的系统类型及开放端口" class="headerlink" title="获取远程主机的系统类型及开放端口"></a>获取远程主机的系统类型及开放端口</h3><blockquote>
+<p>nmap -sS -P0 -sV -O</p>
+</blockquote>
+<h3 id="获取ip和mac地址："><a href="#获取ip和mac地址：" class="headerlink" title="获取ip和mac地址："></a>获取ip和mac地址：</h3><blockquote>
+<p>nmap -sP -PI -PT -oN 192.168.1.0/24</p>
+</blockquote>
+<h3 id="扫描存活主机"><a href="#扫描存活主机" class="headerlink" title="扫描存活主机"></a>扫描存活主机</h3><blockquote>
+<p>nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“</p>
+</blockquote>
+<p>windows:</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sP -n <span class="number">192</span>.<span class="number">168</span>.<span class="number">10</span>.<span class="number">0</span>/<span class="number">24</span> | <span class="built_in">find</span> "<span class="number">192</span>" &gt;tmp_active001&amp;<span class="keyword">for</span> /f "tokens=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>" %i <span class="keyword">in</span> (tmp_active001)<span class="keyword">do</span> @<span class="built_in">echo</span> %m</div></pre></td></tr></table></figure>
+<h2 id="漏洞探测"><a href="#漏洞探测" class="headerlink" title="漏洞探测"></a>漏洞探测</h2><p>漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:<a href="https://github.com/nmap/nmap/tree/master/scripts" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/nmap/nmap/tree/master/scripts</a></p>
+<blockquote>
+<p>nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt</p>
+</blockquote>
+<h2 id="扫描常见端口"><a href="#扫描常见端口" class="headerlink" title="扫描常见端口:"></a>扫描常见端口:</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -O -P0 -T5 --open -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> <span class="number">63</span>.<span class="number">237</span>.<span class="number">172</span>.<span class="number">115</span>/<span class="number">24</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>21  ftp  主要看是否支持匿名，也可以跑弱口令<br>80  web  常见web漏洞以及是否为一些管理后台<br>443  openssl  心脏滴血以及一些web漏洞测试<br>873  rsync  主要看是否支持匿名，也可以跑弱口令<br>2601,2604 zebra路由，默认密码zebra<br>3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了<br>4440 rundeck  参考WooYun: 借用新浪某服务成功漫游新浪内网<br>6082  varnish  参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网<br>6379  redis 一般无认证，可直接访问<br>8000-9090  都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上<br>9200  elasticsearch  参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞<br>11211  memcache  未授权访问<br>27017  mongodb  未授权访问<br>28017  mongodb统计页面</p>
+</blockquote>
+<h2 id="扫描巨大网络"><a href="#扫描巨大网络" class="headerlink" title="扫描巨大网络"></a>扫描巨大网络</h2><blockquote>
+<p>-sn    不扫描端口，只ping主机<br>-PE   通过ICMP echo判定主机是否存活<br>-n     不反向解析IP地址到域名<br>–min-hostgroup 1024    最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描<br>–min-parallelism 1024  这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024<br>-oX nmap_output.xml    将结果以XML格式输出，文件名为nmap_output.xml</p>
+</blockquote>
+<p>扫描结束，解析XML文档即可得到哪些IP地址存活.</p>
+<p>附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> -iL ip.txt</div></pre></td></tr></table></figure>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -sV -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> --open --max-hostgroup <span class="number">10</span> --max-parallelism <span class="number">10</span> --max-rtt-timeout <span class="number">1000</span>ms --host-timeout <span class="number">800</span>s --max-scan-delay <span class="number">2000</span>ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt</div></pre></td></tr></table></figure>
+<h1 id="WindoWs自带命令端口扫描及powershell"><a href="#WindoWs自带命令端口扫描及powershell" class="headerlink" title="WindoWs自带命令端口扫描及powershell"></a>WindoWs自带命令端口扫描及powershell</h1><h2 id="bat批量ping获取iP"><a href="#bat批量ping获取iP" class="headerlink" title="bat批量ping获取iP"></a>bat批量ping获取iP</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="built_in">setlocal</span> ENABLEDELAYEDEXPANSION</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq eol=- skip=<span class="number">1</span> delims=\" <span class="variable">%%j</span> <span class="keyword">IN</span> (`<span class="built_in">net</span> view ^| <span class="built_in">find</span> "命令成功完成" /v ^|<span class="built_in">find</span> "The command completed successfully." /v`) <span class="keyword">DO</span> (</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq delims=" <span class="variable">%%i</span> <span class="keyword">IN</span> (`@<span class="built_in">ping</span> -n <span class="number">1</span> -<span class="number">4</span> <span class="variable">%%j</span> ^| <span class="built_in">findstr</span> "Pinging"`) <span class="keyword">DO</span> (</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq tokens=<span class="number">2</span> delims=[]" <span class="variable">%%k</span> <span class="keyword">IN</span> (`<span class="built_in">echo</span> <span class="variable">%%i</span>`) <span class="keyword">DO</span> (<span class="built_in">echo</span> <span class="variable">%%k</span> <span class="variable">%%j</span>)</div><div class="line">)</div><div class="line">)</div></pre></td></tr></table></figure>
+<h2 id="内网无工具扫描"><a href="#内网无工具扫描" class="headerlink" title="内网无工具扫描"></a>内网无工具扫描</h2><p>一条 cmd 命令解决：</p>
+<blockquote>
+<p>for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”<br>ping 整个 c 段，只输出有响应的主机。</p>
+<p>% H” g% Q+ _6 q- P7 t<br>更变态的：</p>
+<p>4 o4 g8 X- v9 x&amp; w<br>域机器对应 IP</p>
+<p>FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |<br>find /i “ttl” &amp; echo.)<br>把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。</p>
+</blockquote>
+<p>找主机名</p>
+<blockquote>
+<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>B 段查找</p>
+<p>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>Win7</p>
+<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>改成</p>
+<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”<br>就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”）</p>
+</blockquote>
+<p>另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境</p>
+<h2 id="PowerShell-IPv4NetworkScanner"><a href="#PowerShell-IPv4NetworkScanner" class="headerlink" title="PowerShell_IPv4NetworkScanner"></a>PowerShell_IPv4NetworkScanner</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div><div class="line"></div><div class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div><div class="line"></div><div class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div></pre></td></tr></table></figure>
+<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -EndIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">20</span></div><div class="line"></div><div class="line">IPv4Address   Status Hostname</div><div class="line">-----------   ------ --------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span> Up     fritz.box</div></pre></td></tr></table></figure>
+<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -Mask <span class="number">255</span>.<span class="number">255</span>.<span class="number">255</span>.<span class="number">0</span> -DisableDNSResolving</div><div class="line"></div><div class="line">IPv4Address    Status</div><div class="line">-----------    ------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up</div></pre></td></tr></table></figure>
+<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -CIDR <span class="number">25</span> -EnableMACResolving</div><div class="line"></div><div class="line">IPv4Address    Status Hostname           MAC               Vendor</div><div class="line">----------- ------ --------           ---               ------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up     fritz.box          XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up     XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation</div></pre></td></tr></table></figure>
+<p>下载链接: <a href="https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git</a></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截</p>
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="http://wolvez.club/?p=480" rel="external nofollow noopener noreferrer" target="_blank">nmap语法</a></li>
+<li><a href="http://www.mottoin.com/92978.html" rel="external nofollow noopener noreferrer" target="_blank">内网渗透测试定位技术总结</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/渗透教程/" rel="tag"># 渗透教程</a>
+          
+            <a href="/tags/nmap中文教程/" rel="tag"># nmap中文教程</a>
+          
+            <a href="/tags/端口扫描/" rel="tag"># 端口扫描</a>
+          
+            <a href="/tags/漏洞扫描/" rel="tag"># 漏洞扫描</a>
+          
+            <a href="/tags/内网渗透/" rel="tag"># 内网渗透</a>
+          
+            <a href="/tags/漏洞利用/" rel="tag"># 漏洞利用</a>
+          
+            <a href="/tags/防火墙/" rel="tag"># 防火墙</a>
+          
+            <a href="/tags/powershell端口扫描/" rel="tag"># powershell端口扫描</a>
+          
+            <a href="/tags/bat端口扫描/" rel="tag"># bat端口扫描</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/14/CVE-2017-8759-Exploit/" rel="next" title="CVE-2017-8759-微软.net远程代码执行漏洞复现">
+                <i class="fa fa-chevron-left"></i> CVE-2017-8759-微软.net远程代码执行漏洞复现
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="KillRootKit">
+          <p class="site-author-name" itemprop="name">KillRootKit</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">15</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sys7em.info/" title="A.tm.K" target="_blank">A.tm.K</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.xx8.uk/" title="Lan酱的新小窝" target="_blank">Lan酱的新小窝</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.mayter.cn/" title="Mayter’s Blog" target="_blank">Mayter’s Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http:/sslcvm.com" title="王先生的网站" target="_blank">王先生的网站</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/backlion/" title="渗透测试中心" target="_blank" rel="external nofollow noopener noreferrer">渗透测试中心</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://somd5.com/" title="SoMd5" target="_blank" rel="external nofollow noopener noreferrer">SoMd5</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.chamd5.org/" title="ChaMd5" target="_blank" rel="external nofollow noopener noreferrer">ChaMd5</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://censys.io/" title="Censys" target="_blank" rel="external nofollow noopener noreferrer">Censys</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.shodan.io/" title="ShoDan" target="_blank" rel="external nofollow noopener noreferrer">ShoDan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.virustotal.com/" title="VirusTotal" target="_blank" rel="external nofollow noopener noreferrer">VirusTotal</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.appinn.com/" title="小众软件" target="_blank" rel="external nofollow noopener noreferrer">小众软件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wowubuntu.com/markdown/index.html" title="MarkDown语法说明" target="_blank" rel="external nofollow noopener noreferrer">MarkDown语法说明</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/lhlsec/webshell" title="Webshell-lhlsec" target="_blank" rel="external nofollow noopener noreferrer">Webshell-lhlsec</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/tennc/webshell" title="Webshell-tennc" target="_blank" rel="external nofollow noopener noreferrer">Webshell-tennc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhaohuini.com/" title="找回你,注册过哪些网站" target="_blank" rel="external nofollow noopener noreferrer">找回你,注册过哪些网站</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://10minutemail.org/" title="十分钟邮箱" target="_blank" rel="external nofollow noopener noreferrer">十分钟邮箱</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tool.chacuo.net/mailanonymous/" title="伪造邮件" target="_blank" rel="external nofollow noopener noreferrer">伪造邮件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.haoweichi.com/" title="随机生成世界各国公民身份" target="_blank" rel="external nofollow noopener noreferrer">随机生成世界各国公民身份</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://cha.hx99.net/" title="Hx99社工库" target="_blank" rel="external nofollow noopener noreferrer">Hx99社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sgk.70sec.com/" title="70Sec社工库" target="_blank" rel="external nofollow noopener noreferrer">70Sec社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://boy.findmima.com/" title="FindMima" target="_blank" rel="external nofollow noopener noreferrer">FindMima</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://163.donothackme.club/" title="DonotHackme社工库" target="_blank" rel="external nofollow noopener noreferrer">DonotHackme社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://scanner.baidu.com/" title="在线WebShell扫描" target="_blank" rel="external nofollow noopener noreferrer">在线WebShell扫描</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.objectif-securite.ch/ophcrack.php" title="OphCrack" target="_blank" rel="external nofollow noopener noreferrer">OphCrack</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#0x00-简述"><span class="nav-number">1.</span> <span class="nav-text">0x00 简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#0x01-命令及参数介绍"><span class="nav-number">2.</span> <span class="nav-text">0x01 命令及参数介绍</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#常见端口扫描"><span class="nav-number">2.1.</span> <span class="nav-text">常见端口扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#输出"><span class="nav-number">2.2.</span> <span class="nav-text">输出</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Nmap端口6个状态"><span class="nav-number">2.3.</span> <span class="nav-text">Nmap端口6个状态</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用实例"><span class="nav-number">2.4.</span> <span class="nav-text">使用实例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#获取远程主机的系统类型及开放端口"><span class="nav-number">2.4.1.</span> <span class="nav-text">获取远程主机的系统类型及开放端口</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#获取ip和mac地址："><span class="nav-number">2.4.2.</span> <span class="nav-text">获取ip和mac地址：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#扫描存活主机"><span class="nav-number">2.4.3.</span> <span class="nav-text">扫描存活主机</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#漏洞探测"><span class="nav-number">2.5.</span> <span class="nav-text">漏洞探测</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫描常见端口"><span class="nav-number">2.6.</span> <span class="nav-text">扫描常见端口:</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#扫描巨大网络"><span class="nav-number">2.7.</span> <span class="nav-text">扫描巨大网络</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#WindoWs自带命令端口扫描及powershell"><span class="nav-number">3.</span> <span class="nav-text">WindoWs自带命令端口扫描及powershell</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#bat批量ping获取iP"><span class="nav-number">3.1.</span> <span class="nav-text">bat批量ping获取iP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#内网无工具扫描"><span class="nav-number">3.2.</span> <span class="nav-text">内网无工具扫描</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#PowerShell-IPv4NetworkScanner"><span class="nav-number">3.3.</span> <span class="nav-text">PowerShell_IPv4NetworkScanner</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Syntax"><span class="nav-number">3.3.1.</span> <span class="nav-text">Syntax</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-1"><span class="nav-number">3.3.2.</span> <span class="nav-text">Example 1</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-2"><span class="nav-number">3.3.3.</span> <span class="nav-text">Example 2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Example-3"><span class="nav-number">3.3.4.</span> <span class="nav-text">Example 3</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">4.</span> <span class="nav-text">结语</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">5.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">KillRootKit</span>
+  <!-- Fuck Coding Page广告 -->
+  <div class="powered-by">
+  </div>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></span>
+</div>
+<!--以下3行为一条竖线和Coding Page
+  <div class="powered-by">
+  </div>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+</div>-->
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow noopener noreferrer" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://killlan.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/';
+          this.page.identifier = '2017/09/16/Nmap-Chinese-Course/';
+          this.page.title = 'Nmap 中文教程';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://killlan.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PyYV1PvEyvCEoeOFXHfzLGVo-gzGzoHsz", "EUErOjAe0u0PsGxAtFIo3gc8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
