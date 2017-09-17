@@ -3,6 +3,7 @@ Allow: /
 Allow: /archives/
 Allow: /categories/
 Allow: /about/
+Allow: /WooyunDrops/
 
 Disallow: /vendors/
 Disallow: /js/
