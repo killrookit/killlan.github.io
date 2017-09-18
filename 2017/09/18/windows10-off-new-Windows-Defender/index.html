@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+  <link href="//lib.baomitu.com/fancybox/2.1.5/jquery.fancybox.min.cs" rel="stylesheet" type="text/css">
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.proxy.ustclug.org/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+  
+
+<link href="//lib.baomitu.com/font-awesome/4.6.2/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
+
+
+  <meta name="keywords" content="win10,删除最新Windows Defender,关闭最新Windows Defender,打开windows Defender,删除杀毒软件,组策略,注册表,">
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico?v=5.1.2">
+
+
+
+
+
+
+<meta name="description" content="简述Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Wi">
+<meta name="keywords" content="win10,删除最新Windows Defender,关闭最新Windows Defender,打开windows Defender,删除杀毒软件,组策略,注册表">
+<meta property="og:type" content="article">
+<meta property="og:title" content="windows10关闭最新Windows Defender">
+<meta property="og:url" content="http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/index.html">
+<meta property="og:site_name" content="KillLan&#39;sBlog">
+<meta property="og:description" content="简述Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Wi">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/8135e4a1df896c4344fafc9b4f07d32f.png">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/2808ec3c8f3b6bbeb389c7a04af32bf0.png">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/681df75e8df08cf9a0a549b82c65d3c5.png">
+<meta property="og:updated_time" content="2017-09-18T00:52:02.084Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="windows10关闭最新Windows Defender">
+<meta name="twitter:description" content="简述Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Wi">
+<meta name="twitter:image" content="http://ovqjzu5ds.bkt.clouddn.com/8135e4a1df896c4344fafc9b4f07d32f.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    sidebar: {"position":"right","display":"post","offset":12,"offset_float":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: 'S8F1O4WUNA',
+      apiKey: '0a36672a03d577251de0cd5b5f644c9d',
+      indexName: 'indexName',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/">
+
+
+
+
+
+  <title>windows10关闭最新Windows Defender | KillLan'sBlog</title>
+  
+
+
+
+
+
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "https://hm.baidu.com/hm.js?13f430ddbef1b04a8dd2ef35f888085a";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+
+
+
+
+
+
+  <div style="display: none;">
+    <script src="//s95.cnzz.com/z_stat.php?id=1264445144&web_id=1264445144" language="JavaScript"></script>
+  </div>
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-right page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">KillLan'sBlog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <h1 class="site-subtitle" itemprop="description">关注内网渗透与防御</h1>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-wooyundrops">
+          <a href="/WooyunDrops" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br>
+            
+            WooyunDrops
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            关于
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KillRootKit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KillLan'sBlog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h2 class="post-title" itemprop="name headline">windows10关闭最新Windows Defender</h2>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-18T01:36:18+08:00">
+                2017-09-18
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术问题解答/" itemprop="url" rel="index">
+                    <span itemprop="name">技术问题解答</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/18/windows10-off-new-Windows-Defender/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/18/windows10-off-new-Windows-Defender/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/18/windows10-off-new-Windows-Defender/" class="leancloud_visitors" data-flag-title="windows10关闭最新Windows Defender">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Windows 8中与Microsoft Security Essentials集成。<br>Windows Defender不像某些其他同类免费产品一样只能扫描系统，还可以对系统进行实时监控，移除已经安装的ActiveX插件，清除大多数微软的程序和其他常用程序的历史纪录。</p>
+<h1 id="组策略-amp-注册表关闭最新Windows-Defender"><a href="#组策略-amp-注册表关闭最新Windows-Defender" class="headerlink" title="组策略&amp;注册表关闭最新Windows Defender"></a>组策略&amp;注册表关闭最新Windows Defender</h1><h2 id="使用组策略关闭最新Windows-Defender"><a href="#使用组策略关闭最新Windows-Defender" class="headerlink" title="使用组策略关闭最新Windows Defender"></a>使用组策略关闭最新Windows Defender</h2><p>本地组策略编辑器仅在Windows 10 Pro，Enterprise和Education 版本中可用。</p>
+<p>所有版本可以使用下面的注册表。</p>
+<p>打开步骤:开始-运行[win+r]-输入gpedit.msc</p>
+<p>win+r=键盘windows图标+r键</p>
+<p><img src="http://ovqjzu5ds.bkt.clouddn.com/8135e4a1df896c4344fafc9b4f07d32f.png" alt="gpedit"></p>
+<p>打开右侧菜单栏选择计算机配置-管理模板-Windows 组件-Windows Defender 防病毒程序-关闭 Windows Defender 防病毒程序</p>
+<p>默认是未配置,我先前启用了</p>
+<p><img src="http://ovqjzu5ds.bkt.clouddn.com/2808ec3c8f3b6bbeb389c7a04af32bf0.png" alt="off windows defender"></p>
+<p><img src="http://ovqjzu5ds.bkt.clouddn.com/681df75e8df08cf9a0a549b82c65d3c5.png" alt="start"></p>
+<p>选择已启用,点击确定,然后关闭组策略</p>
+<h2 id="使用注册表关闭最新Windows-Defender"><a href="#使用注册表关闭最新Windows-Defender" class="headerlink" title="使用注册表关闭最新Windows Defender"></a>使用注册表关闭最新Windows Defender</h2><p>使用REG文件打开或关闭Windows Defender Antivirus</p>
+<blockquote>
+<p>下面的.reg文件将添加和修改下面的注册表项中的DWORD值。</p>
+<p>HKEY_LOCAL_MACHINE \ SOFTWARE \ Policies \ Microsoft \ Windows Defender</p>
+<p>DisableAntiSpyware DWORD</p>
+<p>(delete) or 0 = On<br>1 = Off</p>
+</blockquote>
+<h3 id="关闭Windows-Defender-Antivirus"><a href="#关闭Windows-Defender-Antivirus" class="headerlink" title="关闭Windows Defender Antivirus"></a>关闭Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为关闭windef.reg<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</div><div class="line">"DisableAntiSpyware"=dword:<span class="number">00000001</span></div></pre></td></tr></table></figure></p>
+<h3 id="开启Windows-Defender-Antivirus"><a href="#开启Windows-Defender-Antivirus" class="headerlink" title="开启Windows Defender Antivirus"></a>开启Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为开启windef.reg<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</div><div class="line">"DisableAntiSpyware"=-</div></pre></td></tr></table></figure></p>
+<p><a href="http://ovqjzu5ds.bkt.clouddn.com/off_on_windefreg.zip" rel="external nofollow noopener noreferrer" target="_blank">点我下载:关闭和开启脚本</a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ul>
+<li><a href="https://zh.wikipedia.org/zh-hans/Windows_Defender" rel="external nofollow noopener noreferrer" target="_blank">Windows Defender</a></li>
+<li><a href="https://www.tenforums.com/tutorials/5918-turn-off-windows-defender-windows-10-a.html" rel="external nofollow noopener noreferrer" target="_blank">Turn On or Off Windows Defender in Windows 10</a></li>
+</ul>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/win10/" rel="tag"># win10</a>
+          
+            <a href="/tags/删除最新Windows-Defender/" rel="tag"># 删除最新Windows Defender</a>
+          
+            <a href="/tags/关闭最新Windows-Defender/" rel="tag"># 关闭最新Windows Defender</a>
+          
+            <a href="/tags/打开windows-Defender/" rel="tag"># 打开windows Defender</a>
+          
+            <a href="/tags/删除杀毒软件/" rel="tag"># 删除杀毒软件</a>
+          
+            <a href="/tags/组策略/" rel="tag"># 组策略</a>
+          
+            <a href="/tags/注册表/" rel="tag"># 注册表</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/16/Nmap-Chinese-Course/" rel="next" title="Nmap 中文教程">
+                <i class="fa fa-chevron-left"></i> Nmap 中文教程
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="KillRootKit">
+          <p class="site-author-name" itemprop="name">KillRootKit</p>
+           
+              <p class="site-description motion-element" itemprop="description"></p>
+           
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-tags">
+              <a href="/tags/index.html">
+                <span class="site-state-item-count">22</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              Links
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sys7em.info/" title="A.tm.K" target="_blank">A.tm.K</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.xx8.uk/" title="Lan酱的新小窝" target="_blank">Lan酱的新小窝</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.mayter.cn/" title="Mayter’s Blog" target="_blank">Mayter’s Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.duoluosb.com/" title="堕落's Blog" target="_blank">堕落's Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://04z.net/" title="Evi1oX's Blog" target="_blank">Evi1oX's Blog</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sslcvm.com/" title="王先生的网站" target="_blank">王先生的网站</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.cnblogs.com/backlion/" title="渗透测试中心" target="_blank" rel="external nofollow noopener noreferrer">渗透测试中心</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://somd5.com/" title="SoMd5" target="_blank" rel="external nofollow noopener noreferrer">SoMd5</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.chamd5.org/" title="ChaMd5" target="_blank" rel="external nofollow noopener noreferrer">ChaMd5</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://censys.io/" title="Censys" target="_blank" rel="external nofollow noopener noreferrer">Censys</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.shodan.io/" title="ShoDan" target="_blank" rel="external nofollow noopener noreferrer">ShoDan</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://www.virustotal.com/" title="VirusTotal" target="_blank" rel="external nofollow noopener noreferrer">VirusTotal</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.appinn.com/" title="小众软件" target="_blank" rel="external nofollow noopener noreferrer">小众软件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://wowubuntu.com/markdown/index.html" title="MarkDown语法说明" target="_blank" rel="external nofollow noopener noreferrer">MarkDown语法说明</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/lhlsec/webshell" title="Webshell-lhlsec" target="_blank" rel="external nofollow noopener noreferrer">Webshell-lhlsec</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://github.com/tennc/webshell" title="Webshell-tennc" target="_blank" rel="external nofollow noopener noreferrer">Webshell-tennc</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.zhaohuini.com/" title="找回你,注册过哪些网站" target="_blank" rel="external nofollow noopener noreferrer">找回你,注册过哪些网站</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://10minutemail.org/" title="十分钟邮箱" target="_blank" rel="external nofollow noopener noreferrer">十分钟邮箱</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://tool.chacuo.net/mailanonymous/" title="伪造邮件" target="_blank" rel="external nofollow noopener noreferrer">伪造邮件</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.haoweichi.com/" title="随机生成世界各国公民身份" target="_blank" rel="external nofollow noopener noreferrer">随机生成世界各国公民身份</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://cha.hx99.net/" title="Hx99社工库" target="_blank" rel="external nofollow noopener noreferrer">Hx99社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://sgk.70sec.com/" title="70Sec社工库" target="_blank" rel="external nofollow noopener noreferrer">70Sec社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://boy.findmima.com/" title="FindMima" target="_blank" rel="external nofollow noopener noreferrer">FindMima</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://163.donothackme.club/" title="DonotHackme社工库" target="_blank" rel="external nofollow noopener noreferrer">DonotHackme社工库</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://scanner.baidu.com/" title="在线WebShell扫描" target="_blank" rel="external nofollow noopener noreferrer">在线WebShell扫描</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.objectif-securite.ch/ophcrack.php" title="OphCrack" target="_blank" rel="external nofollow noopener noreferrer">OphCrack</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#组策略-amp-注册表关闭最新Windows-Defender"><span class="nav-number">2.</span> <span class="nav-text">组策略&注册表关闭最新Windows Defender</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#使用组策略关闭最新Windows-Defender"><span class="nav-number">2.1.</span> <span class="nav-text">使用组策略关闭最新Windows Defender</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#使用注册表关闭最新Windows-Defender"><span class="nav-number">2.2.</span> <span class="nav-text">使用注册表关闭最新Windows Defender</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭Windows-Defender-Antivirus"><span class="nav-number">2.2.1.</span> <span class="nav-text">关闭Windows Defender Antivirus</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#开启Windows-Defender-Antivirus"><span class="nav-number">2.2.2.</span> <span class="nav-text">开启Windows Defender Antivirus</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考"><span class="nav-number">2.3.</span> <span class="nav-text">参考</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2017</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">KillRootKit</span>
+  <!-- Fuck Coding Page广告 -->
+  <div class="powered-by">
+  </div>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold" rel="external nofollow noopener noreferrer" target="_blank">Coding Pages</a></span>
+</div>
+<!--以下3行为一条竖线和Coding Page
+  <div class="powered-by">
+  </div>
+  <span>Hosted by <a href="https://pages.coding.me" style="font-weight: bold">Coding Pages</a></span>
+</div>-->
+
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io" rel="external nofollow noopener noreferrer" target="_blank">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next" rel="external nofollow noopener noreferrer" target="_blank">
+    NexT.Mist
+  </a>
+</div>
+
+
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="//lib.baomitu.com/fastclick/1.0.6/fastclick.min.js"></script>
+
+  
+  <script type="text/javascript" src="//cdn.staticfile.org/jquery_lazyload/1.9.7/jquery.lazyload.min.js"></script>
+
+  
+  <script type="text/javascript" src="//lib.baomitu.com/velocity/1.2.1/velocity.min.js"></script>
+
+  
+  <script type="text/javascript" src="//lib.baomitu.com/velocity/1.2.1/velocity.ui.min.js"></script>
+
+  
+  <script type="text/javascript" src="//lib.baomitu.com/fancybox/2.1.5/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.2"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.2"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.2"></script>
+
+
+
+  
+
+
+  
+
+    
+      <script id="dsq-count-scr" src="https://killlan.disqus.com/count.js" async></script>
+    
+
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/';
+          this.page.identifier = '2017/09/18/windows10-off-new-Windows-Defender/';
+          this.page.title = 'windows10关闭最新Windows Defender';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://killlan.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
+    
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js"></script>
+  <script>AV.initialize("PyYV1PvEyvCEoeOFXHfzLGVo-gzGzoHsz", "EUErOjAe0u0PsGxAtFIo3gc8");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
