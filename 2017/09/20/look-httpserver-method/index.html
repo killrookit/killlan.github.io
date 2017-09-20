@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="KillLan,安全博客,黑客网站,黑客技术,黑客工具,信息安全,web安全,网络安全,系统安全,漏洞利用,渗透测试工具,内网渗透,局域网攻击,社会工程学,黑客社工">
+  <meta name="keywords" content="浏览器,httpserver信息,网站,chrome,">
 
 
 
@@ -98,16 +98,22 @@
 
 
 
-<meta name="description" content="KillLan是一个研究内网的奇淫技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KillLan&#39;sBlog">
-<meta property="og:url" content="http://www.killlan.com/tags/漏洞利用/index.html">
+<meta name="description" content="简述 HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。 手工具体步骤1、打开谷歌浏览器 2、地址栏输入”www.shouyihuo.com”,这个Url是我随便找的 3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目 4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Doc">
+<meta name="keywords" content="浏览器,httpserver信息,网站,chrome">
+<meta property="og:type" content="article">
+<meta property="og:title" content="手工查看当前网站的HTTPSERVER信息">
+<meta property="og:url" content="http://www.killlan.com/2017/09/20/look-httpserver-method/index.html">
 <meta property="og:site_name" content="KillLan&#39;sBlog">
-<meta property="og:description" content="KillLan是一个研究内网的奇淫技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
+<meta property="og:description" content="简述 HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。 手工具体步骤1、打开谷歌浏览器 2、地址栏输入”www.shouyihuo.com”,这个Url是我随便找的 3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目 4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Doc">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/41e0af1d9a5b8887bc2adfe271582f9f.png">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/9d046df30df64d5dcf06f818cc1d2900.png">
+<meta property="og:image" content="http://ovqjzu5ds.bkt.clouddn.com/3f57eb9b0bf8bf39880bf710bb943014.png">
+<meta property="og:updated_time" content="2017-09-20T13:20:25.818Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KillLan&#39;sBlog">
-<meta name="twitter:description" content="KillLan是一个研究内网的奇淫技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
+<meta name="twitter:title" content="手工查看当前网站的HTTPSERVER信息">
+<meta name="twitter:description" content="简述 HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。 手工具体步骤1、打开谷歌浏览器 2、地址栏输入”www.shouyihuo.com”,这个Url是我随便找的 3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目 4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Doc">
+<meta name="twitter:image" content="http://ovqjzu5ds.bkt.clouddn.com/41e0af1d9a5b8887bc2adfe271582f9f.png">
 
 
 
@@ -136,13 +142,13 @@
 
 
 
-  <link rel="canonical" href="http://www.killlan.com/tags/漏洞利用/">
+  <link rel="canonical" href="http://www.killlan.com/2017/09/20/look-httpserver-method/">
 
 
 
 
 
-  <title>标签: 漏洞利用 | KillLan'sBlog</title>
+  <title>手工查看当前网站的HTTPSERVER信息 | KillLan'sBlog</title>
   
 
 
@@ -183,7 +189,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -309,78 +315,205 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>漏洞利用<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.killlan.com/2017/09/20/look-httpserver-method/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KillRootKit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KillLan'sBlog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/16/Nmap-Chinese-Course/" itemprop="url">
-              
-                <span itemprop="name">Nmap 中文教程</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">手工查看当前网站的HTTPSERVER信息</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-09-16T02:39:20+08:00" content="2017-09-16">
-          09-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-20T20:31:36+08:00">
+                2017-09-20
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术问题解答/" itemprop="url" rel="index">
+                    <span itemprop="name">技术问题解答</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/09/20/look-httpserver-method/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2017/09/20/look-httpserver-method/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2017/09/20/look-httpserver-method/" class="leancloud_visitors" data-flag-title="手工查看当前网站的HTTPSERVER信息">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
-        
+      
 
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h3 class="post-title">
-        
-            <a class="post-title-link" href="/2017/09/14/CVE-2017-8759-Exploit/" itemprop="url">
-              
-                <span itemprop="name">CVE-2017-8759-微软.net远程代码执行漏洞复现</span>
-              
-            </a>
-        
-      </h3>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-09-14T00:55:54+08:00" content="2017-09-14">
-          09-14
-        </time>
-      </div>
-
-    </header>
-  </article>
-
+      
+        <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p> HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。</p>
+<h1 id="手工具体步骤"><a href="#手工具体步骤" class="headerlink" title="手工具体步骤"></a>手工具体步骤</h1><p>1、打开谷歌浏览器</p>
+<p>2、地址栏输入”www.shouyihuo.com”,这个Url是我随便找的</p>
+<p>3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目</p>
+<p>4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Dock to boottom”</p>
+<p><img src="http://ovqjzu5ds.bkt.clouddn.com/41e0af1d9a5b8887bc2adfe271582f9f.png" alt="dock to boottom"></p>
+<p>5、栏目就会到网页页面下方,在栏目菜单栏选择第三个”Network”浏览器刷新页面就会有一堆Url参数<br><img src="http://ovqjzu5ds.bkt.clouddn.com/9d046df30df64d5dcf06f818cc1d2900.png" alt="elements network"></p>
+<p>6、我一般选择第一个链接点击进去,就可以看到当前Url的HTTPSERVER信息</p>
+<p><img src="http://ovqjzu5ds.bkt.clouddn.com/3f57eb9b0bf8bf39880bf710bb943014.png" alt="look httpserver"></p>
+<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>此方法可以在所有浏览器使用,但是在操作步骤可能略有不同.</p>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/浏览器/" rel="tag"># 浏览器</a>
+          
+            <a href="/tags/httpserver信息/" rel="tag"># httpserver信息</a>
+          
+            <a href="/tags/网站/" rel="tag"># 网站</a>
+          
+            <a href="/tags/chrome/" rel="tag"># chrome</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/18/acunetix-web-vulnerability-scanner-11/" rel="next" title="AWVS各类脚本">
+                <i class="fa fa-chevron-left"></i> AWVS各类脚本
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -388,6 +521,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -408,8 +552,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="KillRootKit">
           <p class="site-author-name" itemprop="name">KillRootKit</p>
@@ -507,6 +660,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#手工具体步骤"><span class="nav-number">2.</span> <span class="nav-text">手工具体步骤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#结语"><span class="nav-number">3.</span> <span class="nav-text">结语</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -629,10 +798,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -650,6 +819,18 @@
       <script id="dsq-count-scr" src="https://killlan.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.killlan.com/2017/09/20/look-httpserver-method/';
+          this.page.identifier = '2017/09/20/look-httpserver-method/';
+          this.page.title = '手工查看当前网站的HTTPSERVER信息';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://killlan.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   

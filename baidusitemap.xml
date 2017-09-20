@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
+    <lastmod>2017-09-20T13:20:25.818Z</lastmod>
+    <data>
+        <display>
+        <title>手工查看当前网站的HTTPSERVER信息</title>
+        <pubTime>2017-09-20T12:31:36.000Z</pubTime>
+        
+        <tag>浏览器</tag>
+         
+        <tag>httpserver信息</tag>
+         
+        <tag>网站</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
     <lastmod>2017-09-18T13:18:41.765Z</lastmod>
     <data>
@@ -91,8 +117,6 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
-        <tag>漏洞利用</tag>
-         
         <tag>渗透教程</tag>
          
         <tag>nmap中文教程</tag>
@@ -102,6 +126,8 @@
         <tag>漏洞扫描</tag>
          
         <tag>内网渗透</tag>
+         
+        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          

