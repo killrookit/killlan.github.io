@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://www.killlan.com/2017/09/24/haimawan-reset-pass/</loc>
+    <lastmod>2017-09-24T06:14:18.816Z</lastmod>
+    <data>
+        <display>
+        <title>海马玩模拟器密码清除</title>
+        <pubTime>2017-09-24T05:41:43.000Z</pubTime>
+        
+        <tag>安卓模拟器</tag>
+         
+        <tag>海马玩模拟器</tag>
+         
+        <tag>密码清除</tag>
+         
+        <tag>adb</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.killlan.com/2017/09/21/vpn-faq/</loc>
     <lastmod>2017-09-21T15:56:31.604Z</lastmod>
     <data>
@@ -143,6 +169,8 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
+        <tag>漏洞利用</tag>
+         
         <tag>渗透教程</tag>
          
         <tag>nmap中文教程</tag>
@@ -152,8 +180,6 @@
         <tag>漏洞扫描</tag>
          
         <tag>内网渗透</tag>
-         
-        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          
