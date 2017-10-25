@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.killlan.com/2017/10/25/commandline-query-domainloginlogon/</loc>
+    
+    <lastmod>2017-10-25T15:46:49.797Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.killlan.com/2017/10/01/sqlmap-bypass-waf/</loc>
     
     <lastmod>2017-10-01T12:14:02.657Z</lastmod>
