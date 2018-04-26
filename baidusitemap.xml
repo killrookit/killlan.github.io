@@ -4,6 +4,28 @@
 
     
   <url>
+    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
+    <lastmod>2018-04-26T07:32:58.681Z</lastmod>
+    <data>
+        <display>
+        <title>Kali Linux更新签名无效错误</title>
+        <pubTime>2018-04-26T07:12:30.000Z</pubTime>
+        
+        <tag>KaliLinux更新报错</tag>
+         
+        <tag>ED444FF07D8D0BF6</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.killlan.com/2017/09/13/anonymous-register-gmail/</loc>
     <lastmod>2017-11-19T15:37:41.265Z</lastmod>
     <data>
@@ -219,8 +241,6 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
-        <tag>漏洞利用</tag>
-         
         <tag>渗透教程</tag>
          
         <tag>nmap中文教程</tag>
@@ -230,6 +250,8 @@
         <tag>漏洞扫描</tag>
          
         <tag>内网渗透</tag>
+         
+        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          
