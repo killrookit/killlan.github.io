@@ -6,7 +6,7 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -454,10 +454,13 @@
 <blockquote>
 <p>常见VPN错误721解决方法</p>
 </blockquote>
-<p>1.单击“开始”，然后单击“运行”。<br>2.在“打开”框中，键入 regedit，然后单击“确定”。<br>3.在注册表编辑器中，找到以下子项<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\&#123;<span class="number">4</span>D36E972-E325-<span class="number">11</span>CE-BFC1-<span class="number">08002</span>bE10318&#125;\&lt;<span class="number">000</span>x&gt;</div></pre></td></tr></table></figure></p>
-<p>其中 <000x> 是 WAN 微型端口 (PPTP) 驱动程序的网络适配器。<br>4.在“编辑”菜单上，指向“新建”，然后单击“DWORD 值”。<br>5.键入 ValidateAddress，然后按 Enter。该值的默认设置为“1”（打开）；因此，您可以通过将其设置为“0”将其关闭。<br>6.退出注册表编辑器。<br>7.重新启动计算机。</000x></p>
+<p>1.单击“开始”，然后单击“运行”。<br>2.在“打开”框中，键入 regedit，然后单击“确定”。<br>3.在注册表编辑器中，找到以下子项</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\&#123;<span class="number">4</span>D36E972-E325-<span class="number">11</span>CE-BFC1-<span class="number">08002</span>bE10318&#125;\&lt;<span class="number">000</span>x&gt;</span><br></pre></td></tr></table></figure>
+
+<p>其中 &lt;000x&gt; 是 WAN 微型端口 (PPTP) 驱动程序的网络适配器。<br>4.在“编辑”菜单上，指向“新建”，然后单击“DWORD 值”。<br>5.键入 ValidateAddress，然后按 Enter。该值的默认设置为“1”（打开）；因此，您可以通过将其设置为“0”将其关闭。<br>6.退出注册表编辑器。<br>7.重新启动计算机。</p>
 <h2 id="错误-720-解决办法"><a href="#错误-720-解决办法" class="headerlink" title="错误 720 解决办法"></a>错误 720 解决办法</h2><p>vpn错误720定义是无法建立与远程计算机的连接。您可能需要更改此连接的网络设置。也可以简单理解成VPN服务器问题。<br>vpn错误720处理方法：<br>1.可能服务器问题，非用户问题，请向管理员反映；可能是服务器人过多，你可以尝试多连几次。<br>2.看看你电脑或者VPN服务器宽带连接是否正常。<br>3.还有另一种解决方法，重装TCP/IP协议:<br>（1）、开始——运行——regedit.exe，打开注册表编辑器，删除以下两个键：</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock</div><div class="line"></div><div class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock2</div></pre></td></tr></table></figure>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock</span><br><span class="line"></span><br><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock2</span><br></pre></td></tr></table></figure>
+
 <p>（2）、用记事本打开%winroot%\inf\nettcpip.inf文件，找到：<br>[MS_TCPIP.PrimaryInstall]<br>Characteristics = 0xa0 &lt;――――――把此处的0Xa0改为0x80 保存退出<br>（3）、打开本地连接的TCP/IP属性――-添加协议——从磁盘——浏览找到刚刚保存的 nettcpip.inf(%winroot%\inf\nettcpip.inf)文件，然后选择“TCP/IP协议”（不是选择那个TCP/IP 版本6）。<br>经过这一步之后，又返回网络连接的窗口，但这个时候，那个“卸载”按钮已经是可用的了。点这个 “卸载”按钮来把TCP/IP协议删除，然后重启一次机器。<br>（4）、重启后再照着第3步，重新安装一次TCP/IP协议便可。<br>（5）、再重启一次，这时应该可以了，可以照着需要，设置一下IP地址。</p>
 <h2 id="错误-769-解决办法"><a href="#错误-769-解决办法" class="headerlink" title="错误 769 解决办法"></a>错误 769 解决办法</h2><p>1.确保网络电缆已连接。即保证自己电脑可以顺利上网。<br>2.网络连接是否禁用。首先打开“我的电脑”→“控制面版”→“网络连接”，查看本地连接的是否处在 “禁用”状态，是的话只需双击本地连接，看到状态变为“已启用”即可。<br>3.网卡问题。若是连本地连接都没有的话，绝大部分情况是你网卡有问题；此时请检查网卡装好了没或网卡坏了。如果是网卡没装好重装即可。 如果是网卡坏了即时更换。例如：电脑中毒，把病毒删除之后出现VPN错误769代码，此时卸载网卡，重新搜索新硬件。重装网卡即可。<br>4.当本地能上网而连接不上VPN服务器。原因是当本机能上网并不代表你一定能连接到指定的VPN服务器，此时可以ping对应VPN服务器IP，如果 ping得通证明服务器没问题即可以连接上。导致的原因有VPN服务器没有开启或者你的电脑防火墙阻挡住VPN连接导致无法连接到目标。<br>5.硬件问题。例如：路由器不支持VPN，不过现在比较少，或者路由器自带防火墙阻挡了。<br>注意：出现VPN错误769代码，绝大多数是网卡被禁用，此时启用即可！造成的原因一般为：用户的误操作或一些防火墙软件、计算机病毒引起的。如果没有找到本地连接，一般是网卡的驱动程序丢了或计算机没有检测到网卡，此时需要重新安装即可。</p>
 <h2 id="错误-650-解决办法"><a href="#错误-650-解决办法" class="headerlink" title="错误 650 解决办法"></a>错误 650 解决办法</h2><p>在建立VPN时，远程计算机没有响应，断开连接，此时通常出现VPN错误650。<br>出现VPN错误650的原因：ADSL ISP服务器故障，网卡故障，非正常关机造成网络协议导致出错。<br>VPN错误650解决办法：检查ADSL信号灯是否能正确同步，检查网卡，删除所有网络组件重新安装网络。</p>
@@ -465,7 +468,9 @@
 <blockquote>
 <p>vpn错误711解决方法：</p>
 </blockquote>
-<p>1.启动Remote Access Connection Manager与Network Connections与Telephony服务。<br>2.启动方法一：开始-&gt;运行-&gt;在里面输入：services.msc -&gt;（双击）Remote Access Connection Manager与Network Connections与Telephony -&gt;启动这三项服务<br>3.启动方法二：新建一个文本文件（后缀为.txt）的文件，将下面的内容复制进去：<br><figure class="highlight bat"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">@<span class="built_in">echo</span>开启VPN执行环境必要系统服务</div><div class="line">@<span class="built_in">pause</span></div><div class="line">sc config TapiSrv <span class="built_in">start</span>= AUTO</div><div class="line">sc config Netman <span class="built_in">start</span>= AUTO</div><div class="line">sc config RasMan <span class="built_in">start</span>= AUTO</div><div class="line"><span class="built_in">Net</span> <span class="built_in">start</span> TapiSrv</div><div class="line"><span class="built_in">Net</span> <span class="built_in">start</span> RasMan</div><div class="line"><span class="built_in">Net</span> <span class="built_in">start</span> Netman</div><div class="line">@<span class="built_in">pause</span></div></pre></td></tr></table></figure></p>
+<p>1.启动Remote Access Connection Manager与Network Connections与Telephony服务。<br>2.启动方法一：开始-&gt;运行-&gt;在里面输入：services.msc -&gt;（双击）Remote Access Connection Manager与Network Connections与Telephony -&gt;启动这三项服务<br>3.启动方法二：新建一个文本文件（后缀为.txt）的文件，将下面的内容复制进去：</p>
+<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span>开启VPN执行环境必要系统服务</span><br><span class="line">@<span class="built_in">pause</span></span><br><span class="line">sc config TapiSrv <span class="built_in">start</span>= AUTO</span><br><span class="line">sc config Netman <span class="built_in">start</span>= AUTO</span><br><span class="line">sc config RasMan <span class="built_in">start</span>= AUTO</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> TapiSrv</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> RasMan</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> Netman</span><br><span class="line">@<span class="built_in">pause</span></span><br></pre></td></tr></table></figure>
+
 <p>点击菜单-&gt;文件-&gt;另存为；文件类型选“所有文件”；文件名“服务.bat”；保存好后双击“服务.bat”，即可完成系统服务设置。</p>
 <h2 id="错误-634-解决办法"><a href="#错误-634-解决办法" class="headerlink" title="错误 634 解决办法"></a>错误 634 解决办法</h2><p>远程访问VPN服务器不能在网络上注册你的计算机名称，这一般随着NetBIOS协议一起出现，但也可能随着tcp/ip或者ipx一起出现。通常，当地址已经在网络上使用时，会发生vpn错误634。如果对这方面不是很专业的请与系统管理员联系处理vpn错误634。</p>
 <h2 id="错误-678-解决办法"><a href="#错误-678-解决办法" class="headerlink" title="错误 678 解决办法"></a>错误 678 解决办法</h2><p>1.可能是vpn服务器人数过多，请尝试多连接几次 ；<br>2.可能是你装反了客户端，请重新安装客户端；<br>3.从上面定义不难看出，调制解调器或其他设备故障，检查号码，再拨号。如果是虚拟专用网络 (VPN) 连接，则检查目标服务器的主机名或 IP 地址，然后再次尝试连接。还要确保电话线(网线)插在调制解调器（网卡）的正确插槽中。<br>4.VPN pptp远程拨号错误678；<br>5.如果您是购买VPN用户直接联系商家解决；</p>
@@ -484,7 +489,7 @@
 <p>VPN错误756原因可能由以下几点造成的：</p>
 </blockquote>
 <p>1.在连这个VPN之前，可能已连接了另一个连接，但没有正常有效断开关闭。<br>2.这个VPN的帐号未正关闭，已经或仍在使用中。就像家里ADSL帐号没正常关闭,挂着，马上再连就连不上了,隔一会连接就OK了。<br>解决方法如下:<br>1.重启下电脑；如果电脑不能有效关闭先前的VPN连接，此时重启下电脑。<br>2.重启路由器。<br>3.也有可能是这种情况多数为VISTA或者windows 7系统用户，解决方法为：请用鼠标右键点软件，选择“以管理员身份运行”即可。</p>
-<ol>
+<ol start="4">
 <li>当系统为XP，出现VPN错误756是因为你在登陆过程中非正常中断，导致账号连接出现错误，出现这种情况最好的办法就是：点击网上邻居—–反键—–属性 —–虚拟网络 ，在虚拟网络里面看到 VPN网络连接断开 ，删除后重启计算机，然后再连接；如果无法删除，直接重启计算机，然后再删除后连接。</li>
 </ol>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>在使用VPN时很多问题会导致其无法正常使用,以上方法仅供参考.</p>
@@ -736,7 +741,7 @@
         <div class="copyright">
   
   &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

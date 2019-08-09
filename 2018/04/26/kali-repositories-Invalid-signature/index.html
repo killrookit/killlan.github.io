@@ -6,7 +6,7 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -435,8 +435,10 @@
       
 
       
-        <h1 id="错误回显结果"><a href="#错误回显结果" class="headerlink" title="错误回显结果"></a>错误回显结果</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">root@kali:~# apt-<span class="built_in">get</span> <span class="keyword">update</span></div><div class="line">Ge<span class="variable">t:1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease [<span class="number">30.5</span> kB]</div><div class="line">Err:<span class="number">1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease</div><div class="line">  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</div><div class="line">Fetched <span class="number">30.5</span> kB in <span class="number">2</span>s (<span class="number">10.4</span> kB/s)</div><div class="line">Reading package lists... Done</div><div class="line">W: An error occurred during the signature verification. The repository <span class="keyword">is</span> not updated <span class="built_in">and</span> the <span class="keyword">previous</span> <span class="built_in">index</span> <span class="keyword">files</span> will <span class="keyword">be</span> used. GPG error: http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease: The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</div><div class="line">W: Failed <span class="keyword">to</span> fetch http://http.kali.org/kali/dists/kali-rolling/InRelease  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</div><div class="line">W: Some <span class="built_in">index</span> <span class="keyword">files</span> failed <span class="keyword">to</span> download. They have been ignored, <span class="built_in">or</span> old ones used instead.</div></pre></td></tr></table></figure>
-<h1 id="修复命令"><a href="#修复命令" class="headerlink" title="修复命令"></a>修复命令</h1><figure class="highlight elixir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">root<span class="variable">@kali</span><span class="symbol">:~</span><span class="comment"># wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add</span></div><div class="line">OK</div></pre></td></tr></table></figure>
+        <h1 id="错误回显结果"><a href="#错误回显结果" class="headerlink" title="错误回显结果"></a>错误回显结果</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">Ge<span class="variable">t:1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease [<span class="number">30.5</span> kB]</span><br><span class="line">Err:<span class="number">1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease</span><br><span class="line">  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">Fetched <span class="number">30.5</span> kB in <span class="number">2</span>s (<span class="number">10.4</span> kB/s)</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: An error occurred during the signature verification. The repository <span class="keyword">is</span> not updated <span class="built_in">and</span> the <span class="keyword">previous</span> <span class="built_in">index</span> <span class="keyword">files</span> will <span class="keyword">be</span> used. GPG error: http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease: The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">W: Failed <span class="keyword">to</span> fetch http://http.kali.org/kali/dists/kali-rolling/InRelease  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">W: Some <span class="built_in">index</span> <span class="keyword">files</span> failed <span class="keyword">to</span> download. They have been ignored, <span class="built_in">or</span> old ones used instead.</span><br></pre></td></tr></table></figure>
+
+<h1 id="修复命令"><a href="#修复命令" class="headerlink" title="修复命令"></a>修复命令</h1><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@kali</span><span class="symbol">:~</span><span class="comment"># wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add</span></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
+
 <blockquote>
 <p>apt-get clean</p>
 <p>apt-get update</p>
@@ -682,7 +684,7 @@
         <div class="copyright">
   
   &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

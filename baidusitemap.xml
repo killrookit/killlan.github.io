@@ -4,30 +4,8 @@
 
     
   <url>
-    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
-    <lastmod>2018-04-26T07:32:58.681Z</lastmod>
-    <data>
-        <display>
-        <title>Kali Linux更新签名无效错误</title>
-        <pubTime>2018-04-26T07:12:30.000Z</pubTime>
-        
-        <tag>KaliLinux更新报错</tag>
-         
-        <tag>ED444FF07D8D0BF6</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.killlan.com/2017/09/13/anonymous-register-gmail/</loc>
-    <lastmod>2017-11-19T15:37:41.265Z</lastmod>
+    <lastmod>2019-08-09T16:54:27.981Z</lastmod>
     <data>
         <display>
         <title>匿名注册谷歌邮箱[实测可用]</title>
@@ -51,7 +29,7 @@
     
   <url>
     <loc>http://www.killlan.com/2017/10/25/commandline-query-domainloginlogon/</loc>
-    <lastmod>2017-10-25T15:46:49.797Z</lastmod>
+    <lastmod>2019-08-09T16:54:25.326Z</lastmod>
     <data>
         <display>
         <title>命令行获取域内登陆记录</title>
@@ -67,6 +45,142 @@
            
              
               <breadCrumb title="内网渗透" url="http://www.killlan.com/categories/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.killlan.com/2017/09/14/CVE-2017-8759-Exploit/</loc>
+    <lastmod>2019-08-09T16:54:23.114Z</lastmod>
+    <data>
+        <display>
+        <title>CVE-2017-8759-微软.net远程代码执行漏洞复现</title>
+        <pubTime>2017-09-13T16:55:54.000Z</pubTime>
+        
+        <tag>漏洞利用</tag>
+         
+        <tag>exploit</tag>
+         
+        <tag>cve-2017-8759</tag>
+         
+        <tag>微软漏洞</tag>
+         
+         
+           
+             
+              <breadCrumb title="漏洞利用" url="http://www.killlan.com/categories/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
+    <lastmod>2019-08-09T16:54:20.814Z</lastmod>
+    <data>
+        <display>
+        <title>手工查看当前网站的HTTPSERVER信息</title>
+        <pubTime>2017-09-20T12:31:36.000Z</pubTime>
+        
+        <tag>浏览器</tag>
+         
+        <tag>httpserver信息</tag>
+         
+        <tag>网站</tag>
+         
+        <tag>chrome</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/</loc>
+    <lastmod>2019-08-09T16:54:16.481Z</lastmod>
+    <data>
+        <display>
+        <title>windows10关闭最新Windows Defender</title>
+        <pubTime>2017-09-17T17:36:18.000Z</pubTime>
+        
+        <tag>win10</tag>
+         
+        <tag>删除最新Windows Defender</tag>
+         
+        <tag>关闭最新Windows Defender</tag>
+         
+        <tag>打开windows Defender</tag>
+         
+        <tag>删除杀毒软件</tag>
+         
+        <tag>组策略</tag>
+         
+        <tag>注册表</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
+    <lastmod>2019-08-09T16:53:41.134Z</lastmod>
+    <data>
+        <display>
+        <title>AWVS各类脚本</title>
+        <pubTime>2017-09-18T11:58:10.000Z</pubTime>
+        
+        <tag>acunetix web vulnerability scanner 11</tag>
+         
+        <tag>awvs11破解版版</tag>
+         
+        <tag>awvs11启动停止脚本</tag>
+         
+        <tag>awvs11批量扫描脚本</tag>
+         
+        <tag>漏洞扫描工具</tag>
+         
+        <tag>批处理脚本</tag>
+         
+         
+           
+             
+              <breadCrumb title="神兵利器" url="http://www.killlan.com/categories/%E7%A5%9E%E5%85%B5%E5%88%A9%E5%99%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
+    <lastmod>2018-04-26T07:32:58.681Z</lastmod>
+    <data>
+        <display>
+        <title>Kali Linux更新签名无效错误</title>
+        <pubTime>2018-04-26T07:12:30.000Z</pubTime>
+        
+        <tag>KaliLinux更新报错</tag>
+         
+        <tag>ED444FF07D8D0BF6</tag>
+         
+         
+           
+             
+              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
           
         </display>
     </data>
@@ -152,88 +266,6 @@
 
     
   <url>
-    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
-    <lastmod>2017-09-20T13:20:25.818Z</lastmod>
-    <data>
-        <display>
-        <title>手工查看当前网站的HTTPSERVER信息</title>
-        <pubTime>2017-09-20T12:31:36.000Z</pubTime>
-        
-        <tag>浏览器</tag>
-         
-        <tag>httpserver信息</tag>
-         
-        <tag>网站</tag>
-         
-        <tag>chrome</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
-    <lastmod>2017-09-18T13:18:41.765Z</lastmod>
-    <data>
-        <display>
-        <title>AWVS各类脚本</title>
-        <pubTime>2017-09-18T11:58:10.000Z</pubTime>
-        
-        <tag>acunetix web vulnerability scanner 11</tag>
-         
-        <tag>awvs11破解版版</tag>
-         
-        <tag>awvs11启动停止脚本</tag>
-         
-        <tag>awvs11批量扫描脚本</tag>
-         
-        <tag>漏洞扫描工具</tag>
-         
-        <tag>批处理脚本</tag>
-         
-         
-           
-             
-              <breadCrumb title="神兵利器" url="http://www.killlan.com/categories/%E7%A5%9E%E5%85%B5%E5%88%A9%E5%99%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.killlan.com/2017/09/14/CVE-2017-8759-Exploit/</loc>
-    <lastmod>2017-09-18T12:39:19.016Z</lastmod>
-    <data>
-        <display>
-        <title>CVE-2017-8759-微软.net远程代码执行漏洞复现</title>
-        <pubTime>2017-09-13T16:55:54.000Z</pubTime>
-        
-        <tag>漏洞利用</tag>
-         
-        <tag>exploit</tag>
-         
-        <tag>cve-2017-8759</tag>
-         
-        <tag>微软漏洞</tag>
-         
-         
-           
-             
-              <breadCrumb title="漏洞利用" url="http://www.killlan.com/categories/%E6%BC%8F%E6%B4%9E%E5%88%A9%E7%94%A8/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/</loc>
     <lastmod>2017-09-18T12:38:28.761Z</lastmod>
     <data>
@@ -241,6 +273,8 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
+        <tag>漏洞利用</tag>
+         
         <tag>渗透教程</tag>
          
         <tag>nmap中文教程</tag>
@@ -250,8 +284,6 @@
         <tag>漏洞扫描</tag>
          
         <tag>内网渗透</tag>
-         
-        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          
@@ -263,38 +295,6 @@
            
              
               <breadCrumb title="渗透教程" url="http://www.killlan.com/categories/%E6%B8%97%E9%80%8F%E6%95%99%E7%A8%8B/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/</loc>
-    <lastmod>2017-09-18T12:34:25.384Z</lastmod>
-    <data>
-        <display>
-        <title>windows10关闭最新Windows Defender</title>
-        <pubTime>2017-09-17T17:36:18.000Z</pubTime>
-        
-        <tag>win10</tag>
-         
-        <tag>删除最新Windows Defender</tag>
-         
-        <tag>关闭最新Windows Defender</tag>
-         
-        <tag>打开windows Defender</tag>
-         
-        <tag>删除杀毒软件</tag>
-         
-        <tag>组策略</tag>
-         
-        <tag>注册表</tag>
-         
-         
-           
-             
-              <breadCrumb title="技术问题解答" url="http://www.killlan.com/categories/%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98%E8%A7%A3%E7%AD%94/"/>
           
         </display>
     </data>

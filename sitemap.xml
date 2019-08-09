@@ -2,23 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
-    
-    <lastmod>2018-04-26T07:32:58.681Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.killlan.com/2017/09/13/anonymous-register-gmail/</loc>
     
-    <lastmod>2017-11-19T15:37:41.265Z</lastmod>
+    <lastmod>2019-08-09T16:54:27.981Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.killlan.com/2017/10/25/commandline-query-domainloginlogon/</loc>
     
-    <lastmod>2017-10-25T15:46:49.797Z</lastmod>
+    <lastmod>2019-08-09T16:54:25.326Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/14/CVE-2017-8759-Exploit/</loc>
+    
+    <lastmod>2019-08-09T16:54:23.114Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
+    
+    <lastmod>2019-08-09T16:54:20.814Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/</loc>
+    
+    <lastmod>2019-08-09T16:54:16.481Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
+    
+    <lastmod>2019-08-09T16:53:41.134Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
+    
+    <lastmod>2018-04-26T07:32:58.681Z</lastmod>
     
   </url>
   
@@ -44,37 +72,9 @@
   </url>
   
   <url>
-    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
-    
-    <lastmod>2017-09-20T13:20:25.818Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
-    
-    <lastmod>2017-09-18T13:18:41.765Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.killlan.com/2017/09/14/CVE-2017-8759-Exploit/</loc>
-    
-    <lastmod>2017-09-18T12:39:19.016Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/</loc>
     
     <lastmod>2017-09-18T12:38:28.761Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/</loc>
-    
-    <lastmod>2017-09-18T12:34:25.384Z</lastmod>
     
   </url>
   

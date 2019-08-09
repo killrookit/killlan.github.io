@@ -6,7 +6,7 @@
 
 
 <html class="theme-next mist use-motion" lang="zh-Hans">
-<head>
+<head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -436,8 +436,12 @@
 
       
         <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>海马玩模拟器是一款可以在电脑运行的安卓模拟器,由于某天需要在海马玩模拟器链接VPN,强制需要设置锁屏密码,过几天再用发现密码忘记了,于是翻资料找解决方法.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>1.打开海马玩模拟器默认安装目录win32：”C:\Program Files\Droid4X” Win64：”C:\Program Files (x86)\Droid4X”<br>2.快捷键win + r启动运行,输入CMD回车进入命令管理窗口,并输入”cd C:\Program Files (x86)\Droid4X”切换到海马玩模拟器安装目录<br>3.输入”adb devices”回车,返回信息如下:<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></div><div class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></div><div class="line"><span class="function">127.0.0.1:26944 <span class="title">device</span></span></div></pre></td></tr></table></figure></p>
-<p>请关闭模拟器或断开多余的USB<br>成功的返回信息:<br><figure class="highlight dos"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></div><div class="line"><span class="function">* <span class="title">daemon</span> <span class="title">not</span> <span class="title">running</span>. <span class="title">starting</span> <span class="title">it</span> <span class="title">now</span> <span class="title">on</span> <span class="title">port</span> 5037 *</span></div><div class="line"><span class="function">* <span class="title">daemon</span> <span class="title">started</span> <span class="title">successfully</span> *</span></div><div class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></div></pre></td></tr></table></figure></p>
+<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>1.打开海马玩模拟器默认安装目录win32：”C:\Program Files\Droid4X” Win64：”C:\Program Files (x86)\Droid4X”<br>2.快捷键win + r启动运行,输入CMD回车进入命令管理窗口,并输入”cd C:\Program Files (x86)\Droid4X”切换到海马玩模拟器安装目录<br>3.输入”adb devices”回车,返回信息如下:</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></span><br><span class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></span><br><span class="line"><span class="function">127.0.0.1:26944 <span class="title">device</span></span></span><br></pre></td></tr></table></figure>
+
+<p>请关闭模拟器或断开多余的USB<br>成功的返回信息:</p>
+<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></span><br><span class="line"><span class="function">* <span class="title">daemon</span> <span class="title">not</span> <span class="title">running</span>. <span class="title">starting</span> <span class="title">it</span> <span class="title">now</span> <span class="title">on</span> <span class="title">port</span> 5037 *</span></span><br><span class="line"><span class="function">* <span class="title">daemon</span> <span class="title">started</span> <span class="title">successfully</span> *</span></span><br><span class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></span><br></pre></td></tr></table></figure>
+
 <p>4.打开海马玩模拟器<br>5.在刚刚的命令行输入”adb -s 127.0.0.1:26944 shell rm -r -f /data/system/*.key”删除模拟器的密码wenjian,并回车<br>,没有任何返回信息即成功.<br>5.返回海马玩模拟器,点击密码框,回车即可进入系统.</p>
 <h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>步骤不算多,能真正解决问题即可<br>生活就是为了不断的去尝试和折腾,不去尝试怎么知道你就不能做呢?</p>
 
@@ -688,7 +692,7 @@
         <div class="copyright">
   
   &copy;  2017 - 
-  <span itemprop="copyrightYear">2018</span>
+  <span itemprop="copyrightYear">2019</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
