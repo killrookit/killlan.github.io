@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[微软输入法英文变大空格修复办法]]></title>
+    <url>%2F2019%2F08%2F18%2Fmicrosoft-Input-English-Becomebigger%2F</url>
+    <content type="text"><![CDATA[简述日常使用键盘输入过程中，可能误操作或触发到某快捷键导致输入法在英文状态下输入英文会变大有空格间距，来回输入法关闭切换实在让人头疼，谷歌、bing一波找到解决办法，因该问题遇见多次留个笔记以防以后忘记。 修复方法桌面右下角在中字鼠标右键–&gt;选中全半角(半角)(W)–&gt;选择半角(H) 如图 并且加上快捷键会非常秒哦 桌面右下角在中字鼠标右键–&gt;快捷键设置(K)–&gt; Shift + 空格 如图]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>输入法英文变大空格</tag>
+        <tag>微软输入法</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Kali Linux更新签名无效错误]]></title>
     <url>%2F2018%2F04%2F26%2Fkali-repositories-Invalid-signature%2F</url>
     <content type="text"><![CDATA[错误回显结果123456789root@kali:~# apt-get updateGet:1 http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease [30.5 kB]Err:1 http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;Fetched 30.5 kB in 2s (10.4 kB/s)Reading package lists... DoneW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease: The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;W: Failed to fetch http://http.kali.org/kali/dists/kali-rolling/InRelease The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;W: Some index files failed to download. They have been ignored, or old ones used instead. 修复命令12root@kali:~# wget -q -O - https://archive.kali.org/archive-key.asc | apt-key addOK apt-get clean apt-get update 参考文章*The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository]]></content>
@@ -122,12 +135,12 @@
         <category>渗透教程</category>
       </categories>
       <tags>
-        <tag>漏洞利用</tag>
         <tag>渗透教程</tag>
         <tag>nmap中文教程</tag>
         <tag>端口扫描</tag>
         <tag>漏洞扫描</tag>
         <tag>内网渗透</tag>
+        <tag>漏洞利用</tag>
         <tag>防火墙</tag>
         <tag>powershell端口扫描</tag>
         <tag>bat端口扫描</tag>
