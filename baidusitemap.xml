@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/</loc>
+    <lastmod>2019-08-31T12:32:52.325Z</lastmod>
+    <data>
+        <display>
+        <title>Powershell快速导出域HASH(DSInternals)</title>
+        <pubTime>2019-08-31T11:16:39.000Z</pubTime>
+        
+        <tag>域HASH,NTLMHASH,内网渗透,DSInternals</tag>
+         
+         
+           
+             
+              <breadCrumb title="内网渗透" url="http://www.killlan.com/categories/%E5%86%85%E7%BD%91%E6%B8%97%E9%80%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.killlan.com/2017/09/13/anonymous-register-gmail/</loc>
     <lastmod>2019-08-18T15:58:58.057Z</lastmod>
     <data>
@@ -297,8 +317,6 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
-        <tag>漏洞利用</tag>
-         
         <tag>渗透教程</tag>
          
         <tag>nmap中文教程</tag>
@@ -308,6 +326,8 @@
         <tag>漏洞扫描</tag>
          
         <tag>内网渗透</tag>
+         
+        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          

