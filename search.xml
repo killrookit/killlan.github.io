@@ -8,7 +8,10 @@
         <category>内网渗透</category>
       </categories>
       <tags>
-        <tag>域HASH,NTLMHASH,内网渗透,DSInternals</tag>
+        <tag>内网渗透</tag>
+        <tag>域HASH</tag>
+        <tag>NTLMHASH</tag>
+        <tag>DSInternals</tag>
       </tags>
   </entry>
   <entry>
@@ -146,12 +149,12 @@
         <category>渗透教程</category>
       </categories>
       <tags>
+        <tag>漏洞利用</tag>
         <tag>渗透教程</tag>
         <tag>nmap中文教程</tag>
         <tag>端口扫描</tag>
         <tag>漏洞扫描</tag>
         <tag>内网渗透</tag>
-        <tag>漏洞利用</tag>
         <tag>防火墙</tag>
         <tag>powershell端口扫描</tag>
         <tag>bat端口扫描</tag>
