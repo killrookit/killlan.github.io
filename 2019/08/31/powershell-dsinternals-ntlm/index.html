@@ -98,19 +98,19 @@
 
 
 
-<meta name="description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
+<meta name="description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： 1Install-Module DSInternals  2、PowerShell 3.0、4.0解压压缩包 123cd C:\test\DSInternalsImport-Mod">
 <meta name="keywords" content="内网渗透,域HASH,NTLMHASH,DSInternals">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Powershell快速导出域HASH(DSInternals)">
 <meta property="og:url" content="http://www.killlan.com/2019/08/31/powershell-dsinternals-ntlm/index.html">
 <meta property="og:site_name" content="KillLan&#39;sBlog">
-<meta property="og:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
+<meta property="og:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： 1Install-Module DSInternals  2、PowerShell 3.0、4.0解压压缩包 123cd C:\test\DSInternalsImport-Mod">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="http://cdn.killlan.com/20190831202038-201983120216.png">
-<meta property="og:updated_time" content="2019-08-31T12:36:50.960Z">
+<meta property="og:updated_time" content="2019-09-01T16:27:38.584Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Powershell快速导出域HASH(DSInternals)">
-<meta name="twitter:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： Install-Module DSInternals2、PowerShell 3.0、4.0解压压缩包cd C:\test\DSInternalsImport-Module .\D">
+<meta name="twitter:description" content="简述我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉 DSInternals使用方法1、PowerShell 5.0： 1Install-Module DSInternals  2、PowerShell 3.0、4.0解压压缩包 123cd C:\test\DSInternalsImport-Mod">
 <meta name="twitter:image" content="http://cdn.killlan.com/20190831202038-201983120216.png">
 
 
@@ -439,7 +439,11 @@
       
         <h1 id="简述"><a href="#简述" class="headerlink" title="简述"></a>简述</h1><p>我们都知道域NTDS.dit文件域用户越多文件越大,我见过的ntds文件起码以G为单位,把ntds大文件拉回到本地实属不便,并且易被流量监控设备发觉</p>
 <h1 id="DSInternals使用方法"><a href="#DSInternals使用方法" class="headerlink" title="DSInternals使用方法"></a>DSInternals使用方法</h1><p>1、PowerShell 5.0：</p>
-<p>Install-Module DSInternals<br>2、PowerShell 3.0、4.0<br>解压压缩包<br>cd C:\test\DSInternals<br>Import-Module .\DSInternals</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Install</span>-<span class="keyword">Module</span> DSInternals</span><br></pre></td></tr></table></figure>
+
+<p>2、PowerShell 3.0、4.0<br>解压压缩包</p>
+<figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cd <span class="keyword">C</span>:\test\DSInternals</span><br><span class="line"></span><br><span class="line"><span class="keyword">Import</span>-<span class="keyword">Module</span> .\DSInternals</span><br></pre></td></tr></table></figure>
+
 <p>导出所有域用户HASH</p>
 <figure class="highlight mathematica"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">Get</span>-ADReplAccount -<span class="keyword">All</span> -NamingContext <span class="string">'DC=Adatum,DC=com'</span> -Server LON-DC1</span><br></pre></td></tr></table></figure>
 
@@ -496,6 +500,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/02/RedTeam-CheatSheet/" rel="prev" title="RedTeam CheatSheet">
+                RedTeam CheatSheet <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -577,7 +585,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-count">14</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -599,7 +607,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">54</span>
+                <span class="site-state-item-count">57</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
