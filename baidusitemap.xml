@@ -4,6 +4,26 @@
 
     
   <url>
+    <loc>http://www.killlan.com/2019/09/07/linux-windows-Tools/</loc>
+    <lastmod>2019-09-07T15:25:10.680Z</lastmod>
+    <data>
+        <display>
+        <title>Linux/Windows单文件小工具(持续更新)</title>
+        <pubTime>2019-09-07T15:09:02.000Z</pubTime>
+        
+        <tag>Linux、windows、小工具</tag>
+         
+         
+           
+             
+              <breadCrumb title="神兵利器" url="http://www.killlan.com/categories/%E7%A5%9E%E5%85%B5%E5%88%A9%E5%99%A8/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://www.killlan.com/2019/09/02/RedTeam-CheatSheet/</loc>
     <lastmod>2019-09-01T17:02:57.814Z</lastmod>
     <data>
@@ -349,8 +369,6 @@
         <title>Nmap 中文教程</title>
         <pubTime>2017-09-15T18:39:20.000Z</pubTime>
         
-        <tag>漏洞利用</tag>
-         
         <tag>内网渗透</tag>
          
         <tag>渗透教程</tag>
@@ -360,6 +378,8 @@
         <tag>端口扫描</tag>
          
         <tag>漏洞扫描</tag>
+         
+        <tag>漏洞利用</tag>
          
         <tag>防火墙</tag>
          

