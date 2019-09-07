@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.killlan.com/about/index.html</loc>
+    
+    <lastmod>2019-09-07T15:29:22.854Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://www.killlan.com/2019/09/07/linux-windows-Tools/</loc>
     
     <lastmod>2019-09-07T15:25:10.680Z</lastmod>
@@ -117,13 +124,6 @@
     <loc>http://www.killlan.com/categories/index.html</loc>
     
     <lastmod>2017-09-18T03:28:27.798Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://www.killlan.com/about/index.html</loc>
-    
-    <lastmod>2017-09-18T03:28:06.546Z</lastmod>
     
   </url>
   
