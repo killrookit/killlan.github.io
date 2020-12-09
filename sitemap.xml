@@ -2,23 +2,100 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://www.killlan.com/about/index.html</loc>
+    <loc>http://www.killlan.com/tags/index.html</loc>
     
-    <lastmod>2020-01-08T05:58:29.662Z</lastmod>
+    <lastmod>2020-12-09T19:12:40.718Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://www.killlan.com/tags/index.html</loc>
+    <loc>http://www.killlan.com/about/index.html</loc>
     
-    <lastmod>2017-09-18T03:28:48.062Z</lastmod>
+    <lastmod>2020-12-09T19:12:40.716Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://www.killlan.com/categories/index.html</loc>
     
-    <lastmod>2017-09-18T03:28:27.798Z</lastmod>
+    <lastmod>2020-12-09T19:12:40.716Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/windows10-off-new-Windows-Defender/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.714Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/21/vpn-faq/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.705Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/10/01/sqlmap-bypass-waf/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/20/look-httpserver-method/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.689Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2018/04/26/kali-repositories-Invalid-signature/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.682Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/24/haimawan-reset-pass/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.672Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/10/25/commandline-query-domainloginlogon/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.664Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/13/anonymous-register-gmail/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.663Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/18/acunetix-web-vulnerability-scanner-11/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.652Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/16/Nmap-Chinese-Course/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.644Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://www.killlan.com/2017/09/14/CVE-2017-8759-Exploit/</loc>
+    
+    <lastmod>2020-12-09T19:12:40.630Z</lastmod>
     
   </url>
   
